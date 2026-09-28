@@ -1,13 +1,13 @@
 {
   "theme": {
-    "bg": "#F5F2E9",
-    "bg_alt": "#E9E4D6",
+    "bg": "#F6F6F4",
+    "bg_alt": "#E7E7E3",
     "ink": "#0A0A0A",
-    "ink_soft": "#4a4744",
+    "ink_soft": "#4d4d4a",
     "accent": "#D3212F",
     "accent_ink": "#0A0A0A",
     "card": "#ffffff",
-    "border": "#ddd6c4",
+    "border": "#d9d9d4",
     "font_display": "'Inter', system-ui, sans-serif",
     "accent_text": "#ffffff"
   },
@@ -23,7 +23,7 @@
     "facebook_url": "",
     "footer_tagline": "Dog training in Reading, Berkshire \u00b7 obedience, reactivity and protection work",
     "google_rating": "5.0",
-    "google_review_count": "31",
+    "google_review_count": 33,
     "google_reviews_url": "https://www.google.com/search?q=LM-K9+Reading+dog+training",
     "logo_url": "IMG:logo",
     "city": "Reading",
@@ -228,7 +228,7 @@
       "headline": "Real work deserves real stories.",
       "testimonials": null,
       "pending_title": "Client success stories pending approval",
-      "pending_body": "LM-K9 has 31 verified Google reviews at a 5.0 average; individual client quotes/before-after media are not yet supplied for this preview, so this section is left open rather than inventing testimonials."
+      "pending_body": "LM-K9 has 33 verified Google reviews at a 5.0 average; individual client quotes/before-after media are not yet supplied for this preview, so this section is left open rather than inventing testimonials."
     },
     "faq": {
       "headline": "What to know before you call.",
@@ -355,7 +355,11 @@
       "headline": "Personally led by one of the UK's leading dog trainers.",
       "cards": [
         {
-          "title": "5.0 from 31 Google reviews",
+          "title": "12+ years of experience",
+          "body": "A dog trainer and behaviourist with over a decade of hands-on results across obedience, reactivity and protection work."
+        },
+        {
+          "title": "5.0 from 33 Google reviews",
           "body": "Verified rating from clients across Reading and Berkshire."
         },
         {
@@ -428,7 +432,7 @@
         "eyebrow": "A career built on results",
         "headline": "Reactivity and aggression cases are one of his greatest passions.",
         "paragraphs": [
-          "Liam has worked with some of the country's most difficult dogs and achieved genuine, transformative results. Reactivity and aggression cases are one of his greatest passions \u2014 a completely tailored training method across all four quadrants of operant conditioning to build a fully conditioned dog he trains for.",
+          "With over 12 years of experience, Liam has worked with some of the country's most difficult dogs and achieved genuine, transformative results. Reactivity and aggression cases are one of his greatest passions \u2014 a completely tailored training method across all four quadrants of operant conditioning to build a fully conditioned dog he trains for. Beyond 1-2-1 and residential training, Liam also offers sport dog coaching and dog sourcing services for owners looking to start with the right dog from day one.",
           "He is deeply committed to sharing his knowledge, speaking regularly at seminars and workshops alongside some of the biggest names in dog training, and drawing on an extensive network of breeders, decoys and working-dog professionals."
         ],
         "image_url": "IMG:liam_about2",

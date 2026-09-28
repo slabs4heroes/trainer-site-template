@@ -53,7 +53,7 @@
 {% if home.audience.disclaimer %}<p class="fine">{{ home.audience.disclaimer }}</p>{% endif %}
 </div></section>
 
-<section class="section alt"><div class="wrap">
+<section class="section dark"><div class="wrap">
 <div class="eyebrow">{{ home.friction.eyebrow }}</div><h2>{{ home.friction.headline }}</h2><p class="lead-text">{{ home.friction.body }}</p>
 <div class="cards3">
 {% for f in home.friction.list %}<div class="info-card"><h3>&ldquo;{{ f.quote }}&rdquo;</h3><p>{{ f.response }}</p></div>{% endfor %}
@@ -76,7 +76,7 @@
 <div><div class="eyebrow">{{ home.feature.eyebrow }}</div><h2>{{ home.feature.headline }}</h2><p>{{ home.feature.body }}</p><a class="btn-primary" href="{{ home.feature.cta_url }}">{{ home.feature.cta_label }}</a></div>
 </div></section>
 
-<section class="section alt"><div class="wrap">
+<section class="section dark"><div class="wrap">
 <div class="founder">
 <h2>{{ home.proof.headline }}</h2>
 {% if home.proof.testimonials %}

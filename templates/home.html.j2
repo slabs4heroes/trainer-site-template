@@ -1,0 +1,99 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<section class="hero" id="top">
+  <div class="hero-bg"><img src="{{ home.hero.image_url }}" alt="{{ home.hero.image_alt }}" loading="eager"></div>
+  <div class="hero-inner"><div class="wrap" style="display:grid;gap:24px;">
+  <div>
+    <div class="eyebrow">{{ home.hero.eyebrow }}</div>
+    <h1>{{ home.hero.headline }}</h1>
+    <p class="sub">{{ home.hero.subcopy }}</p>
+    {% if business.google_rating %}<div class="trust-strip">
+      <span class="rating-num"><span data-count="{{ business.google_rating }}" data-decimals="1">0</span> <span class="stars">★★★★★</span></span>
+      <span class="rating-sub"><span data-count="{{ business.google_review_count }}">0</span> verified Google reviews &middot; {{ business.city }}, {{ business.state }}</span>
+    </div>{% endif %}
+  </div>
+  <div class="form-card" id="lead-form">
+    <h2>{{ home.hero.form_heading | default("Request your consultation") }}</h2>
+    <p class="card-sub">{{ home.hero.form_subcopy | default("Fill this out and we'll reach out directly.") }}</p>
+    <form class="progressive-form k9pn-lead-form" data-form-id="home_hero" aria-label="{{ home.hero.form_aria_label }}">
+      <div class="name-row">
+        <div class="field"><label>First name</label><input type="text" name="first_name" placeholder="First name" required></div>
+        <div class="field"><label>Last name</label><input type="text" name="last_name" placeholder="Last name" required></div>
+      </div>
+      <div class="form-extra">
+        <div class="field"><label>{{ home.hero.form_question_label }}</label>
+          <select name="service_interest" required><option value="">Choose one</option>{% for opt in home.hero.form_options %}<option>{{ opt }}</option>{% endfor %}</select>
+        </div>
+        <div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="Best way to reach you" required></div>
+        <div class="field"><label>Email</label><input type="email" name="email" placeholder="you@email.com"></div>
+        <label class="consent-row"><input type="checkbox" name="sms_consent" data-consent-text="{{ sms_consent_text }}"> <span>{{ sms_consent_text }} <a href="{{ nav.privacy_url | default('/privacy') }}">Privacy</a> &middot; <a href="{{ nav.terms_url | default('/terms') }}">Terms</a></span></label>
+        <button type="submit" class="btn-primary" style="display:block;width:100%;">{{ home.hero.form_cta }}</button>
+        <div class="form-status" role="status"></div>
+      </div>
+    </form>
+    <div class="form-note">{{ home.hero.form_note }}</div>
+  </div>
+  </div></div>
+</section>
+
+<section class="section alt"><div class="wrap">
+<div class="eyebrow">{{ home.programs.eyebrow }}</div><h2>{{ home.programs.headline }}</h2>
+<div class="cards3" style="grid-template-columns:1fr 1fr;">
+{% for p in home.programs.list %}
+<article class="program-card"><div class="program-media"><img src="{{ p.image_url }}" alt="{{ p.image_alt }}"></div>
+<div class="copy"><h3>{{ p.name }}</h3><p>{{ p.short_description }}</p><a class="btn-primary" href="{{ p.link_url }}">{{ p.cta_label }}</a></div></article>
+{% endfor %}
+</div></div></section>
+
+<section class="section"><div class="wrap">
+<div class="eyebrow">{{ home.audience.eyebrow }}</div><h2>{{ home.audience.headline }}</h2><p class="lead-text">{{ home.audience.body }}</p>
+<div class="cards3">
+{% for c in home.audience.cards %}<div class="info-card"><h3>{{ c.title }}</h3><p>{{ c.body }}</p></div>{% endfor %}
+</div>
+{% if home.audience.disclaimer %}<p class="fine">{{ home.audience.disclaimer }}</p>{% endif %}
+</div></section>
+
+<section class="section alt"><div class="wrap">
+<div class="eyebrow">{{ home.friction.eyebrow }}</div><h2>{{ home.friction.headline }}</h2><p class="lead-text">{{ home.friction.body }}</p>
+<div class="cards3">
+{% for f in home.friction.list %}<div class="info-card"><h3>&ldquo;{{ f.quote }}&rdquo;</h3><p>{{ f.response }}</p></div>{% endfor %}
+</div></div></section>
+
+<section class="section"><div class="wrap">
+<div class="eyebrow">{{ home.process.eyebrow }}</div><h2>{{ home.process.headline }}</h2><p class="lead-text">{{ home.process.body }}</p>
+<div class="steps">
+{% for s in home.process.steps %}<div class="step-card"><div class="num">{{ "%02d"|format(loop.index) }}</div><h3>{{ s.title }}</h3><p>{{ s.body }}</p></div>{% endfor %}
+</div></div></section>
+
+<section class="section alt"><div class="wrap">
+<div class="eyebrow">{{ home.gallery.eyebrow }}</div><h2>{{ home.gallery.headline }}</h2>
+<div class="gallery">
+{% for g in home.gallery.list %}<div class="g-item"><img src="{{ g.image_url }}" alt="{{ g.image_alt }}" loading="lazy"></div>{% endfor %}
+</div></div></section>
+
+<section class="section"><div class="wrap feature">
+<div class="feature-media"><img src="{{ home.feature.image_url }}" alt="{{ home.feature.image_alt }}"></div>
+<div><div class="eyebrow">{{ home.feature.eyebrow }}</div><h2>{{ home.feature.headline }}</h2><p>{{ home.feature.body }}</p><a class="btn-primary" href="{{ home.feature.cta_url }}">{{ home.feature.cta_label }}</a></div>
+</div></section>
+
+<section class="section alt"><div class="wrap">
+<div class="founder">
+<h2>{{ home.proof.headline }}</h2>
+{% if home.proof.testimonials %}
+<div class="cards3">{% for t in home.proof.testimonials %}<div class="info-card"><p>&ldquo;{{ t.quote }}&rdquo;</p><p class="fine">{{ t.author }}</p></div>{% endfor %}</div>
+{% else %}
+<p>{{ home.proof.pending_body }}</p>
+{% endif %}
+</div></div></section>
+
+<section class="section"><div class="wrap">
+<div class="eyebrow">Frequently asked questions</div><h2>{{ home.faq.headline }}</h2>
+{% for q in home.faq.list %}<div class="faq-item"><h3>{{ q.question }}</h3><p>{{ q.answer }}</p></div>{% endfor %}
+</div></section>
+
+<section class="final-cta"><div class="wrap">
+<h2>{{ home.service_area.headline }}</h2>
+<p>{{ home.service_area.body }}</p>
+<a class="btn-primary" href="{{ home.service_area.cta_url }}">{{ home.service_area.cta_label }}</a>
+</div></section>
+{% endblock %}

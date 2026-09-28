@@ -1,0 +1,29 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<section class="section legal-page"><div class="wrap">
+<h1>Privacy Policy</h1>
+<div class="updated">{{ business.name }} &middot; last updated {{ legal_updated | default("") }}</div>
+<p>{{ business.name }} ("we," "us") respects your privacy. This page explains what information
+we collect through this website and how we use it.</p>
+
+<h2>Information we collect</h2>
+<p>When you submit a form on this site we collect the information you provide: your name,
+phone number, email address, and any details you share about your dog or training needs.</p>
+
+<h2>SMS / text messaging</h2>
+<p><strong>No mobile information will be shared with third parties or affiliates for marketing
+or promotional purposes.</strong> Text messaging originator opt-in data and consent will not be
+shared with any third parties.</p>
+<p>If you opt in to receive text messages from us, we use your phone number only to reply about
+your inquiry and appointments with {{ business.name }}.</p>
+
+<h2>How we use your information</h2>
+<p>We use the information you submit to respond to your inquiry, schedule consultations and
+appointments, and — only with your consent — send you text or email updates about your training
+program. We do not sell your information.</p>
+
+<h2>Contact us</h2>
+<p>Questions about this policy? Reach us at <a href="mailto:{{ business.email }}">{{ business.email }}</a>
+or <a href="tel:{{ business.phone_e164 }}">{{ business.phone_display }}</a>.</p>
+</div></section>
+{% endblock %}

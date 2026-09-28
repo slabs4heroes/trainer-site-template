@@ -1,0 +1,35 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<section class="hero" id="top">
+  <div class="hero-bg"><img src="{{ about.hero.image_url }}" alt="{{ about.hero.image_alt }}" loading="eager"></div>
+  <div class="hero-inner"><div class="wrap">
+  <div class="eyebrow">{{ about.hero.eyebrow }}</div>
+  <h1>{{ about.hero.headline }}</h1>
+  <p class="sub">{{ about.hero.subcopy }}</p>
+  <a class="btn-primary" href="{{ about.hero.cta_url }}">{{ about.hero.cta_label }}</a>
+  </div></div>
+</section>
+
+{% for block in about.story_blocks %}
+<section class="section {{ 'alt' if loop.index is even else '' }}"><div class="wrap feature{{ ' reverse' if block.reverse else '' }}">
+<div><div class="eyebrow">{{ block.eyebrow }}</div><h2>{{ block.headline }}</h2>
+{% for para in block.paragraphs %}<p>{{ para }}</p>{% endfor %}
+</div>
+<div class="feature-media"><img src="{{ block.image_url }}" alt="{{ block.image_alt }}"></div>
+</div></section>
+{% endfor %}
+
+{% if about.gallery %}
+<section class="section alt"><div class="wrap">
+<div class="eyebrow">{{ about.gallery.eyebrow }}</div><h2>{{ about.gallery.headline }}</h2>
+<div class="gallery">
+{% for g in about.gallery.list %}<div class="g-item"><img src="{{ g.image_url }}" alt="{{ g.image_alt }}" loading="lazy"></div>{% endfor %}
+</div></div></section>
+{% endif %}
+
+<section class="section"><div class="wrap">
+<div class="eyebrow">{{ about.philosophy.eyebrow }}</div><h2>{{ about.philosophy.headline }}</h2><p class="lead-text">{{ about.philosophy.body }}</p>
+<div class="cards3">{% for c in about.philosophy.cards %}<div class="info-card"><h3>{{ c.title }}</h3><p>{{ c.body }}</p></div>{% endfor %}</div>
+{% if about.philosophy.disclaimer %}<p class="fine">{{ about.philosophy.disclaimer }}</p>{% endif %}
+</div></section>
+{% endblock %}

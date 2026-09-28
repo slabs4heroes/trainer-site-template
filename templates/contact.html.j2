@@ -1,0 +1,39 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<section class="hero" id="top">
+  <div class="hero-bg"><img src="{{ contact.hero.image_url }}" alt="{{ contact.hero.image_alt }}" loading="eager"></div>
+  <div class="hero-inner"><div class="wrap">
+  <div class="eyebrow">{{ contact.hero.eyebrow }}</div>
+  <h1>{{ contact.hero.headline }}</h1>
+  <p class="sub">{{ contact.hero.subcopy }}</p>
+  <div class="trust-strip"><span class="rating-num">{{ business.phone_display }}</span><span class="rating-sub">{{ business.hours_line }}</span></div>
+  </div></div>
+</section>
+
+<section class="section"><div class="wrap feature">
+<form class="form-card k9pn-lead-form" data-form-id="contact" style="background:var(--card);backdrop-filter:none;border-color:var(--border);">
+<h2>{{ contact.form.headline }}</h2>
+<div class="name-row">
+<div class="field"><label>First name</label><input name="first_name" placeholder="First name" required></div>
+<div class="field"><label>Last name</label><input name="last_name" placeholder="Last name" required></div>
+</div>
+<div class="field"><label>Phone</label><input name="phone" type="tel" placeholder="{{ business.phone_display }}"></div>
+<div class="field"><label>Email</label><input name="email" type="email" placeholder="you@email.com"></div>
+<div class="field"><label>Dog's name</label><input name="dog_name" placeholder="e.g. Bear"></div>
+<div class="field"><label>Tell us about your dog</label><textarea name="message" rows="3" placeholder="Dog's name, breed, age and biggest challenge"></textarea></div>
+<label class="consent-row"><input type="checkbox" name="sms_consent" data-consent-text="{{ sms_consent_text }}"> <span>{{ sms_consent_text }} <a href="{{ nav.privacy_url | default('/privacy') }}">Privacy</a> &middot; <a href="{{ nav.terms_url | default('/terms') }}">Terms</a></span></label>
+<button type="submit" class="btn-primary" style="display:block;width:100%;">{{ contact.form.cta_label }}</button>
+<div class="form-status" role="status"></div>
+<div class="form-note">{{ contact.form.note }}</div>
+</form>
+<div><div class="eyebrow">{{ contact.location.eyebrow }}</div><h2>{{ contact.location.headline }}</h2><p>{{ contact.location.body }}</p>
+{% if contact.location.callout %}<div class="callout"><strong>Important:</strong> {{ contact.location.callout }}</div>{% endif %}
+</div>
+</div></section>
+
+<section class="section alt"><div class="wrap">
+<div class="eyebrow">{{ contact.helper.eyebrow }}</div><h2>{{ contact.helper.headline }}</h2>
+<div class="cards3">{% for c in contact.helper.cards %}<div class="info-card"><h3>{{ c.title }}</h3><p>{{ c.body }}</p></div>{% endfor %}</div>
+{% if contact.helper.disclaimer %}<p class="fine">{{ contact.helper.disclaimer }}</p>{% endif %}
+</div></section>
+{% endblock %}

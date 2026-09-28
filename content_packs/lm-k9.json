@@ -1,0 +1,535 @@
+{
+  "theme": {
+    "bg": "#F5F2E9",
+    "bg_alt": "#E9E4D6",
+    "ink": "#0A0A0A",
+    "ink_soft": "#4a4744",
+    "accent": "#D3212F",
+    "accent_ink": "#0A0A0A",
+    "card": "#ffffff",
+    "border": "#ddd6c4",
+    "font_display": "'Inter', system-ui, sans-serif",
+    "accent_text": "#ffffff"
+  },
+  "business": {
+    "name": "LM-K9",
+    "legal_name": "LM-K9 LTD",
+    "address_line": "Reading, Berkshire, UK",
+    "phone_e164": "+447908569561",
+    "phone_display": "+44 (0)7908 569 561",
+    "hours_line": "By appointment",
+    "email": "LMK9training@gmail.com",
+    "instagram_url": "https://www.instagram.com/lm_k9training",
+    "facebook_url": "",
+    "footer_tagline": "Dog training in Reading, Berkshire \u00b7 obedience, reactivity and protection work",
+    "google_rating": "5.0",
+    "google_review_count": "31",
+    "google_reviews_url": "https://www.google.com/search?q=LM-K9+Reading+dog+training",
+    "logo_url": "IMG:logo",
+    "city": "Reading",
+    "state": "Berkshire",
+    "postal_code": "",
+    "street_address": "Reading, Berkshire",
+    "area_served": [
+      "Reading, UK",
+      "Wokingham, UK",
+      "Bracknell, UK",
+      "Henley-on-Thames, UK"
+    ],
+    "lead_webhook_url": ""
+  },
+  "notice_text": "K9PN reusable template proof \u2014 real LM-K9 copy/photos, not the live lm-k9.com site \u2014 form not yet connected to a CRM",
+  "nav": {
+    "home_url": "/home",
+    "cta_url": "/contact",
+    "cta_label": "Book a consultation",
+    "links": [
+      {
+        "label": "Home",
+        "url": "/home"
+      },
+      {
+        "label": "Programs",
+        "url": "/programs"
+      },
+      {
+        "label": "About Liam",
+        "url": "/about"
+      },
+      {
+        "label": "Contact",
+        "url": "/contact"
+      }
+    ],
+    "privacy_url": "/privacy",
+    "terms_url": "/terms"
+  },
+  "seo": {
+    "home": {
+      "title": "Dog Trainer in Reading | LM-K9",
+      "description": "Liam McArthur builds a completely tailored training plan for your dog in Reading, Berkshire \u2014 obedience, reactivity, protection work and residential stays.",
+      "canonical_url": "https://trainer-site-template-lmk9.vercel.app/home"
+    },
+    "programs": {
+      "title": "Dog Training Programs in Reading | LM-K9",
+      "description": "1-2-1 sessions, group classes, home visits, residential training, boarding and protection work with Liam McArthur in Reading, Berkshire.",
+      "canonical_url": "https://trainer-site-template-lmk9.vercel.app/programs"
+    },
+    "about": {
+      "title": "Meet Liam McArthur | Dog Trainer in Reading",
+      "description": "Liam McArthur is one of the UK's leading dog trainers \u2014 IGP1, BH, SDC, ZWP1, ACA1 (first in the world), Team GB Dog Sport.",
+      "canonical_url": "https://trainer-site-template-lmk9.vercel.app/about"
+    },
+    "contact": {
+      "title": "Book a Consultation | LM-K9, Reading",
+      "description": "Request a callback with Liam McArthur about your dog's training in Reading, Berkshire.",
+      "canonical_url": "https://trainer-site-template-lmk9.vercel.app/contact"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Bespoke trainer \u00b7 Reading, Berkshire",
+      "headline": "Do better for your dog.",
+      "subcopy": "Liam McArthur builds a completely tailored training plan for your dog \u2014 obedience, reactivity, protection work and residential stays \u2014 based on the dog in front of him, not a one-size-fits-all method.",
+      "form_aria_label": "Dog training consultation request",
+      "form_cta": "Request a callback",
+      "form_question_label": "What are you looking for help with?",
+      "form_options": [
+        "1-2-1 obedience",
+        "Reactivity",
+        "Residential / board and train",
+        "Protection work",
+        "Group classes",
+        "Not sure yet"
+      ],
+      "form_note": "Preview \u2014 form is not connected to a live CRM yet.",
+      "image_url": "IMG:hero",
+      "image_alt": "Liam McArthur working with a dog outdoors in Reading, Berkshire",
+      "form_heading": "Get in touch with Liam",
+      "form_subcopy": "Tell him about your dog and he'll come back to you."
+    },
+    "programs": {
+      "eyebrow": "Services",
+      "headline": "Bespoke training, built around your dog.",
+      "list": [
+        {
+          "name": "Essential Training",
+          "short_description": "1-2-1 sessions, group classes and home visits to build reliable obedience and resolve everyday behaviour issues.",
+          "image_url": "IMG:gsd1",
+          "image_alt": "Dog trained by LM-K9 practising obedience outdoors",
+          "link_url": "/programs",
+          "cta_label": "Book essential training"
+        },
+        {
+          "name": "Specialist & Residential",
+          "short_description": "Advanced protection work, residential training and boarding for existing clients whose dogs need a structured, higher-level programme.",
+          "image_url": "IMG:protection1",
+          "image_alt": "Protection dog training session with LM-K9",
+          "link_url": "/programs",
+          "cta_label": "Ask about residential"
+        }
+      ]
+    },
+    "audience": {
+      "eyebrow": "Sound familiar?",
+      "headline": "Is this you?",
+      "body": "So many owners find Liam after they've already seen multiple trainers and been given conflicting advice, and they're at a loss for a way forward.",
+      "cards": [
+        {
+          "title": "Your dog reacts around other dogs or people",
+          "body": "Lunging, barking or reactivity on walks that make everyday outings stressful and unpredictable."
+        },
+        {
+          "title": "You've stopped enjoying walks",
+          "body": "Walks feel stressful, unpredictable, or you've simply stopped looking forward to time with your dog."
+        },
+        {
+          "title": "You want it done properly from the start",
+          "body": "You've tried other trainers or generic advice with nothing to show for it, and want a working or protection dog trained properly."
+        }
+      ],
+      "disclaimer": ""
+    },
+    "friction": {
+      "eyebrow": "In their own words",
+      "headline": "What owners tell Liam before they start",
+      "body": "The same handful of struggles come up again and again in the first call.",
+      "list": [
+        {
+          "quote": "My dog lunges, barks or reacts around other dogs or people.",
+          "response": "Reactivity has a cause. Liam builds a structured plan around what's actually driving it, not just the symptom."
+        },
+        {
+          "quote": "Walks feel stressful, unpredictable, or I've stopped enjoying them.",
+          "response": "The goal is a dog whose needs and drives are actually being met, so walks feel calm again."
+        },
+        {
+          "quote": "I want my working or protection dog trained properly from the start.",
+          "response": "Liam has worked with some of the country's most difficult dogs and trains a completely tailored approach across all four quadrants of operant conditioning."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "A simple path forward",
+      "headline": "Book. Train. Thrive.",
+      "body": "Get in touch with a few details about your dog and Liam reviews every enquiry personally.",
+      "steps": [
+        {
+          "title": "Book",
+          "body": "Get in touch with a few details about your dog and what you're dealing with. Liam reviews every enquiry personally."
+        },
+        {
+          "title": "Train",
+          "body": "A tailored plan \u2014 1-2-1, group classes, residential or specialist work \u2014 built around your dog's temperament and your goals."
+        },
+        {
+          "title": "Thrive",
+          "body": "Reliable obedience, calmer walks, and a dog whose needs and drives are actually being met."
+        }
+      ]
+    },
+    "gallery": {
+      "eyebrow": "More from the programme",
+      "headline": "Real sessions, real dogs, real Reading.",
+      "list": [
+        {
+          "image_url": "IMG:liam_dog2",
+          "image_alt": "Liam McArthur working obedience with a dog",
+          "caption": "1-2-1 obedience work in progress."
+        },
+        {
+          "image_url": "IMG:onset",
+          "image_alt": "LM-K9 on set for a working-dog demonstration",
+          "caption": "On-set decoy and demonstration work."
+        },
+        {
+          "image_url": "IMG:gsd2",
+          "image_alt": "German Shepherd training session with LM-K9",
+          "caption": "Advanced obedience and control work."
+        },
+        {
+          "image_url": "IMG:protection2",
+          "image_alt": "Bite work and protection training session",
+          "caption": "Bite work and protection conditioning."
+        }
+      ]
+    },
+    "feature": {
+      "eyebrow": "From first session to advanced work",
+      "headline": "One trainer, every stage.",
+      "body": "Liam works across the full range \u2014 pet-dog obedience and reactivity, through to working and protection dogs \u2014 so your plan grows with your dog instead of switching trainers as needs change.",
+      "image_url": "IMG:liam_about1",
+      "image_alt": "Liam McArthur with a working dog in the field",
+      "cta_url": "/contact",
+      "cta_label": "Talk to Liam"
+    },
+    "proof": {
+      "eyebrow": "Proof from the programme",
+      "headline": "Real work deserves real stories.",
+      "testimonials": null,
+      "pending_title": "Client success stories pending approval",
+      "pending_body": "LM-K9 has 31 verified Google reviews at a 5.0 average; individual client quotes/before-after media are not yet supplied for this preview, so this section is left open rather than inventing testimonials."
+    },
+    "faq": {
+      "headline": "What to know before you call.",
+      "list": [
+        {
+          "question": "What training methods does Liam use?",
+          "answer": "A completely tailored approach across all four quadrants of operant conditioning, built around the dog in front of him rather than one method for every dog."
+        },
+        {
+          "question": "Can you help with reactivity or aggression?",
+          "answer": "Yes \u2014 reactivity and aggression cases are one of Liam's core focuses; share what's happening so it can be discussed properly at the consultation."
+        },
+        {
+          "question": "Do you offer residential / board and train?",
+          "answer": "Yes, for existing clients whose dogs need a structured, higher-level programme \u2014 residential training starts from \u00a3150/day (minimum 1 week, crate trained)."
+        },
+        {
+          "question": "What ages and breeds do you work with?",
+          "answer": "Liam works with a wide range of ages and breeds, including working and protection-line dogs; share your dog's age, breed and history when you get in touch."
+        },
+        {
+          "question": "What does training cost?",
+          "answer": "1-2-1: \u00a3150 first session, or 3 sessions (3.5 hrs) for \u00a3275. Follow-up 1-2-1: \u00a375/hour. Group classes: \u00a320 per household (existing clients). Home visits: \u00a3200/hour + \u00a31/mile."
+        }
+      ]
+    },
+    "service_area": {
+      "eyebrow": "Serving Reading & nearby areas",
+      "headline": "Dog training that starts in Reading and travels home with you.",
+      "body": "LM-K9 is based in Reading, Berkshire and works with owners across Wokingham, Bracknell and Henley-on-Thames, alongside residential and protection clients further afield. Every conversation starts with your dog's actual behaviour and goals, not a generic plan.",
+      "cta_url": "/contact",
+      "cta_label": "Talk to Liam"
+    }
+  },
+  "programs": {
+    "hero": {
+      "eyebrow": "Services \u00b7 Reading, Berkshire",
+      "headline": "Bespoke training, built around your dog.",
+      "subcopy": "No two dogs are the same. Liam leads with a completely tailored plan \u2014 from first obedience sessions through to advanced protection work.",
+      "cta_url": "/contact",
+      "cta_label": "Book a consultation",
+      "image_url": "IMG:gsd1",
+      "image_alt": "Dog trained by LM-K9 practising obedience outdoors"
+    },
+    "detail": {
+      "eyebrow": "What's included",
+      "headline": "Essential, specialist and professional services.",
+      "list": [
+        {
+          "tier_label": "Essential Training",
+          "name": "1-2-1, Group Classes & Home Visits",
+          "description": "Build reliable obedience and resolve everyday behaviour issues with 1-2-1 sessions, group classes or home visits.",
+          "bullets": [
+            "1-2-1: \u00a3150 first session, or 3 sessions (3.5 hrs) for \u00a3275",
+            "Follow-up 1-2-1: \u00a375/hour",
+            "Group classes: \u00a320 per household (existing clients)",
+            "Home visits: \u00a3200/hour + \u00a31/mile"
+          ],
+          "image_url": "IMG:gsd1",
+          "image_alt": "Dog trained by LM-K9 practising obedience outdoors",
+          "cta_url": "/contact",
+          "cta_label": "Book essential training"
+        },
+        {
+          "tier_label": "Specialist & Residential",
+          "name": "Bite Work, Protection & Residential",
+          "description": "Advanced protection work, residential training and boarding for existing clients whose dogs need a structured, higher-level programme.",
+          "bullets": [
+            "Bite work & protection: \u00a365/hour",
+            "Residential training: \u00a3150/day (min. 1 week, crate trained)",
+            "Boarding: \u00a375/day (crate trained, existing clients)"
+          ],
+          "image_url": "IMG:protection1",
+          "image_alt": "Protection dog training session with LM-K9",
+          "cta_url": "/contact",
+          "cta_label": "Ask about residential"
+        }
+      ]
+    },
+    "method": {
+      "eyebrow": "How Liam trains",
+      "headline": "A completely tailored approach, not a fixed method.",
+      "body": "Liam builds each dog's plan across all four quadrants of operant conditioning, adjusted to that individual dog's drives, history and the owner's real goals \u2014 not one system applied to every dog.",
+      "image_url": "IMG:onset",
+      "image_alt": "LM-K9 on set for a working-dog demonstration",
+      "image_url_alt2": "IMG:liam_dog2",
+      "cards": [
+        {
+          "title": "All four quadrants",
+          "body": "Liam builds each dog's plan using positive reinforcement, structure and clear communication, adjusted to that individual dog's drives and history."
+        },
+        {
+          "title": "Reactivity & aggression specialism",
+          "body": "One of Liam's greatest passions \u2014 a fully conditioned, tailored plan rather than a generic protocol."
+        },
+        {
+          "title": "Working & protection dogs",
+          "body": "IGP1, BH, SDC, ZWP1 and ACA1 (first in the world) titled, with a network of decoys and working-dog professionals."
+        }
+      ]
+    },
+    "consult_prep": {
+      "eyebrow": "Before you call",
+      "headline": "Help Liam understand your dog.",
+      "body": "The more context you share about your dog's history and your goals, the more useful the first conversation can be.",
+      "cards": [
+        {
+          "title": "Your dog's profile",
+          "body": "Age, breed, health considerations, training history and daily routines."
+        },
+        {
+          "title": "The challenge",
+          "body": "Reactivity, aggression, leash pulling, recall, or working/protection goals."
+        },
+        {
+          "title": "Your goals",
+          "body": "What you want daily life \u2014 or your dog's working ability \u2014 to look like."
+        }
+      ],
+      "disclaimer": ""
+    },
+    "why": {
+      "eyebrow": "Why LM-K9",
+      "headline": "Personally led by one of the UK's leading dog trainers.",
+      "cards": [
+        {
+          "title": "5.0 from 31 Google reviews",
+          "body": "Verified rating from clients across Reading and Berkshire."
+        },
+        {
+          "title": "National reputation",
+          "body": "Speaks at seminars and workshops alongside some of the biggest names in dog training."
+        },
+        {
+          "title": "Team GB Dog Sport",
+          "body": "IGP1, BH, SDC, ZWP1, ACA1 (first in the world)."
+        }
+      ]
+    },
+    "transfer": {
+      "eyebrow": "What happens after training",
+      "headline": "A plan you can keep using at home.",
+      "paragraphs": [
+        "Every programme ends with clear handover guidance so you can keep the same structure and communication going once your dog is back in your day-to-day routine."
+      ],
+      "cta_url": "/contact",
+      "cta_label": "Book a consultation",
+      "image_url": "IMG:liam_dog2",
+      "image_alt": "Liam McArthur working obedience with a dog"
+    },
+    "faq": {
+      "eyebrow": "Frequently asked questions",
+      "headline": "What to know before you call.",
+      "list": [
+        {
+          "question": "What training methods does Liam use?",
+          "answer": "A completely tailored approach across all four quadrants of operant conditioning, built around the dog in front of him rather than one method for every dog."
+        },
+        {
+          "question": "Can you help with reactivity or aggression?",
+          "answer": "Yes \u2014 reactivity and aggression cases are one of Liam's core focuses; share what's happening so it can be discussed properly at the consultation."
+        },
+        {
+          "question": "Do you offer residential / board and train?",
+          "answer": "Yes, for existing clients whose dogs need a structured, higher-level programme \u2014 residential training starts from \u00a3150/day (minimum 1 week, crate trained)."
+        },
+        {
+          "question": "What ages and breeds do you work with?",
+          "answer": "Liam works with a wide range of ages and breeds, including working and protection-line dogs; share your dog's age, breed and history when you get in touch."
+        },
+        {
+          "question": "What does training cost?",
+          "answer": "1-2-1: \u00a3150 first session, or 3 sessions (3.5 hrs) for \u00a3275. Follow-up 1-2-1: \u00a375/hour. Group classes: \u00a320 per household (existing clients). Home visits: \u00a3200/hour + \u00a31/mile."
+        }
+      ]
+    },
+    "closing": {
+      "headline": "Ready to build a tailored plan for your dog?",
+      "body": "Get in touch with a few details and Liam will review your enquiry personally.",
+      "cta_url": "/contact",
+      "cta_label": "Book a consultation"
+    },
+    "gallery": null
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "About your trainer",
+      "headline": "Meet Liam, one of the UK's leading dog trainers.",
+      "subcopy": "Liam has worked with some of the country's most difficult dogs and achieved genuine, transformative results.",
+      "cta_url": "/contact",
+      "cta_label": "Talk to Liam",
+      "image_url": "IMG:liam_about1",
+      "image_alt": "Liam McArthur with a working dog in the field"
+    },
+    "story_blocks": [
+      {
+        "eyebrow": "A career built on results",
+        "headline": "Reactivity and aggression cases are one of his greatest passions.",
+        "paragraphs": [
+          "Liam has worked with some of the country's most difficult dogs and achieved genuine, transformative results. Reactivity and aggression cases are one of his greatest passions \u2014 a completely tailored training method across all four quadrants of operant conditioning to build a fully conditioned dog he trains for.",
+          "He is deeply committed to sharing his knowledge, speaking regularly at seminars and workshops alongside some of the biggest names in dog training, and drawing on an extensive network of breeders, decoys and working-dog professionals."
+        ],
+        "image_url": "IMG:liam_about2",
+        "image_alt": "Liam McArthur working with a dog in training",
+        "reverse": false,
+        "landscape": false
+      },
+      {
+        "eyebrow": "Certifications",
+        "headline": "IGP1 \u00b7 BH \u00b7 SDC \u00b7 ZWP1 \u00b7 ACA 1 (first in the world) \u00b7 Team GB Dog Sport.",
+        "paragraphs": [
+          "Liam holds IGP1, BH, SDC and ZWP1 titles, is ACA 1 certified (the first in the world to hold this), and has represented Team GB in Dog Sport."
+        ],
+        "image_url": "IMG:onset",
+        "image_alt": "LM-K9 on set for a working-dog demonstration",
+        "reverse": true,
+        "landscape": true
+      }
+    ],
+    "gallery": {
+      "eyebrow": "More of the story",
+      "headline": "Reading roots, national reputation.",
+      "list": [
+        {
+          "image_url": "IMG:gsd2",
+          "image_alt": "German Shepherd training session with LM-K9"
+        },
+        {
+          "image_url": "IMG:protection2",
+          "image_alt": "Bite work and protection training session"
+        },
+        {
+          "image_url": "IMG:liam_dog2",
+          "image_alt": "Liam McArthur working obedience with a dog"
+        },
+        {
+          "image_url": "IMG:gsd1",
+          "image_alt": "Dog trained by LM-K9 practising obedience outdoors"
+        }
+      ]
+    },
+    "philosophy": {
+      "eyebrow": "How Liam works",
+      "headline": "A completely tailored plan, every time.",
+      "body": "No dog gets a generic protocol. Liam builds a plan across all four quadrants of operant conditioning based on the dog's drives, history and the owner's real goals.",
+      "cards": [
+        {
+          "title": "Reactivity & aggression",
+          "body": "One of Liam's greatest passions, worked through with a fully conditioned, individual plan."
+        },
+        {
+          "title": "Working & protection",
+          "body": "Bite work, protection and sourcing dogs for owners, handlers and trainers who want to go deeper."
+        },
+        {
+          "title": "Mentorship",
+          "body": "Runs the MNTR Mentorship Programme for owners, handlers and trainers alongside seminars and workshops."
+        }
+      ],
+      "disclaimer": ""
+    },
+    "gallery_x": null
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Get in touch",
+      "headline": "Get in touch with Liam.",
+      "subcopy": "Tell him about your dog and he'll come back to you \u2014 obedience, reactivity, protection work or residential stays.",
+      "image_url": "IMG:liam_dog2",
+      "image_alt": "Liam McArthur working obedience with a dog"
+    },
+    "form": {
+      "eyebrow": "Request a callback",
+      "headline": "Request a callback",
+      "cta_label": "Request a callback",
+      "note": "Preview \u2014 form is not connected to a live CRM yet."
+    },
+    "location": {
+      "eyebrow": "Reading dog training",
+      "headline": "Based in Reading. Serving Berkshire and residential clients further afield.",
+      "body": "LM-K9 works with owners across Reading, Wokingham, Bracknell and Henley-on-Thames, plus residential and protection clients nationwide.",
+      "callout": "Get in touch before visiting \u2014 sessions are by appointment."
+    },
+    "helper": {
+      "eyebrow": "Help Liam understand the fit",
+      "headline": "The more context you share, the more useful the first conversation can be.",
+      "cards": [
+        {
+          "title": "Your dog's profile",
+          "body": "Include age, breed, training history and the routines that matter most in your home."
+        },
+        {
+          "title": "The challenge",
+          "body": "Share examples of reactivity, aggression, leash pulling or the working/protection goals you have."
+        },
+        {
+          "title": "Your location and goals",
+          "body": "Let Liam know your area and what you want daily life \u2014 or your dog's working ability \u2014 to look like."
+        }
+      ],
+      "disclaimer": "This form is a preview and is not yet connected to a live CRM."
+    }
+  }
+}

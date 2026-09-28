@@ -1,0 +1,577 @@
+{
+  "business": {
+    "name": "Gator Alley Dog Training",
+    "legal_name": "Gator Alley Dog Training Academy, LLC",
+    "address_line": "10328 Charlotte Dr, Parrish, FL 34219",
+    "phone_e164": "+19413487454",
+    "phone_display": "(941) 348-7454",
+    "hours_line": "Wed–Sun, 9 AM–8 PM",
+    "email": "gatoralleyk9@gmail.com",
+    "instagram_url": "https://www.instagram.com/gatoralleyk9",
+    "facebook_url": "https://www.facebook.com/share/1HG7KeMFk3/?mibextid=wwXIfr",
+    "footer_tagline": "Dog training in Parrish, Florida · Serving board-and-train clients nationwide",
+    "google_rating": "5.0",
+    "google_review_count": "16",
+    "google_reviews_url": "https://www.google.com/search?q=Gator+Alley+Dog+Training+Parrish+FL",
+    "logo_url": "https://images.squarespace-cdn.com/content/v1/68a200e394d1231fed92f005/728d2a0e-8fa9-41df-8583-70f27a9784e4/GALogoFontwht.png?format=500w",
+    "city": "Parrish",
+    "state": "FL",
+    "postal_code": "34219",
+    "street_address": "10328 Charlotte Dr",
+    "area_served": [
+      "Parrish, FL",
+      "Palmetto, FL",
+      "Bradenton, FL",
+      "Lakewood Ranch, FL",
+      "Ellenton, FL",
+      "Sarasota, FL"
+    ]
+  },
+  "notice_text": "Private SEO redesign preview · nothing here changes the live site",
+  "nav": {
+    "home_url": "/gator-alley-gen-test-home",
+    "cta_url": "/gator-alley-gen-test-contact",
+    "cta_label": "Request a consultation",
+    "links": [
+      {
+        "label": "Home",
+        "url": "/gator-alley-gen-test-home"
+      },
+      {
+        "label": "Programs",
+        "url": "/gator-alley-gen-test-programs"
+      },
+      {
+        "label": "About Jacob",
+        "url": "/gator-alley-gen-test-about"
+      },
+      {
+        "label": "Contact",
+        "url": "/gator-alley-gen-test-contact"
+      }
+    ]
+  },
+  "seo": {
+    "home": {
+      "title": "Dog Training in Parrish, FL | Gator Alley Dog Training",
+      "description": "Board-and-train in Parrish, FL, led by Jacob Soos. Discuss puppy foundations, obedience and behavior-history needs in 4- or 6-week programs.",
+      "canonical_url": "https://k9pn.viktor.page/gator-alley-gen-test-home"
+    },
+    "programs": {
+      "title": "Board & Train Programs in Parrish, FL | Gator Alley Dog Training",
+      "description": "Two personally led board-and-train programs in Parrish, FL: a 4-Week Board & Train and a 6-Week Master Program, both led directly by Jacob Soos.",
+      "canonical_url": "https://k9pn.viktor.page/gator-alley-gen-test-programs"
+    },
+    "about": {
+      "title": "Meet Jacob Soos | Dog Trainer in Parrish, FL",
+      "description": "Meet Jacob Soos of Gator Alley Dog Training in Parrish, FL: Coast Guard veteran and Palmetto native who personally trains each dog.",
+      "canonical_url": "https://k9pn.viktor.page/gator-alley-gen-test-about"
+    },
+    "contact": {
+      "title": "Contact Gator Alley Dog Training | Parrish, FL",
+      "description": "Request a dog-training consultation with Jacob Soos at Gator Alley Dog Training in Parrish, FL.",
+      "canonical_url": "https://k9pn.viktor.page/gator-alley-gen-test-contact"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Dog training in Parrish, Florida",
+      "headline": "Reliable obedience built for real life.",
+      "subcopy": "Gator Alley Dog Training offers personally led board-and-train programs for owners who want calm, trustworthy and obedient dogs.",
+      "form_aria_label": "Dog training consultation request",
+      "form_cta": "Get training details",
+      "form_question_label": "What type of training are you looking for?",
+      "form_options": [
+        "4-Week Board & Train",
+        "6-Week Master Program",
+        "Behavior help — not sure which program",
+        "General consultation"
+      ],
+      "form_note": "Private preview — form submissions are not connected yet.",
+      "image_url": "https://images.squarespace-cdn.com/content/v1/68a200e394d1231fed92f005/42bde91f-e53f-4d95-99b6-e73edfa3bb4d/_H1B0520v3.jpg?format=1500w",
+      "image_alt": "Dog trained by Gator Alley Dog Training Academy, LLC",
+      "form_heading": "Request your consultation",
+      "form_subcopy": "Fill this out and Jacob Soos will reach out directly."
+    },
+    "programs": {
+      "eyebrow": "Board & Train programs",
+      "headline": "Two ways to build a better life with your dog.",
+      "list": [
+        {
+          "name": "4-Week Board & Train",
+          "short_description": "A structured foundation in clear communication, dependable obedience and real-world reliability.",
+          "image_url": "IMG:German Shepherd during board-and-train work in Parrish, Florida",
+          "image_alt": "German Shepherd during board-and-train work in Parrish, Florida",
+          "link_url": "/gator-alley-gen-test-programs",
+          "cta_label": "Explore 4 weeks"
+        },
+        {
+          "name": "6-Week Master Program",
+          "short_description": "An extended program for advanced obedience, serious behavioral challenges and deeper work.",
+          "image_url": "IMG:Jacob Soos giving a hand-signal cue to a German Shepherd during training",
+          "image_alt": "Jacob Soos giving a hand-signal cue to a German Shepherd during training",
+          "link_url": "/gator-alley-gen-test-programs",
+          "cta_label": "Explore 6 weeks"
+        }
+      ]
+    },
+    "audience": {
+      "eyebrow": "Parrish dog training for real-life goals",
+      "headline": "From puppy foundations to more complicated behavior histories.",
+      "body": "Owners in Parrish and nearby communities often start with a practical question: how do we make everyday life with our dog feel calmer, clearer and more manageable? Bring the full picture to the consultation so Jacob can discuss the right next step.",
+      "cards": [
+        {
+          "title": "Puppy foundations",
+          "body": "If you are raising a puppy, share your goals around socialization, household manners, leash skills, recall and building good habits early. Jacob can discuss whether one of the current programs fits your dog and your timeline."
+        },
+        {
+          "title": "Common obedience challenges",
+          "body": "Leash pulling, jumping, barking, inconsistent recall and difficulty settling can make normal routines feel exhausting. Clear communication and real-world practice are part of the conversation."
+        },
+        {
+          "title": "Behavior-history cases",
+          "body": "Reactivity, anxiety, fear, aggression or a bite history need honest context and careful planning. Share what has happened, where it happens and what safety considerations matter at home."
+        }
+      ],
+      "disclaimer": "These are common goals owners bring to a consultation, not a promise of an instant fix or a separate service menu."
+    },
+    "friction": {
+      "eyebrow": "Is this you?",
+      "headline": "When everyday dog life feels harder than it should.",
+      "body": "Maybe walks are stressful, guests bring out jumping or barking, recall feels unreliable, or you’re not sure how to help a puppy build good foundations. You’re not looking for a gimmick—you want a clearer plan and support that fits your household.",
+      "list": [
+        {
+          "quote": "I love my dog, but I feel overwhelmed.",
+          "response": "Training should make daily life more manageable, not leave you guessing what to do next."
+        },
+        {
+          "quote": "The behavior changes depending on the situation.",
+          "response": "Real-world routines and distractions matter. The goal is usable communication beyond a quiet training space."
+        },
+        {
+          "quote": "I want my family to feel confident.",
+          "response": "Clear handover guidance helps owners continue the work consistently once their dog returns home."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "A simple path forward",
+      "headline": "Book. Train. Thrive.",
+      "body": "Every conversation begins with your dog’s needs, your goals and the right fit—not a one-size-fits-all promise.",
+      "steps": [
+        {
+          "title": "Book",
+          "body": "Share what is happening at home and speak directly with Jacob about your goals."
+        },
+        {
+          "title": "Train",
+          "body": "Your dog receives personally led work, structure and real-world exposure in the appropriate program."
+        },
+        {
+          "title": "Thrive",
+          "body": "Use the handover and ongoing support to carry clearer communication into everyday life."
+        }
+      ]
+    },
+    "gallery": {
+      "eyebrow": "More from the program",
+      "headline": "Real sessions, real dogs, real Parrish backyards.",
+      "list": [
+        {
+          "image_url": "https://images.squarespace-cdn.com/content/v1/68a200e394d1231fed92f005/f867c384-fc89-4eed-b847-a7264a17801d/IMG_1543.png?format=1500w",
+          "image_alt": "Dog trained by Gator Alley Dog Training Academy, LLC",
+          "caption": "Hand signals and verbal cues layered together during an obedience session."
+        },
+        {
+          "image_url": "https://images.squarespace-cdn.com/content/v1/68a200e394d1231fed92f005/2a960f83-9786-4208-ab9d-18a44fdf864e/0223.jpg?format=1500w",
+          "image_alt": "Dog trained by Gator Alley Dog Training Academy, LLC",
+          "caption": "Jacob and Chloe with Gator — the same balanced approach used with client dogs."
+        },
+        {
+          "image_url": "https://images.squarespace-cdn.com/content/v1/68a200e394d1231fed92f005/e72369e0-14ca-45b5-84a7-616cfd605f37/3c0adafd-cabc-4b5b-894e-b9a019d4a49c.jpeg?format=1500w",
+          "image_alt": "Dog trained by Gator Alley Dog Training Academy, LLC",
+          "caption": "Real-world reliability, practiced outside the training space."
+        },
+        {
+          "image_url": "https://images.squarespace-cdn.com/content/v1/68a200e394d1231fed92f005/d24daaa7-241a-474d-bc45-0b996bcf23f3/IMG_0555.jpeg?format=1500w",
+          "image_alt": "Dog trained by Gator Alley Dog Training Academy, LLC",
+          "caption": ""
+        }
+      ]
+    },
+    "feature": {
+      "eyebrow": "The Gator Alley difference",
+      "headline": "Real-world exposure. Personal care. Clear standards.",
+      "body": "Dogs live and learn in a real home environment, not a facility. Jacob personally works with each dog through the routines, people and distractions that make reliable behavior matter.",
+      "image_url": "IMG:Jacob Soos working obedience with his German Shepherd",
+      "image_alt": "Jacob Soos working obedience with his German Shepherd",
+      "cta_url": "/gator-alley-gen-test-about",
+      "cta_label": "Meet Jacob"
+    },
+    "proof": {
+      "eyebrow": "Proof from the program",
+      "headline": "Real work deserves real stories.",
+      "testimonials": null,
+      "pending_title": "Client success stories coming after approval",
+      "pending_body": "The source pages identify a client transformations section, but no testimonial quotes, client names or before-and-after media were supplied in the verified brief. This private preview intentionally leaves that proof open for Jacob/Mike to approve rather than inventing it."
+    },
+    "faq": {
+      "headline": "What to know before you call.",
+      "list": [
+        {
+          "question": "Where does training happen?",
+          "answer": "Dogs live and learn in Jacob’s real home environment in Parrish rather than a kennel facility, with exposure to household routines and real-world distractions."
+        },
+        {
+          "question": "Who trains my dog?",
+          "answer": "Jacob personally trains and cares for every dog throughout the program."
+        },
+        {
+          "question": "What happens when my dog comes home?",
+          "answer": "The program includes a detailed handover and ongoing support so you can continue the training consistently at home."
+        },
+        {
+          "question": "What ages and breeds are a fit?",
+          "answer": "Every dog is different. Share your dog’s age, breed, history and goals so Jacob can discuss the appropriate next step."
+        },
+        {
+          "question": "Can puppy owners start the conversation?",
+          "answer": "Yes, puppy owners can include their socialization, household-manners and foundation goals in the consultation request. Jacob can then discuss whether the current programs are appropriate."
+        },
+        {
+          "question": "Can you help with reactivity or aggression?",
+          "answer": "Behavior history matters. Be candid about fear, aggression, reactivity or bite history during the consultation so the situation can be discussed responsibly."
+        },
+        {
+          "question": "What does training cost?",
+          "answer": "Program fit and scope are discussed during the consultation. Contact Jacob for current availability and program details rather than relying on an assumed price."
+        }
+      ]
+    },
+    "service_area": {
+      "eyebrow": "Serving Parrish & nearby areas",
+      "headline": "Dog training that starts in Parrish and travels home with you.",
+      "body": "Gator Alley Dog Training is based in Parrish and serves owners in Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota, while also welcoming board-and-train clients from around the country. The page is local by design: the conversation starts with your dog's actual routines, behavior history and household goals, not a generic city-page promise.",
+      "cta_url": "/gator-alley-gen-test-contact",
+      "cta_label": "Talk with Jacob"
+    }
+  },
+  "programs": {
+    "hero": {
+      "eyebrow": "Board & Train in Parrish, FL",
+      "headline": "Board-and-train programs for dependable real-world behavior.",
+      "subcopy": "Choose the level of support that matches your dog’s needs, then speak directly with Jacob about the right fit.",
+      "cta_url": "/gator-alley-gen-test-contact",
+      "cta_label": "Book a free call",
+      "image_url": "IMG:Jacob Soos training a dog in Parrish, Florida",
+      "image_alt": "Jacob Soos training a dog in Parrish, Florida"
+    },
+    "detail": {
+      "eyebrow": "The transformation starts here",
+      "headline": "Two personally led board-and-train programs.",
+      "list": [
+        {
+          "tier_label": "Signature program",
+          "name": "4-Week Board & Train",
+          "description": "Personally led by Jacob Soos, founder and owner of Gator Alley Dog Training Academy. Designed to take foundational obedience to the next level through verbal commands, hand signals and leash pressure, this program builds confident communication, dependable obedience and real-world reliability.",
+          "bullets": [
+            "Best for: puppies and dogs needing foundational manners, leash skills and household obedience",
+            "Location: Jacob’s real home environment in Parrish, not a kennel facility",
+            "Includes: daily structure, socialization and a detailed handover session with ongoing support"
+          ],
+          "image_url": "IMG:German Shepherd during board-and-train work in Parrish, Florida",
+          "image_alt": "German Shepherd during board-and-train work in Parrish, Florida",
+          "cta_url": "/gator-alley-gen-test-contact",
+          "cta_label": "Ask about 4 weeks"
+        },
+        {
+          "tier_label": "Advanced program",
+          "name": "6-Week Master Program",
+          "description": "Personally led by Jacob Soos, this program is designed for advanced obedience, serious behavioral challenges and owners seeking the highest level of training. It focuses on precision, reliability and real-world control at an exceptional standard.",
+          "bullets": [
+            "Best for: dogs with more complex behavior histories or owners wanting the deepest level of off-leash reliability",
+            "Location: Jacob’s real home environment in Parrish, not a kennel facility",
+            "Includes: daily structure, socialization and a detailed handover session with ongoing support"
+          ],
+          "image_url": "IMG:Jacob Soos giving a hand-signal cue to a German Shepherd during training",
+          "image_alt": "Jacob Soos giving a hand-signal cue to a German Shepherd during training",
+          "cta_url": "/gator-alley-gen-test-contact",
+          "cta_label": "Ask about 6 weeks"
+        }
+      ]
+    },
+    "method": {
+      "eyebrow": "How Jacob communicates with your dog",
+      "headline": "Full-spectrum communication, built for reliability.",
+      "body": "Jacob’s approach uses voice commands, leash cues, hand signals and properly conditioned e-collar work together, so your dog understands what is being asked in any environment—not just inside a quiet training space. Training is balanced: clear communication, positive reinforcement, structure, fair corrections and accountability, tailored to each individual dog.",
+      "image_url": "IMG:Jacob Soos using a hand signal with a German Shepherd during training",
+      "image_alt": "Jacob Soos using a hand signal with a German Shepherd during training",
+      "cards": [
+        {
+          "title": "Voice & hand signals",
+          "body": "Verbal commands and hand signals build the foundation for clear, consistent communication in everyday household situations."
+        },
+        {
+          "title": "Leash pressure & structure",
+          "body": "Leash work and daily structure build dependable obedience that carries over into real walks, guests and distractions."
+        },
+        {
+          "title": "Conditioned e-collar work",
+          "body": "For dogs ready for it, properly conditioned e-collar work supports off-leash reliability and real-world control. This is discussed and agreed to as part of the program terms."
+        }
+      ]
+    },
+    "consult_prep": {
+      "eyebrow": "Bring the real-life details",
+      "headline": "What should Parrish-area owners discuss with Jacob?",
+      "body": "The consultation is the place to explain the behavior you are seeing and the life you want to share with your dog. That may include puppy foundations, leash pulling, jumping, barking, poor recall, reactivity, anxiety or another behavior-history concern.",
+      "cards": [
+        {
+          "title": "Foundations and manners",
+          "body": "Talk through your puppy or young dog's routines, socialization goals, household expectations and early obedience questions."
+        },
+        {
+          "title": "Everyday obedience",
+          "body": "Describe where communication breaks down: walks, guests, settling, recall, distractions or consistency between family members."
+        },
+        {
+          "title": "Behavior context",
+          "body": "For reactivity, fear, aggression or a bite history, honest detail helps Jacob determine whether a consultation and current program are an appropriate fit."
+        }
+      ],
+      "disclaimer": "Gator Alley is based in Parrish and speaks with owners from Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota. Nearby-area language supports discovery; it is not a ranking promise."
+    },
+    "why": {
+      "eyebrow": "Why board & train works",
+      "headline": "Clear communication, real-world exposure and personal care.",
+      "cards": [
+        {
+          "title": "Balanced training",
+          "body": "The balanced approach combines clear communication, positive reinforcement, structure, fair corrections and accountability. Training is tailored to each dog using appropriate methods and tools to build confidence, obedience and reliable behavior in the real world."
+        },
+        {
+          "title": "Real-world exposure",
+          "body": "Your dog lives in Jacob’s home—not a facility—and trains in the environments that matter most. Household routines, public settings and everyday distractions build behavior you can use at home in Parrish and beyond."
+        },
+        {
+          "title": "Jacob trains every dog",
+          "body": "Every dog is personally trained and cared for by Jacob. Your dog is never passed to inexperienced staff or unfamiliar trainers; you know who is responsible for training, care, safety and progress."
+        }
+      ]
+    },
+    "transfer": {
+      "eyebrow": "Training that transfers home",
+      "headline": "Built for daily life in Parrish and the surrounding communities.",
+      "paragraphs": [
+        "Gator Alley Dog Training is based in Parrish and serves dog owners from Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota, while also welcoming board-and-train clients from around the country.",
+        "At the end of the program, Jacob provides a detailed handover and ongoing support so owners can continue the dog’s progress at home."
+      ],
+      "cta_url": "/gator-alley-gen-test-contact",
+      "cta_label": "Request a consultation",
+      "image_url": "IMG:Jacob Soos working obedience with his German Shepherd",
+      "image_alt": "Jacob Soos working obedience with his German Shepherd"
+    },
+    "gallery": {
+      "eyebrow": "Dog training in Parrish, Florida",
+      "headline": "Impulse control, puppy training and obedience for real life.",
+      "body": "Gator Alley’s Parrish dog-training programs build practical behavior around the routines and environments that matter after dogs return home—from settling indoors to neighborhood obedience and puppy leash work.",
+      "list": [
+        {
+          "image_url": "IMG:Dogs practicing calm impulse control inside a home in Parrish, Florida",
+          "image_alt": "Dogs practicing calm impulse control inside a home in Parrish, Florida",
+          "caption": "Home-based impulse-control practice for calm behavior in Parrish, FL."
+        },
+        {
+          "image_url": "IMG:Dogs practicing socialization and impulse control outdoors in Parrish, Florida",
+          "image_alt": "Dogs practicing socialization and impulse control outdoors in Parrish, Florida",
+          "caption": "Outdoor socialization and impulse-control work around other dogs in Parrish."
+        },
+        {
+          "image_url": "IMG:Dogs holding a down command during neighborhood obedience training in Parrish, Florida",
+          "image_alt": "Dogs holding a down command during neighborhood obedience training in Parrish, Florida",
+          "caption": "Neighborhood obedience training and dependable down-stays in Parrish, FL."
+        },
+        {
+          "image_url": "IMG:Jacob Soos with a young dog during puppy training in Parrish, Florida",
+          "image_alt": "Jacob Soos with a young dog during puppy training in Parrish, Florida",
+          "caption": "Personally led puppy training with Jacob Soos in Parrish."
+        },
+        {
+          "image_url": "IMG:Young puppy practicing leash skills during puppy training in Parrish, Florida",
+          "image_alt": "Young puppy practicing leash skills during puppy training in Parrish, Florida",
+          "caption": "Puppy leash skills and confidence-building in a Parrish neighborhood."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Questions about the programs",
+      "headline": "Before you choose a program.",
+      "list": [
+        {
+          "question": "Which program is right for my dog?",
+          "answer": "The right fit depends on your dog’s current behavior, training history and goals. Start with a consultation so Jacob can discuss whether the 4-Week Board & Train or 6-Week Master Program is appropriate."
+        },
+        {
+          "question": "Where will my dog stay?",
+          "answer": "Dogs live and learn in Jacob’s real home environment in Parrish rather than a kennel facility."
+        },
+        {
+          "question": "Who works with my dog?",
+          "answer": "Jacob personally trains and cares for every dog throughout the board-and-train program."
+        },
+        {
+          "question": "Do age and breed matter?",
+          "answer": "They are part of the fit conversation, along with training history, health, behavior and household goals. Include those details when you reach out."
+        },
+        {
+          "question": "What about reactivity, anxiety or aggression?",
+          "answer": "Behavior history should be discussed candidly, including fear, aggression, reactivity or bite history. Jacob can explain what information is needed before recommending a next step."
+        },
+        {
+          "question": "Do you use e-collars or balanced training methods?",
+          "answer": "Yes—Jacob’s approach combines voice, leash cues, hand signals and properly conditioned e-collar work as part of a balanced training method. This is discussed and agreed to as part of the program terms before training begins."
+        },
+        {
+          "question": "What should I expect on format and pricing?",
+          "answer": "These are immersive board-and-train programs in a real home environment, with handover and ongoing support. Current fit, availability and program details are discussed during a consultation."
+        }
+      ]
+    },
+    "closing": {
+      "eyebrow": "Join the pack",
+      "headline": "Tell Jacob what you want to change.",
+      "body": "Share your dog’s age, breed, biggest challenge and training goals to begin the conversation.",
+      "cta_url": "/gator-alley-gen-test-contact",
+      "cta_label": "Book a free call"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "Meet your trainer",
+      "headline": "Jacob Soos, dog trainer in Parrish, Florida.",
+      "subcopy": "Gator Alley Dog Training is built around patient, consistent work and clearer communication between dogs and their families.",
+      "cta_url": "/gator-alley-gen-test-contact",
+      "cta_label": "Talk with Jacob",
+      "image_url": "IMG:Jacob Soos serving in the United States Coast Guard",
+      "image_alt": "Jacob Soos serving in the United States Coast Guard"
+    },
+    "story_blocks": [
+      {
+        "eyebrow": "From Palmetto to Parrish",
+        "headline": "A lifelong respect for dogs—and the work behind their behavior.",
+        "paragraphs": [
+          "Born and raised in Palmetto, Florida, Jacob grew up around dogs, including dogs with challenging behaviors. His training approach was shaped by years of learning how patience, consistency and clear communication change a dog’s relationship with its owner.",
+          "While serving in the U.S. Coast Guard along the Mississippi Gulf Coast, Jacob began training dogs to build experience and deepen that knowledge. Today he lives in Parrish with his wife and high-school sweetheart, Chloe, their German Shepherd Gator, and their cats Guru and Goose."
+        ],
+        "image_url": "IMG:Jacob Soos working obedience with his German Shepherd",
+        "image_alt": "Jacob Soos working obedience with his German Shepherd",
+        "reverse": false,
+        "landscape": false
+      },
+      {
+        "eyebrow": "A home environment",
+        "headline": "Your family becomes part of ours.",
+        "paragraphs": [
+          "During Board & Train, dogs live and learn in a real home environment—not a kennel. Daily structure, socialization and individualized work prepare them for the household routines and distractions that matter after they go home.",
+          "Every program ends with a detailed handover session and ongoing support so owners can confidently continue their dog’s progress."
+        ],
+        "image_url": "IMG:Jacob and Chloe walking dogs in Parrish, Florida",
+        "image_alt": "Jacob and Chloe walking dogs in Parrish, Florida",
+        "reverse": true,
+        "landscape": true
+      },
+      {
+        "eyebrow": "Five years in the U.S. Coast Guard",
+        "headline": "Discipline learned on the water, applied on the leash.",
+        "paragraphs": [
+          "Jacob served five years in the U.S. Coast Guard as a Boatswain's Mate Second Class, including search-and-rescue, law-enforcement missions and hurricane response along the Mississippi Gulf Coast. The same structure, calm and follow-through carries directly into how he trains dogs today."
+        ],
+        "image_url": "IMG:Jacob Soos in U.S. Coast Guard uniform holding service paperwork",
+        "image_alt": "Jacob Soos in U.S. Coast Guard uniform holding service paperwork",
+        "reverse": true,
+        "landscape": false
+      }
+    ],
+    "gallery": {
+      "eyebrow": "More of the story",
+      "headline": "Palmetto roots, Coast Guard discipline, Parrish home.",
+      "list": [
+        {
+          "image_url": "IMG:Portrait of Jacob Soos outdoors in Parrish, Florida",
+          "image_alt": "Portrait of Jacob Soos outdoors in Parrish, Florida",
+          "caption": "Jacob Soos, owner and trainer at Gator Alley Dog Training."
+        },
+        {
+          "image_url": "IMG:Jacob, Chloe and their dog walking together",
+          "image_alt": "Jacob, Chloe and their dog walking together",
+          "caption": "Jacob and Chloe on an evening walk with their dog."
+        },
+        {
+          "image_url": "IMG:Two German Shepherds resting near a boat",
+          "image_alt": "Two German Shepherds resting near a boat",
+          "caption": "Down time between sessions — the dogs Jacob works with every day."
+        }
+      ]
+    },
+    "philosophy": {
+      "eyebrow": "A practical training philosophy",
+      "headline": "Clear communication has to work in the places real life happens.",
+      "body": "Jacob's work is centered on helping owners understand what their dog is communicating, what the household needs to change and how to continue the work after handover. That can mean discussing puppy foundations, common obedience challenges or a more complicated behavior history before deciding which path is appropriate.",
+      "cards": [
+        {
+          "title": "Start with context",
+          "body": "Age, breed, routines, environment and past behavior all matter. A useful consultation begins with the details, not a one-size-fits-all promise."
+        },
+        {
+          "title": "Practice in the real world",
+          "body": "Home routines, people, other pets and everyday distractions are part of why the program uses a real home environment rather than a kennel facility."
+        },
+        {
+          "title": "Carry it home",
+          "body": "The handover and ongoing support are designed to help owners continue clear, consistent communication after their dog returns home."
+        }
+      ],
+      "disclaimer": "Gator Alley is based in Parrish and serves nearby owners in Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota, with nationwide board-and-train availability as secondary positioning."
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Request a consultation",
+      "headline": "Start the conversation about your dog.",
+      "subcopy": "Tell Jacob what is going on, the goals you have and which board-and-train program you are considering. Puppy foundations, common obedience challenges and behavior-history cases are all useful context to include.",
+      "image_url": "IMG:Jacob Soos and Chloe walking with their dogs in Parrish, Florida",
+      "image_alt": "Jacob Soos and Chloe walking with their dogs in Parrish, Florida"
+    },
+    "form": {
+      "eyebrow": "Consultation request",
+      "headline": "How can we help?",
+      "cta_label": "Request a consultation",
+      "note": "Preview form only—not wired for live submissions yet."
+    },
+    "location": {
+      "eyebrow": "Parrish dog training",
+      "headline": "Based in Parrish. Serving nearby owners and board-and-train clients nationwide.",
+      "body": "Gator Alley Dog Training is located at 10328 Charlotte Dr, Parrish, FL 34219. Service conversations commonly begin with owners from Parrish, Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota.",
+      "callout": "Reach out before visiting. This is a training business, not a walk-in storefront."
+    },
+    "helper": {
+      "eyebrow": "Help Jacob understand the fit",
+      "headline": "The more context you share, the more useful the first conversation can be.",
+      "cards": [
+        {
+          "title": "Your dog's profile",
+          "body": "Include age, breed, health considerations, training history and the routines that matter most in your home."
+        },
+        {
+          "title": "The challenge",
+          "body": "Share examples of leash pulling, jumping, barking, poor recall, reactivity, anxiety, fear, aggression or other behavior concerns."
+        },
+        {
+          "title": "Your location and goals",
+          "body": "Let Jacob know whether you are in Parrish, Palmetto, Ellenton, Bradenton, Lakewood Ranch, Sarasota or elsewhere and what you want daily life to feel like."
+        }
+      ],
+      "disclaimer": "The consultation form is a private preview and is not connected to the CRM yet. No submission is sent from this page."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<section class="section legal-page"><div class="wrap">
+<h1>Terms &amp; SMS Terms</h1>
+<div class="updated">{{ business.name }} &middot; last updated {{ legal_updated | default("") }}</div>
+
+<h2>SMS terms</h2>
+<p>By checking the SMS consent box on a form on this site, you agree to receive text messages
+from {{ business.name }} about your inquiry and appointments. Message frequency varies. Message
+and data rates may apply. Reply <strong>STOP</strong> to opt out at any time, or <strong>HELP</strong>
+for help. Consent is not a condition of purchase.</p>
+
+<h2>Using this site</h2>
+<p>This website is provided by {{ business.name }} to share information about our dog training
+services and to let prospective clients request a consultation. Content on this site is general
+information, not a guarantee of any specific training outcome.</p>
+
+<h2>Contact</h2>
+<p><a href="mailto:{{ business.email }}">{{ business.email }}</a> &middot;
+<a href="tel:{{ business.phone_e164 }}">{{ business.phone_display }}</a></p>
+</div></section>
+{% endblock %}

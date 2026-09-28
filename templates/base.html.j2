@@ -1,0 +1,153 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ seo.title }}</title>
+<meta name="description" content="{{ seo.description }}">
+<meta name="robots" content="{{ seo.robots | default('noindex,follow') }}">
+<link rel="canonical" href="{{ seo.canonical_url }}">
+<meta property="og:title" content="{{ seo.title }}">
+<meta property="og:description" content="{{ seo.description }}">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{{ local_business_schema | tojson }}</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap');
+{{ design_css }}
+{% if theme_css %}:root{ {{ theme_css }} }{% endif %}
+</style>
+</head><body>
+<div class="badge-strip">{{ notice_text }}</div>
+<header class="site-header"><div class="nav wrap">
+<a class="logo" href="{{ nav.home_url }}" aria-label="{{ business.name }} home">
+{% if business.logo_url %}<span class="logo-chip"><img class="logo-img" src="{{ business.logo_url }}" alt="{{ business.name }} logo"></span>{% else %}{{ business.name }}{% endif %}
+</a>
+<nav class="nav-links">
+{% for item in nav.links %}<a href="{{ item.url }}"{% if item.current %} aria-current="page"{% endif %}>{{ item.label }}</a>{% endfor %}
+</nav>
+<a class="nav-cta" href="{{ nav.cta_url }}">{{ nav.cta_label }}</a>
+</div></header>
+{% block content %}{% endblock %}
+<footer><div class="wrap">
+<div class="footer-grid">
+<div class="footer-col"><div class="foot-logo">{{ business.name }}</div>
+<p>{{ business.footer_tagline }}</p>
+<p class="fine">{{ business.legal_name }} · {{ business.address_line }}</p>
+</div>
+<div class="footer-col"><h4>Explore</h4><ul class="footer-links">
+{% for item in nav.links %}<li><a href="{{ item.url }}">{{ item.label }}</a></li>{% endfor %}
+</ul></div>
+<div class="footer-col"><h4>Get in touch</h4><ul class="footer-links">
+<li><a href="tel:{{ business.phone_e164 }}">{{ business.phone_display }}</a></li>
+<li>{{ business.hours_line }}</li>
+<li><a href="mailto:{{ business.email }}">{{ business.email }}</a></li>
+{% if business.instagram_url or business.facebook_url %}<li>{% if business.instagram_url %}<a href="{{ business.instagram_url }}">Instagram</a>{% endif %}{% if business.instagram_url and business.facebook_url %} &middot; {% endif %}{% if business.facebook_url %}<a href="{{ business.facebook_url }}">Facebook</a>{% endif %}</li>{% endif %}
+</ul></div>
+</div>
+<div class="footer-bottom"><span>&copy; {{ business.legal_name }}</span><a href="#top">Back to top &uarr;</a></div>
+</div></footer>
+<script>
+document.querySelectorAll('form.progressive-form').forEach(function(f){
+  var extra = f.querySelector('.form-extra');
+  if(!extra) return;
+  var reveal = function(){ extra.classList.add('expanded'); };
+  f.querySelectorAll('.name-row input').forEach(function(inp){
+    inp.addEventListener('input', reveal);
+    inp.addEventListener('focus', reveal);
+  });
+});
+
+// K9PN lead contract: every real form on the site posts this same JSON shape
+// to one webhook URL (site.config lead_webhook_url) — see trainer-snapshot-spec.md.
+var K9PN_WEBHOOK = {{ (business.lead_webhook_url | default("")) | tojson }};
+document.querySelectorAll('form.k9pn-lead-form').forEach(function(f){
+  var status = f.querySelector('.form-status');
+  var submitBtn = f.querySelector('[type="submit"]');
+  f.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    if(!K9PN_WEBHOOK){
+      if(status){ status.textContent = 'Preview — this form is not connected to a live CRM yet.'; status.className='form-status form-status-note'; }
+      return;
+    }
+    var fd = new FormData(f);
+    var consentBox = f.querySelector('input[name="sms_consent"]');
+    var payload = {
+      first_name: fd.get('first_name') || '', last_name: fd.get('last_name') || '',
+      email: fd.get('email') || '', phone: fd.get('phone') || '',
+      sms_consent: !!(consentBox && consentBox.checked),
+      consent_text: (consentBox && consentBox.dataset.consentText) || '',
+      consent_timestamp: new Date().toISOString(),
+      dog_name: fd.get('dog_name') || '', dog_age: fd.get('dog_age') || '',
+      service_interest: fd.get('service_interest') || '', message: fd.get('message') || '',
+      page_url: window.location.href,
+      utm_source: new URLSearchParams(window.location.search).get('utm_source') || '',
+      utm_medium: new URLSearchParams(window.location.search).get('utm_medium') || '',
+      utm_campaign: new URLSearchParams(window.location.search).get('utm_campaign') || '',
+      form_id: f.dataset.formId || 'unknown'
+    };
+    if(submitBtn){ submitBtn.disabled = true; }
+    if(status){ status.textContent = 'Sending…'; status.className='form-status'; }
+    fetch(K9PN_WEBHOOK, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)})
+      .then(function(r){ if(!r.ok) throw new Error('bad status'); f.reset(); if(status){ status.textContent = "Thanks — we'll be in touch shortly."; status.className='form-status form-status-ok'; } })
+      .catch(function(){ if(status){ status.textContent = 'Something went wrong — please call or email us directly.'; status.className='form-status form-status-err'; } })
+      .finally(function(){ if(submitBtn){ submitBtn.disabled = false; } });
+  });
+});
+
+// K9PN standard motion pack (2026-09-27) — reveal-on-scroll, header shrink, animated
+// counters, mobile sticky call/book bar. Generic selectors so this runs unmodified on
+// every client page/template; respects prefers-reduced-motion via the CSS above.
+(function(){
+  var hasIO = 'IntersectionObserver' in window;
+  var header = document.querySelector('.site-header');
+  window.addEventListener('scroll', function(){
+    if(!header) return;
+    if(window.scrollY > 60) header.classList.add('k9-shrink'); else header.classList.remove('k9-shrink');
+  }, {passive:true});
+
+  var io = hasIO ? new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('k9-in-view'); io.unobserve(e.target); }
+    });
+  }, {threshold:.15, rootMargin:'0px 0px -8% 0px'}) : null;
+
+  var revealSelectors = ['.eyebrow','h2','.program-card','.info-card','.step-card','.faq-item','.g-item','.feature-media','.founder'];
+  revealSelectors.forEach(function(sel){
+    document.querySelectorAll(sel).forEach(function(el){
+      el.classList.add('k9-reveal');
+      if(hasIO) io.observe(el); else el.classList.add('k9-in-view');
+    });
+  });
+
+  function animateCount(el){
+    var target = parseFloat(el.getAttribute('data-count'));
+    var decimals = parseInt(el.getAttribute('data-decimals')||'0',10);
+    var prefix = el.getAttribute('data-prefix')||'';
+    var suffix = el.getAttribute('data-suffix')||'';
+    var dur = 1400, start = null;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts-start)/dur, 1);
+      el.textContent = prefix + (target*p).toFixed(decimals) + suffix;
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var counters = document.querySelectorAll('[data-count]');
+  if(counters.length){ setTimeout(function(){ counters.forEach(animateCount); }, 250); }
+
+  var phone = {{ (business.phone_e164 | default("")) | tojson }};
+  var ctaUrl = {{ (nav.cta_url | default("")) | tojson }};
+  var ctaLabel = {{ (nav.cta_label | default("Book now")) | tojson }};
+  if(phone && ctaUrl){
+    var mob = document.createElement('div');
+    mob.className = 'k9-mobcta';
+    mob.innerHTML = '<div class="row"><a class="secondary" href="tel:'+phone+'">Call</a>'+
+      '<a class="primary" href="'+ctaUrl+'">'+ctaLabel+'</a></div>';
+    document.body.appendChild(mob);
+    var hero = document.querySelector('.hero');
+    window.addEventListener('scroll', function(){
+      var past = hero ? (window.scrollY > hero.offsetHeight * 0.8) : window.scrollY > 400;
+      if(past) mob.classList.add('show'); else mob.classList.remove('show');
+    }, {passive:true});
+  }
+})();
+</script>
+</body></html>

@@ -1,0 +1,65 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<section class="hero" id="top">
+  <div class="hero-bg"><img src="{{ programs.hero.image_url }}" alt="{{ programs.hero.image_alt }}" loading="eager"></div>
+  <div class="hero-inner"><div class="wrap">
+  <div class="eyebrow">{{ programs.hero.eyebrow }}</div>
+  <h1>{{ programs.hero.headline }}</h1>
+  <p class="sub">{{ programs.hero.subcopy }}</p>
+  <a class="btn-primary" href="{{ programs.hero.cta_url }}">{{ programs.hero.cta_label }}</a>
+  </div></div>
+</section>
+
+<section class="section"><div class="wrap">
+<div class="eyebrow">{{ programs.detail.eyebrow }}</div><h2>{{ programs.detail.headline }}</h2>
+<div class="cards3" style="grid-template-columns:1fr 1fr;">
+{% for p in programs.detail.list %}
+<article class="program-card"><div class="program-media"><img src="{{ p.image_url }}" alt="{{ p.image_alt }}"></div>
+<div class="copy"><div class="eyebrow">{{ p.tier_label }}</div><h3 style="font-size:22px;">{{ p.name }}</h3><p>{{ p.description }}</p>
+<ul>{% for b in p.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+<a class="btn-primary" href="{{ p.cta_url }}">{{ p.cta_label }}</a></div></article>
+{% endfor %}
+</div></div></section>
+
+<section class="section alt"><div class="wrap">
+<div class="eyebrow">{{ programs.method.eyebrow }}</div><h2>{{ programs.method.headline }}</h2><p class="lead-text">{{ programs.method.body }}</p>
+{% if programs.method.image_url %}<div class="feature-media" style="aspect-ratio:16/9;margin:20px 0;"><img src="{{ programs.method.image_url }}" alt="{{ programs.method.image_alt }}"></div>{% endif %}
+<div class="cards3">{% for c in programs.method.cards %}<div class="info-card"><h3>{{ c.title }}</h3><p>{{ c.body }}</p></div>{% endfor %}</div>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="eyebrow">{{ programs.consult_prep.eyebrow }}</div><h2>{{ programs.consult_prep.headline }}</h2><p class="lead-text">{{ programs.consult_prep.body }}</p>
+<div class="cards3">{% for c in programs.consult_prep.cards %}<div class="info-card"><h3>{{ c.title }}</h3><p>{{ c.body }}</p></div>{% endfor %}</div>
+{% if programs.consult_prep.disclaimer %}<p class="fine">{{ programs.consult_prep.disclaimer }}</p>{% endif %}
+</div></section>
+
+<section class="section alt"><div class="wrap">
+<div class="eyebrow">{{ programs.why.eyebrow }}</div><h2>{{ programs.why.headline }}</h2>
+<div class="cards3">{% for c in programs.why.cards %}<div class="info-card"><h3>{{ c.title }}</h3><p>{{ c.body }}</p></div>{% endfor %}</div>
+</div></section>
+
+<section class="section"><div class="wrap feature">
+<div><div class="eyebrow">{{ programs.transfer.eyebrow }}</div><h2>{{ programs.transfer.headline }}</h2>
+{% for para in programs.transfer.paragraphs %}<p>{{ para }}</p>{% endfor %}
+<a class="btn-primary" href="{{ programs.transfer.cta_url }}">{{ programs.transfer.cta_label }}</a></div>
+<div class="feature-media"><img src="{{ programs.transfer.image_url }}" alt="{{ programs.transfer.image_alt }}"></div>
+</div></section>
+
+{% if programs.gallery %}
+<section class="section alt"><div class="wrap">
+<div class="eyebrow">{{ programs.gallery.eyebrow }}</div><h2>{{ programs.gallery.headline }}</h2><p class="lead-text">{{ programs.gallery.body }}</p>
+<div class="gallery">
+{% for g in programs.gallery.list %}<div class="g-item"><img src="{{ g.image_url }}" alt="{{ g.image_alt }}" loading="lazy"></div>{% endfor %}
+</div></div></section>
+{% endif %}
+
+<section class="section"><div class="wrap">
+<div class="eyebrow">{{ programs.faq.eyebrow }}</div><h2>{{ programs.faq.headline }}</h2>
+{% for q in programs.faq.list %}<div class="faq-item"><h3>{{ q.question }}</h3><p>{{ q.answer }}</p></div>{% endfor %}
+</div></section>
+
+<section class="final-cta"><div class="wrap">
+<h2>{{ programs.closing.headline }}</h2><p>{{ programs.closing.body }}</p>
+<a class="btn-primary" href="{{ programs.closing.cta_url }}">{{ programs.closing.cta_label }}</a>
+</div></section>
+{% endblock %}

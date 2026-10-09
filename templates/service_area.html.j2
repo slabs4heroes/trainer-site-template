@@ -1,0 +1,53 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<section class="hero" id="top">
+  <div class="hero-bg"><img src="{{ area.hero.image_url }}" alt="{{ area.hero.image_alt }}" loading="eager"></div>
+  <div class="hero-inner"><div class="wrap">
+  <div class="eyebrow">{{ area.hero.eyebrow }}</div>
+  <h1>{{ area.hero.headline }}</h1>
+  <p class="sub">{{ area.hero.subcopy }}</p>
+  <div class="trust-strip"><span class="rating-num">{{ business.google_rating }}&#9733;</span><span class="rating-sub">{{ business.google_review_count }} Google reviews</span></div>
+  <a class="btn-primary" href="{{ area.hero.cta_url }}">{{ area.hero.cta_label }}</a>
+  </div></div>
+</section>
+
+<section class="section"><div class="wrap">
+<div class="eyebrow">{{ area.local_demand.eyebrow }}</div><h2>{{ area.local_demand.headline }}</h2>
+<p class="lead-text">{{ area.local_demand.body }}</p>
+<div class="cards3">{% for c in area.local_demand.cards %}<div class="info-card"><h3>{{ c.title }}</h3><p>{{ c.body }}</p></div>{% endfor %}</div>
+</div></section>
+
+<section class="section alt"><div class="wrap feature">
+<div><div class="eyebrow">{{ area.featured_program.eyebrow }}</div><h2>{{ area.featured_program.headline }}</h2>
+<p>{{ area.featured_program.description }}</p>
+<ul>{% for b in area.featured_program.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+<a class="btn-primary" href="{{ area.featured_program.cta_url }}">{{ area.featured_program.cta_label }}</a>
+<p class="fine" style="margin-top:14px;"><a href="/programs">See all five K9SU training programs &rarr;</a></p>
+</div>
+<div class="feature-media"><img src="{{ area.featured_program.image_url }}" alt="{{ area.featured_program.image_alt }}"></div>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="eyebrow">{{ area.why.eyebrow }}</div><h2>{{ area.why.headline }}</h2>
+<div class="cards3">{% for c in area.why.cards %}<div class="info-card"><h3>{{ c.title }}</h3><p>{{ c.body }}</p></div>{% endfor %}</div>
+</div></section>
+
+<section class="section dark"><div class="wrap">
+<div class="eyebrow">{{ area.faq.eyebrow }}</div><h2>{{ area.faq.headline }}</h2>
+{% for q in area.faq.list %}<div class="faq-item"><h3>{{ q.question }}</h3><p>{{ q.answer }}</p></div>{% endfor %}
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="eyebrow">{{ area.nearby.eyebrow }}</div><h2>{{ area.nearby.headline }}</h2>
+<p class="lead-text">{{ area.nearby.body }}</p>
+<div class="cards3">
+{% for link in area.nearby.links %}<a class="info-card" href="{{ link.url }}" style="display:block;text-decoration:none;color:inherit;"><h3>{{ link.label }}</h3><p>{{ link.body }}</p></a>{% endfor %}
+</div></div></section>
+
+<section class="section alt"><div class="wrap" style="text-align:center;">
+<h2>{{ area.cta.headline }}</h2>
+<p class="lead-text">{{ area.cta.body }}</p>
+<a class="btn-primary" href="{{ area.cta.cta_url }}">{{ area.cta.cta_label }}</a>
+<p class="fine" style="margin-top:10px;"><a href="tel:{{ business.phone_e164 }}">{{ business.phone_display }}</a></p>
+</div></section>
+{% endblock %}

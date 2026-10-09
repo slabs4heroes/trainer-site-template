@@ -1,0 +1,1373 @@
+{
+  "theme": {
+    "bg": "#F5F4F0",
+    "bg_alt": "#E9E7DF",
+    "ink": "#141210",
+    "ink_soft": "#5a5650",
+    "accent": "#A9852F",
+    "accent_ink": "#141210",
+    "card": "#ffffff",
+    "border": "#ddd8cd",
+    "font_display": "'Inter', system-ui, sans-serif",
+    "accent_text": "#ffffff"
+  },
+  "business": {
+    "name": "K9 Services Unlimited",
+    "legal_name": "K9 Services Unlimited LLC",
+    "address_line": "Loudon, TN",
+    "phone_e164": "+18654555191",
+    "phone_display": "(865) 455-5191",
+    "hours_line": "By appointment",
+    "email": "PENDING-CONFIRM@k9servicesunlimited.com",
+    "instagram_url": "https://instagram.com/k9servicesunlimited",
+    "facebook_url": "https://facebook.com/K9servicesunlimited/",
+    "footer_tagline": "Balanced dog training in Knoxville, TN & surrounding areas",
+    "google_rating": "5.0",
+    "google_review_count": 151,
+    "google_reviews_url": "https://www.google.com/search?q=K9+Services+Unlimited+Knoxville+dog+training",
+    "logo_url": "IMG:logo",
+    "city": "Loudon",
+    "state": "TN",
+    "postal_code": "",
+    "street_address": "Loudon, TN",
+    "area_served": [
+      "Knoxville, TN",
+      "Loudon, TN",
+      "Maryville, TN",
+      "Oak Ridge, TN",
+      "Lenoir City, TN",
+      "Farragut, TN"
+    ],
+    "lead_webhook_url": ""
+  },
+  "notice_text": "K9PN template rebuild \u2014 real K9 Services Unlimited copy/photos pulled from k9servicesunlimited.com \u2014 business email is a placeholder pending confirmation, form not yet connected to a CRM",
+  "nav": {
+    "home_url": "/home",
+    "cta_url": "/contact",
+    "cta_label": "Book a free consultation",
+    "links": [
+      {
+        "label": "Home",
+        "url": "/home"
+      },
+      {
+        "label": "Programs",
+        "url": "/programs"
+      },
+      {
+        "label": "About Us",
+        "url": "/about"
+      },
+      {
+        "label": "Contact",
+        "url": "/contact"
+      }
+    ],
+    "privacy_url": "/privacy",
+    "terms_url": "/terms"
+  },
+  "seo": {
+    "home": {
+      "title": "Dog Training in Knoxville, TN | K9 Services Unlimited",
+      "description": "Board and train, puppy training, behavior modification and advanced obedience in Knoxville, TN \u2014 balanced training with 5.0\u2605 from 151 reviews.",
+      "canonical_url": "https://trainer-site-template-k9su.vercel.app/home"
+    },
+    "programs": {
+      "title": "Dog Training Programs in Knoxville, TN | K9 Services Unlimited",
+      "description": "Board and Train, Puppy Training, Behavior Modification, Advanced Obedience and Behavior Rehabilitation in Knoxville, TN.",
+      "canonical_url": "https://trainer-site-template-k9su.vercel.app/programs"
+    },
+    "about": {
+      "title": "About K9 Services Unlimited | Knoxville, TN Dog Training",
+      "description": "K9 Services Unlimited LLC trains family companions and working K9s in Knoxville, TN with a balanced, structured training philosophy.",
+      "canonical_url": "https://trainer-site-template-k9su.vercel.app/about"
+    },
+    "contact": {
+      "title": "Contact K9 Services Unlimited | Knoxville, TN",
+      "description": "Schedule a free consultation with K9 Services Unlimited in Knoxville, TN \u2014 call, email, or send a message.",
+      "canonical_url": "https://trainer-site-template-k9su.vercel.app/contact"
+    },
+    "dog-training-knoxville-tn": {
+      "title": "Dog Training in Knoxville, TN | K9 Services Unlimited",
+      "description": "K9 Services Unlimited is Knoxville's balanced dog training team \u2014 board and train, puppy training, behavior modification and advanced obedience. 5.0\u2605 from 151 reviews.",
+      "canonical_url": "https://trainer-site-template-k9su.vercel.app/dog-training-knoxville-tn"
+    },
+    "dog-training-loudon-tn": {
+      "title": "Dog Training in Loudon, TN | K9 Services Unlimited",
+      "description": "K9 Services Unlimited is based right in Loudon, TN \u2014 board and train, puppy training, and behavior programs for local dogs. 5.0\u2605 from 151 reviews.",
+      "canonical_url": "https://trainer-site-template-k9su.vercel.app/dog-training-loudon-tn"
+    },
+    "dog-training-maryville-tn": {
+      "title": "Dog Obedience Training in Maryville, TN | K9 Services Unlimited",
+      "description": "Off-leash obedience and advanced training for Maryville, TN dog owners from K9 Services Unlimited. 5.0\u2605 from 151 reviews.",
+      "canonical_url": "https://trainer-site-template-k9su.vercel.app/dog-training-maryville-tn"
+    },
+    "dog-training-oak-ridge-tn": {
+      "title": "Dog Behavior Training in Oak Ridge, TN | K9 Services Unlimited",
+      "description": "Aggression, anxiety and fear behavior programs for Oak Ridge, TN dogs from K9 Services Unlimited. 5.0\u2605 from 151 reviews.",
+      "canonical_url": "https://trainer-site-template-k9su.vercel.app/dog-training-oak-ridge-tn"
+    },
+    "dog-training-lenoir-city-tn": {
+      "title": "Dog Reactivity Training in Lenoir City, TN | K9 Services Unlimited",
+      "description": "Reactivity and severe behavior rehabilitation for Lenoir City, TN dogs from K9 Services Unlimited. 5.0\u2605 from 151 reviews.",
+      "canonical_url": "https://trainer-site-template-k9su.vercel.app/dog-training-lenoir-city-tn"
+    },
+    "dog-training-farragut-tn": {
+      "title": "Puppy Training in Farragut, TN | K9 Services Unlimited",
+      "description": "Puppy training and early foundations for Farragut, TN families from K9 Services Unlimited. 5.0\u2605 from 151 reviews.",
+      "canonical_url": "https://trainer-site-template-k9su.vercel.app/dog-training-farragut-tn"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Balanced dog training \u00b7 Knoxville, TN",
+      "headline": "Building Unbreakable Bonds, One Paw At A Time.",
+      "subcopy": "K9 Services Unlimited offers customized training programs tailored to your dog's unique needs \u2014 Board and Train, Puppy Training, Behavior Modification, and Advanced Obedience \u2014 taught by trainers who've worked with over 1,000 dogs.",
+      "form_aria_label": "Dog training consultation request",
+      "form_cta": "Get my free consultation",
+      "form_question_label": "What are you looking for help with?",
+      "form_options": [
+        "Board and Train",
+        "Puppy Training",
+        "Behavior Modification",
+        "Advanced Obedience / Off-Leash",
+        "Behavior Rehabilitation",
+        "Not sure yet"
+      ],
+      "form_note": "Preview \u2014 form is not connected to a live CRM yet.",
+      "image_url": "IMG:gsd_slope",
+      "image_alt": "K9 Services Unlimited trainer sitting with a Belgian Malinois on a grassy slope, Knoxville TN",
+      "form_heading": "Schedule Your Free Consultation",
+      "form_subcopy": "Tell us about your dog and we'll come back to you."
+    },
+    "programs": {
+      "eyebrow": "Our Programs",
+      "headline": "Our Premier Dog Training Programs",
+      "list": [
+        {
+          "name": "Board and Train",
+          "short_description": "4-6 weeks of immersive, personalized training \u2014 the top choice for 90% of our clients \u2014 that builds skills that last a lifetime.",
+          "image_url": "IMG:protection_net",
+          "image_alt": "Trainer crouches behind a net facing a barking dog on a leash in an outdoor training area",
+          "link_url": "/programs",
+          "cta_label": "Ask about Board and Train"
+        },
+        {
+          "name": "Puppy Training",
+          "short_description": "Socialization, confidence building and impulse control during the critical 4-6 month development window.",
+          "image_url": "IMG:puppy_leash",
+          "image_alt": "German shepherd puppy sitting on grass, looking up at a person holding its leash",
+          "link_url": "/programs",
+          "cta_label": "Ask about Puppy Training"
+        }
+      ]
+    },
+    "audience": {
+      "eyebrow": "Sound familiar?",
+      "headline": "Is this you?",
+      "body": "Owners come to us after trying basic obedience classes with mixed results, still looking for real, lasting change.",
+      "cards": [
+        {
+          "title": "Your dog obeys at home but falls apart in public",
+          "body": "Ignores recall when something catches their attention and can't hold a stay when distractions are present."
+        },
+        {
+          "title": "Your dog shows aggression, anxiety, or fear",
+          "body": "Lunges at other dogs, reacts to strangers, or shuts down \u2014 patterns that make daily life unpredictable."
+        },
+        {
+          "title": "You want it done right, in a home environment",
+          "body": "You want a calm, structured, familiar setting \u2014 not a large facility \u2014 with trainers who've worked with over 1,000 dogs."
+        }
+      ],
+      "disclaimer": ""
+    },
+    "friction": {
+      "eyebrow": "In their own words",
+      "headline": "What owners tell us before they start",
+      "body": "The same handful of struggles come up again and again in the first call.",
+      "list": [
+        {
+          "quote": "My dog obeys at home but falls apart in public.",
+          "response": "Advanced obedience and off-leash control builds distance commands, recall under stimulus, and public neutrality through progressive distraction work."
+        },
+        {
+          "quote": "My dog lunges, shows aggression, or shuts down out of fear.",
+          "response": "Behavior rehabilitation starts with a structured evaluation to identify triggers, then rebuilds control and confidence through threshold management."
+        },
+        {
+          "quote": "I want a program built around my dog's specific needs.",
+          "response": "Every program \u2014 puppy, board and train, behavior modification \u2014 is customized, not one-size-fits-all classes."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "A simple path forward",
+      "headline": "Book. Train. Thrive.",
+      "body": "Schedule your free consultation and we'll review your dog's needs before recommending a program.",
+      "steps": [
+        {
+          "title": "Book",
+          "body": "Schedule your free consultation \u2014 tell us about your dog and what you're dealing with."
+        },
+        {
+          "title": "Train",
+          "body": "Board and Train, Puppy Training, Behavior Modification, or Advanced Obedience, built around your dog and your goals."
+        },
+        {
+          "title": "Thrive",
+          "body": "A well-behaved, confident companion \u2014 and a handler equipped with the skills to maintain progress long after training ends."
+        }
+      ]
+    },
+    "gallery": {
+      "eyebrow": "Recent Work",
+      "headline": "Some Recent Training",
+      "list": [
+        {
+          "image_url": "IMG:gsd_field",
+          "image_alt": "German shepherd standing in a sunlit field",
+          "caption": "Advanced obedience work in the field."
+        },
+        {
+          "image_url": "IMG:camp_van",
+          "image_alt": "Woman with dog beside a gray van at an outdoor campsite",
+          "caption": "Real-world training in real-world environments."
+        },
+        {
+          "image_url": "IMG:park_bench",
+          "image_alt": "Woman sits on a park bench beside a dog in a leafy autumn park",
+          "caption": "Reliable behavior in public settings."
+        },
+        {
+          "image_url": "IMG:city_walk",
+          "image_alt": "Two people walking dogs on a city street past storefronts",
+          "caption": "Training that holds up on busy downtown sidewalks."
+        }
+      ]
+    },
+    "feature": {
+      "eyebrow": "Train and Care in a Home Environment",
+      "headline": "A calm, structured, familiar setting.",
+      "body": "By training in a home environment, we create a calm, structured, familiar atmosphere that allows your dog to thrive \u2014 without the distractions of a large facility. Our skilled trainers have worked with over 1,000 dogs.",
+      "image_url": "IMG:puppy_hold",
+      "image_alt": "Brown puppy being held in the hands of a person wearing a light gray shirt",
+      "cta_url": "/contact",
+      "cta_label": "Schedule a consultation"
+    },
+    "proof": {
+      "eyebrow": "Our Reviews",
+      "headline": "Real training deserves real results.",
+      "testimonials": null,
+      "pending_title": "Client success stories pending approval",
+      "pending_body": "K9 Services Unlimited holds a 5.0 average from 151 verified Google reviews; individual client quotes/before-after media weren't part of this rebuild's scrape, so this section is left open rather than inventing testimonials."
+    },
+    "faq": {
+      "headline": "What to know before you call.",
+      "list": [
+        {
+          "question": "What areas do you serve?",
+          "answer": "Knoxville, Loudon, Maryville, Oak Ridge, Lenoir City and Farragut, TN, and all surrounding areas."
+        },
+        {
+          "question": "How long is Board and Train?",
+          "answer": "4 or 6 weeks, depending on your dog's needs \u2014 our award-winning Board and Train program is the top choice for 90% of our clients."
+        },
+        {
+          "question": "Can you help with aggression or anxiety?",
+          "answer": "Yes \u2014 our Behavior Modification and Behavior Rehabilitation programs use a holistic, structured approach to address aggressive, anxious, or fearful behavior."
+        },
+        {
+          "question": "What ages of dogs do you train?",
+          "answer": "We train puppies from the critical 4-6 month development window through adult dogs, plus specialized programs like Police K9 training."
+        },
+        {
+          "question": "Do you train in a facility or a home?",
+          "answer": "We train in a home environment \u2014 a calm, structured, familiar setting that lets your dog thrive without the distractions of a large facility."
+        }
+      ]
+    },
+    "service_area": {
+      "eyebrow": "Serving Knoxville & nearby areas",
+      "headline": "Dog training that starts in Knoxville and travels home with you.",
+      "body": "K9 Services Unlimited is based near Loudon, TN and serves Knoxville, Maryville, Oak Ridge, Lenoir City and Farragut. Every program is tailored to your dog's unique needs, regardless of breed or age.",
+      "cta_url": "/contact",
+      "cta_label": "Schedule a consultation",
+      "area_links": [
+        {
+          "label": "Knoxville",
+          "url": "/dog-training-knoxville-tn"
+        },
+        {
+          "label": "Loudon",
+          "url": "/dog-training-loudon-tn"
+        },
+        {
+          "label": "Maryville",
+          "url": "/dog-training-maryville-tn"
+        },
+        {
+          "label": "Oak Ridge",
+          "url": "/dog-training-oak-ridge-tn"
+        },
+        {
+          "label": "Lenoir City",
+          "url": "/dog-training-lenoir-city-tn"
+        },
+        {
+          "label": "Farragut",
+          "url": "/dog-training-farragut-tn"
+        }
+      ]
+    }
+  },
+  "programs": {
+    "hero": {
+      "eyebrow": "Services \u00b7 Knoxville, TN",
+      "headline": "Our Premier Dog Training Programs",
+      "subcopy": "Whether you're seeking basic obedience, behavior modification, or advanced skills, we have a program built for your dog.",
+      "cta_url": "/contact",
+      "cta_label": "Book a free consultation",
+      "image_url": "IMG:gsd_slope",
+      "image_alt": "Woman sitting with a German shepherd on a grassy slope outdoors"
+    },
+    "detail": {
+      "eyebrow": "What's included",
+      "headline": "Five programs, one balanced philosophy.",
+      "list": [
+        {
+          "tier_label": "Board and Train",
+          "name": "4-6 Week Immersive Program",
+          "description": "Your dog stays with us for 4 or 6 weeks, receiving personalized, professional training tailored to their unique needs \u2014 30+ years of expertise, the top choice for 90% of our clients.",
+          "bullets": [
+            "4 or 6 week residential program",
+            "Customized training plan per dog",
+            "Focus on your dog listening to you, not just the trainer"
+          ],
+          "image_url": "IMG:protection_net",
+          "image_alt": "Trainer crouches behind a net facing a barking dog on a leash in an outdoor training area",
+          "cta_url": "/contact",
+          "cta_label": "Ask about Board and Train"
+        },
+        {
+          "tier_label": "Puppy Training",
+          "name": "Puppy Development Program",
+          "description": "Covers crate training, potty training, nipping, sit, down, recall, leash pressure and impulse control during the critical 4-6 month development period.",
+          "bullets": [
+            "Socialization and confidence building",
+            "Correction-free, positive reinforcement approach",
+            "Prevents long-term behavioral issues"
+          ],
+          "image_url": "IMG:puppy_leash",
+          "image_alt": "German shepherd puppy sitting on grass, looking up at a person holding its leash",
+          "cta_url": "/contact",
+          "cta_label": "Ask about Puppy Training"
+        },
+        {
+          "tier_label": "Behavior Modification",
+          "name": "Aggression, Anxiety & Fear Program",
+          "description": "A holistic approach addressing aggressive, anxious, or fearful behaviors with a customized plan built on structure, boundaries and engagement.",
+          "bullets": [
+            "Managed-setting training \u2014 triggers and outcomes controlled",
+            "Consistent, controlled approach for lasting change"
+          ],
+          "image_url": "IMG:aggressive_dog",
+          "image_alt": "Black and tan dog, focused expression, dark background",
+          "cta_url": "/contact",
+          "cta_label": "Ask about Behavior Modification"
+        },
+        {
+          "tier_label": "Advanced Obedience",
+          "name": "Off-Leash Control",
+          "description": "Distance commands, extended stays, recall under stimulus and public neutrality for dogs that need full control in parks and busy environments.",
+          "bullets": [
+            "Progressive distraction work",
+            "Suitable for pet owners and dogs preparing for sport, service, or working pathways"
+          ],
+          "image_url": "IMG:gsd_field",
+          "image_alt": "German shepherd standing in a sunlit field, tongue out",
+          "cta_url": "/contact",
+          "cta_label": "Ask about Advanced Obedience"
+        },
+        {
+          "tier_label": "Behavior Rehabilitation",
+          "name": "Aggression, Reactivity & Severe Control Issues",
+          "description": "Structured evaluation, threshold management and consistent reinforcement to rebuild control, confidence and stability for unsafe or unpredictable dogs.",
+          "bullets": [
+            "Identifies root causes and behavioral triggers",
+            "Builds tolerance and confidence over time"
+          ],
+          "image_url": "IMG:field_walk",
+          "image_alt": "Trainer and black dog walking together in a grassy field",
+          "cta_url": "/contact",
+          "cta_label": "Ask about Behavior Rehabilitation"
+        }
+      ]
+    },
+    "method": {
+      "eyebrow": "How we train",
+      "headline": "A balanced, structured training philosophy.",
+      "body": "We operate with a balanced, structured training philosophy focused on clarity, consistency, and real-world application \u2014 from family companions to working K9s.",
+      "image_url": "IMG:camp_van",
+      "image_alt": "Woman with dog beside a gray van at an outdoor campsite",
+      "image_url_alt2": "IMG:city_walk",
+      "cards": [
+        {
+          "title": "Real-world environmental training",
+          "body": "Tailored to Knoxville's parks, trails and urban settings so your dog responds reliably under distraction, not just in a classroom."
+        },
+        {
+          "title": "Handler education",
+          "body": "We don't just train your dog \u2014 we train you to understand communication, timing and leadership so you can maintain the behaviors we build."
+        },
+        {
+          "title": "Full spectrum of training",
+          "body": "Pet obedience, behavior modification, sport prep, service dog development, and police K9 training."
+        }
+      ]
+    },
+    "consult_prep": {
+      "eyebrow": "Before you call",
+      "headline": "Help us understand your dog.",
+      "body": "The more context you share about your dog's history and your goals, the more useful the first conversation can be.",
+      "cards": [
+        {
+          "title": "Your dog's profile",
+          "body": "Age, breed, and daily routines."
+        },
+        {
+          "title": "The challenge",
+          "body": "Aggression, anxiety, fear, recall, or off-leash reliability goals."
+        },
+        {
+          "title": "Your goals",
+          "body": "What you want daily life with your dog to look like."
+        }
+      ],
+      "disclaimer": ""
+    },
+    "why": {
+      "eyebrow": "Why K9 Services Unlimited",
+      "headline": "Knoxville's Premier Dog Training Services.",
+      "cards": [
+        {
+          "title": "30+ years of expertise",
+          "body": "A trusted choice for pet owners across Knoxville, TN."
+        },
+        {
+          "title": "5.0 from 151 Google reviews",
+          "body": "Verified rating from clients across Knoxville and surrounding areas."
+        },
+        {
+          "title": "1,000+ dogs trained",
+          "body": "Proven techniques and a compassionate approach tailored to each dog's needs."
+        },
+        {
+          "title": "Full spectrum of programs",
+          "body": "Puppy, board and train, behavior modification, advanced obedience, and police K9 training."
+        }
+      ]
+    },
+    "transfer": {
+      "eyebrow": "What happens after training",
+      "headline": "A plan you can keep using at home.",
+      "paragraphs": [
+        "Every handler leaves equipped with the skills to maintain progress long after training ends \u2014 we train you to understand communication, timing, and leadership."
+      ],
+      "cta_url": "/contact",
+      "cta_label": "Book a free consultation",
+      "image_url": "IMG:track_rest",
+      "image_alt": "Golden retriever resting on a blue mat at an outdoor track"
+    },
+    "faq": {
+      "eyebrow": "Frequently asked questions",
+      "headline": "What to know before you call.",
+      "list": [
+        {
+          "question": "What areas do you serve?",
+          "answer": "Knoxville, Loudon, Maryville, Oak Ridge, Lenoir City and Farragut, TN, and all surrounding areas."
+        },
+        {
+          "question": "How long is Board and Train?",
+          "answer": "4 or 6 weeks, depending on your dog's needs \u2014 our award-winning Board and Train program is the top choice for 90% of our clients."
+        },
+        {
+          "question": "Can you help with aggression or anxiety?",
+          "answer": "Yes \u2014 our Behavior Modification and Behavior Rehabilitation programs use a holistic, structured approach to address aggressive, anxious, or fearful behavior."
+        },
+        {
+          "question": "What ages of dogs do you train?",
+          "answer": "We train puppies from the critical 4-6 month development window through adult dogs, plus specialized programs like Police K9 training."
+        },
+        {
+          "question": "Do you train in a facility or a home?",
+          "answer": "We train in a home environment \u2014 a calm, structured, familiar setting that lets your dog thrive without the distractions of a large facility."
+        }
+      ]
+    },
+    "closing": {
+      "headline": "Ready to build a plan for your dog?",
+      "body": "Schedule your free consultation and we'll review your dog's needs before recommending a program.",
+      "cta_url": "/contact",
+      "cta_label": "Book a free consultation"
+    },
+    "gallery": null
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "About your trainers",
+      "headline": "About K9 Services Unlimited LLC in Knoxville, TN",
+      "subcopy": "Built to serve you and your dog with a complete spectrum of training \u2014 from family companions to working K9s.",
+      "cta_url": "/contact",
+      "cta_label": "Schedule a consultation",
+      "image_url": "IMG:gsd_slope",
+      "image_alt": "Woman sitting with a German shepherd on a grassy slope outdoors"
+    },
+    "story_blocks": [
+      {
+        "eyebrow": "Built on balanced training",
+        "headline": "Real-world performance in Knoxville.",
+        "paragraphs": [
+          "When you're looking for dog training that delivers more than basic commands, you need a team that understands behavior, structure, and the demands of daily life in Knoxville, TN. K9 Services Unlimited LLC was built to serve you and your dog with a complete spectrum of training \u2014 from family companions to working K9s.",
+          "We operate with a balanced, structured training philosophy focused on clarity, consistency, and real-world application. Whether you're raising a puppy, rehabilitating a challenging behavior, or preparing a dog for professional work, we tailor our approach to produce lasting results."
+        ],
+        "image_url": "IMG:field_walk",
+        "image_alt": "Trainer and black dog walking together in a grassy field",
+        "reverse": false,
+        "landscape": false
+      },
+      {
+        "eyebrow": "Connected to the Knoxville community",
+        "headline": "From wooded trails to busy downtown sidewalks.",
+        "paragraphs": [
+          "From the rolling hills and wooded trails around Knoxville to busy downtown sidewalks and dog-friendly parks, we train dogs in the environments where they'll actually live and work. You get a dog that responds reliably under distraction, not just in a controlled classroom.",
+          "Our mission is simple: to produce stable, confident, obedient dogs that perform at home, in public, and in professional settings. Every dog we train is treated with respect, and every handler leaves equipped with the skills to maintain progress long after training ends."
+        ],
+        "image_url": "IMG:city_walk",
+        "image_alt": "Two people walking dogs on a city street past storefronts",
+        "reverse": true,
+        "landscape": true
+      }
+    ],
+    "gallery": {
+      "eyebrow": "More of the story",
+      "headline": "Knoxville roots, full-spectrum training.",
+      "list": [
+        {
+          "image_url": "IMG:puppy_hold",
+          "image_alt": "Brown puppy being held in the hands of a person wearing a light gray shirt"
+        },
+        {
+          "image_url": "IMG:camp_van",
+          "image_alt": "Woman with dog beside a gray van at an outdoor campsite"
+        },
+        {
+          "image_url": "IMG:porch_lab",
+          "image_alt": "Woman sitting on a porch rocking chair with a yellow Labrador beside her"
+        },
+        {
+          "image_url": "IMG:park_bench",
+          "image_alt": "Woman sits on a park bench beside a dog in a leafy autumn park"
+        }
+      ]
+    },
+    "philosophy": {
+      "eyebrow": "Where dog training meets handler education",
+      "headline": "Handler education, not just dog training.",
+      "body": "Our training standards emphasize reliability under distraction, environmental exposure, and handler education. We don't just train your dog \u2014 we train you to understand communication, timing, and leadership so you can maintain the behaviors we build together.",
+      "cards": [
+        {
+          "title": "Experience across every discipline",
+          "body": "Pet obedience, behavior modification, sport prep, service dogs, and police K9s."
+        },
+        {
+          "title": "Balanced training philosophy",
+          "body": "Built on clarity, structure, and consistency."
+        },
+        {
+          "title": "Comprehensive solutions",
+          "body": "Designed for dogs that need to perform in everyday life and professional roles."
+        }
+      ],
+      "disclaimer": ""
+    },
+    "gallery_x": null
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Get in touch",
+      "headline": "Schedule Your Free Consultation",
+      "subcopy": "Have a message or just want to say hello? Contact us by phone, email, or the form below.",
+      "image_url": "IMG:porch_lab",
+      "image_alt": "Woman sitting on a porch rocking chair with a yellow Labrador beside her"
+    },
+    "form": {
+      "eyebrow": "Request a consultation",
+      "headline": "Schedule Your Free Consultation",
+      "cta_label": "Get my free consultation",
+      "note": "Preview \u2014 form is not connected to a live CRM yet."
+    },
+    "location": {
+      "eyebrow": "Knoxville, TN dog training",
+      "headline": "Serving Knoxville, TN and all surrounding areas.",
+      "body": "K9 Services Unlimited works with owners across Knoxville, Loudon, Maryville, Oak Ridge, Lenoir City and Farragut.",
+      "callout": "Training happens in a home environment \u2014 get in touch to set up your consultation."
+    },
+    "helper": {
+      "eyebrow": "Help us understand the fit",
+      "headline": "The more context you share, the more useful the first conversation can be.",
+      "cards": [
+        {
+          "title": "Your dog's profile",
+          "body": "Age, breed, and the routines that matter most in your home."
+        },
+        {
+          "title": "The challenge",
+          "body": "Share examples of aggression, anxiety, reactivity, or the off-leash reliability goals you have."
+        },
+        {
+          "title": "Your location and goals",
+          "body": "Let us know your area and what you want daily life with your dog to look like."
+        }
+      ],
+      "disclaimer": "This form is a preview and is not yet connected to a live CRM."
+    }
+  },
+  "service_areas": [
+    {
+      "slug": "dog-training-knoxville-tn",
+      "town": "Knoxville, TN",
+      "url": "/dog-training-knoxville-tn",
+      "content": {
+        "hero": {
+          "eyebrow": "Primary service area",
+          "headline": "Dog Training in Knoxville, TN",
+          "subcopy": "Board and train, puppy foundations, behavior modification and advanced obedience for Knoxville families \u2014 5.0\u2605 from 151 Google reviews.",
+          "image_url": "IMG:hero",
+          "image_alt": "K9 Services Unlimited trainer working with a dog outdoors in the Knoxville, TN area",
+          "cta_url": "/contact",
+          "cta_label": "Book a free consultation"
+        },
+        "local_demand": {
+          "eyebrow": "What local dog owners search for",
+          "headline": "Real demand from the Knoxville / Knoxville-metro market",
+          "body": "Knoxville's dog training category sees real, steady local search demand \u2014 and the requests we actually get from Knoxville clients line up with it almost exactly.",
+          "cards": [
+            {
+              "title": "High local search demand",
+              "body": "\"Dog trainer\" and related searches run roughly 950/month across the Knoxville market \u2014 one of the highest-intent service categories a Knoxville dog owner searches for."
+            },
+            {
+              "title": "Board & train is the #1 ask",
+              "body": "Board & train comes up more than any other request from Knoxville dog owners \u2014 it's the program 90% of our clients choose first."
+            },
+            {
+              "title": "Obedience right behind it",
+              "body": "Obedience work (listening off-leash, around people, around other dogs) is the second most common ask we hear across the Knoxville area."
+            }
+          ]
+        },
+        "featured_program": {
+          "eyebrow": "Recommended for Knoxville dog owners",
+          "headline": "4-6 Week Immersive Program",
+          "description": "Your dog stays with us for 4 or 6 weeks, receiving personalized, professional training tailored to their unique needs \u2014 30+ years of expertise, the top choice for 90% of our clients.",
+          "bullets": [
+            "4 or 6 week residential program",
+            "Customized training plan per dog",
+            "Focus on your dog listening to you, not just the trainer"
+          ],
+          "image_url": "IMG:protection_net",
+          "image_alt": "Trainer crouches behind a net facing a barking dog on a leash in an outdoor training area",
+          "cta_url": "/contact",
+          "cta_label": "Ask about Board and Train"
+        },
+        "why": {
+          "eyebrow": "Why K9 Services Unlimited",
+          "headline": "Why Knoxville families choose K9 Services Unlimited",
+          "cards": [
+            {
+              "title": "5.0\u2605, 151 reviews",
+              "body": "A perfect rating held across every review on Google \u2014 not a handful of hand-picked testimonials."
+            },
+            {
+              "title": "30+ years of training experience",
+              "body": "Decades spent training family companions and working K9s, not a program built from a certification weekend."
+            },
+            {
+              "title": "A plan built around your dog",
+              "body": "No one-size-fits-all script \u2014 every Knoxville dog gets a plan built for its own age, breed and behavior."
+            }
+          ]
+        },
+        "faq": {
+          "eyebrow": "Frequently asked questions",
+          "headline": "Dog training questions from Knoxville owners",
+          "list": [
+            {
+              "question": "What's the most common reason Knoxville dog owners call you?",
+              "answer": "Board & train requests lead by a wide margin, followed by general obedience, leash pulling, and puppy foundations. If your dog is doing any of those, you're not dealing with anything unusual for this area."
+            },
+            {
+              "question": "Do you train specific breeds?",
+              "answer": "Yes \u2014 huskies, German Shepherds, Yorkies, goldendoodles, schnauzers and Australian Shepherds are among the most common breeds we see in the Knoxville area, alongside every other breed and mix."
+            },
+            {
+              "question": "Do you work with reactive or anxious dogs?",
+              "answer": "Yes. Reactivity, fear/nervousness and separation anxiety are regular requests from Knoxville clients, and our Behavior Modification and Behavior Rehabilitation programs are built specifically for them."
+            }
+          ]
+        },
+        "nearby": {
+          "eyebrow": "Also serving nearby",
+          "headline": "We train dogs throughout the Knoxville metro",
+          "body": "K9 Services Unlimited is based in Loudon, TN and regularly works with dog owners across the following nearby areas.",
+          "links": [
+            {
+              "label": "Loudon, TN",
+              "url": "/dog-training-loudon-tn",
+              "body": "Dog training in Loudon"
+            },
+            {
+              "label": "Maryville, TN",
+              "url": "/dog-training-maryville-tn",
+              "body": "Dog training in Maryville"
+            },
+            {
+              "label": "Oak Ridge, TN",
+              "url": "/dog-training-oak-ridge-tn",
+              "body": "Dog training in Oak Ridge"
+            },
+            {
+              "label": "Lenoir City, TN",
+              "url": "/dog-training-lenoir-city-tn",
+              "body": "Dog training in Lenoir City"
+            },
+            {
+              "label": "Farragut, TN",
+              "url": "/dog-training-farragut-tn",
+              "body": "Dog training in Farragut"
+            }
+          ]
+        },
+        "cta": {
+          "headline": "Ready to start training in Knoxville?",
+          "body": "Book a free consultation and we'll build a plan specific to your dog.",
+          "cta_url": "/contact",
+          "cta_label": "Schedule a consultation"
+        }
+      }
+    },
+    {
+      "slug": "dog-training-loudon-tn",
+      "town": "Loudon, TN",
+      "url": "/dog-training-loudon-tn",
+      "content": {
+        "hero": {
+          "eyebrow": "Knoxville metro service area",
+          "headline": "Dog Training in Loudon, TN",
+          "subcopy": "K9 Services Unlimited is based right here in Loudon \u2014 the closest full-time training team for Loudon dog owners, 5.0\u2605 from 151 reviews.",
+          "image_url": "IMG:track_rest",
+          "image_alt": "Dog resting near a track with a K9 Services Unlimited trainer nearby in Loudon, TN",
+          "cta_url": "/contact",
+          "cta_label": "Book a free consultation"
+        },
+        "local_demand": {
+          "eyebrow": "What local dog owners search for",
+          "headline": "Real demand from the Loudon / Knoxville-metro market",
+          "body": "Loudon dog owners get the advantage every local client wants: your dog's board and train program happens at our home base, not a satellite location.",
+          "cards": [
+            {
+              "title": "Home-base advantage",
+              "body": "Loudon is literally where K9 Services Unlimited operates \u2014 no drop-off drive for board and train clients who live here."
+            },
+            {
+              "title": "Board & train is the top request",
+              "body": "Across the Knoxville metro, board & train is the single most requested program \u2014 and Loudon dogs get it at the source."
+            },
+            {
+              "title": "Flexible pickup/drop-off",
+              "body": "Being based in Loudon means easier scheduling for evaluations, drop-off, and pickup day."
+            }
+          ]
+        },
+        "featured_program": {
+          "eyebrow": "Recommended for Loudon dog owners",
+          "headline": "4-6 Week Immersive Program",
+          "description": "Your dog stays with us for 4 or 6 weeks, receiving personalized, professional training tailored to their unique needs \u2014 30+ years of expertise, the top choice for 90% of our clients.",
+          "bullets": [
+            "4 or 6 week residential program",
+            "Customized training plan per dog",
+            "Focus on your dog listening to you, not just the trainer"
+          ],
+          "image_url": "IMG:protection_net",
+          "image_alt": "Trainer crouches behind a net facing a barking dog on a leash in an outdoor training area",
+          "cta_url": "/contact",
+          "cta_label": "Ask about Board and Train"
+        },
+        "why": {
+          "eyebrow": "Why K9 Services Unlimited",
+          "headline": "Why Loudon families choose K9 Services Unlimited",
+          "cards": [
+            {
+              "title": "Right in your backyard",
+              "body": "No need to drive across Knox County \u2014 we're based in Loudon."
+            },
+            {
+              "title": "5.0\u2605, 151 reviews",
+              "body": "A perfect rating across every review on Google."
+            },
+            {
+              "title": "30+ years of experience",
+              "body": "Decades of hands-on training experience with family companions and working K9s."
+            }
+          ]
+        },
+        "faq": {
+          "eyebrow": "Frequently asked questions",
+          "headline": "Dog training questions from Loudon owners",
+          "list": [
+            {
+              "question": "Are you actually based in Loudon?",
+              "answer": "Yes \u2014 K9 Services Unlimited operates out of Loudon, TN and serves the surrounding Knoxville metro."
+            },
+            {
+              "question": "What's the most popular program for local Loudon clients?",
+              "answer": "Board & train \u2014 it's the program about 90% of our clients (Loudon included) choose first."
+            },
+            {
+              "question": "Do you also offer puppy and behavior programs in Loudon?",
+              "answer": "Yes \u2014 puppy foundations, behavior modification, advanced obedience and behavior rehabilitation are all available from our Loudon base."
+            }
+          ]
+        },
+        "nearby": {
+          "eyebrow": "Also serving nearby",
+          "headline": "We train dogs throughout the Knoxville metro",
+          "body": "K9 Services Unlimited is based in Loudon, TN and regularly works with dog owners across the following nearby areas.",
+          "links": [
+            {
+              "label": "Knoxville, TN",
+              "url": "/dog-training-knoxville-tn",
+              "body": "Dog training in Knoxville"
+            },
+            {
+              "label": "Maryville, TN",
+              "url": "/dog-training-maryville-tn",
+              "body": "Dog training in Maryville"
+            },
+            {
+              "label": "Oak Ridge, TN",
+              "url": "/dog-training-oak-ridge-tn",
+              "body": "Dog training in Oak Ridge"
+            },
+            {
+              "label": "Lenoir City, TN",
+              "url": "/dog-training-lenoir-city-tn",
+              "body": "Dog training in Lenoir City"
+            },
+            {
+              "label": "Farragut, TN",
+              "url": "/dog-training-farragut-tn",
+              "body": "Dog training in Farragut"
+            }
+          ]
+        },
+        "cta": {
+          "headline": "Ready to start training in Loudon?",
+          "body": "Book a free consultation and we'll build a plan specific to your dog.",
+          "cta_url": "/contact",
+          "cta_label": "Schedule a consultation"
+        }
+      }
+    },
+    {
+      "slug": "dog-training-maryville-tn",
+      "town": "Maryville, TN",
+      "url": "/dog-training-maryville-tn",
+      "content": {
+        "hero": {
+          "eyebrow": "Knoxville metro service area",
+          "headline": "Dog Obedience Training in Maryville, TN",
+          "subcopy": "Off-leash control, public neutrality and distance commands for Maryville dogs \u2014 5.0\u2605 from 151 Google reviews.",
+          "image_url": "IMG:gsd_field",
+          "image_alt": "German shepherd practicing off-leash obedience in an open field near Maryville, TN",
+          "cta_url": "/contact",
+          "cta_label": "Book a free consultation"
+        },
+        "local_demand": {
+          "eyebrow": "What local dog owners search for",
+          "headline": "Real demand from the Maryville / Knoxville-metro market",
+          "body": "Obedience is the second most requested program across the Knoxville metro \u2014 and it's exactly what gets a dog from \"good at home\" to reliable anywhere, parks included.",
+          "cards": [
+            {
+              "title": "Obedience, consistently in demand",
+              "body": "Obedience work is the #2 most-mentioned request across the Knoxville-area market, just behind board & train."
+            },
+            {
+              "title": "Built for real-world distractions",
+              "body": "Progressive distraction work means commands hold up around people, other dogs, and public spaces \u2014 not just in a quiet yard."
+            },
+            {
+              "title": "Leash pulling addressed directly",
+              "body": "Leash pulling is one of the top behavior complaints we hear from local owners, and it's covered inside the same obedience work."
+            }
+          ]
+        },
+        "featured_program": {
+          "eyebrow": "Recommended for Maryville dog owners",
+          "headline": "Off-Leash Control",
+          "description": "Distance commands, extended stays, recall under stimulus and public neutrality for dogs that need full control in parks and busy environments.",
+          "bullets": [
+            "Progressive distraction work",
+            "Suitable for pet owners and dogs preparing for sport, service, or working pathways"
+          ],
+          "image_url": "IMG:gsd_field",
+          "image_alt": "German shepherd standing in a sunlit field, tongue out",
+          "cta_url": "/contact",
+          "cta_label": "Ask about Advanced Obedience"
+        },
+        "why": {
+          "eyebrow": "Why K9 Services Unlimited",
+          "headline": "Why Maryville families choose K9 Services Unlimited",
+          "cards": [
+            {
+              "title": "5.0\u2605, 151 reviews",
+              "body": "A perfect rating across every review on Google."
+            },
+            {
+              "title": "30+ years of experience",
+              "body": "Decades of training family companions and working K9s to a genuinely reliable standard."
+            },
+            {
+              "title": "A plan for your dog, not a script",
+              "body": "Every obedience plan is customized to your dog's age, breed and current behavior."
+            }
+          ]
+        },
+        "faq": {
+          "eyebrow": "Frequently asked questions",
+          "headline": "Dog training questions from Maryville owners",
+          "list": [
+            {
+              "question": "My dog listens at home but not outside \u2014 can you help?",
+              "answer": "Yes \u2014 that's exactly what Advanced Obedience / Off-Leash Control is built for: distance commands, recall under stimulus, and public neutrality so training holds up away from home."
+            },
+            {
+              "question": "Is leash pulling something you can fix?",
+              "answer": "Yes \u2014 leash pulling is one of the most common behavior complaints we hear from dog owners across the Knoxville area, and it's addressed directly inside our obedience training."
+            },
+            {
+              "question": "How far is Maryville from your training location?",
+              "answer": "We're based in Loudon, TN and regularly serve Maryville as part of our Knoxville-metro service area \u2014 call (865) 455-5191 to talk through scheduling."
+            }
+          ]
+        },
+        "nearby": {
+          "eyebrow": "Also serving nearby",
+          "headline": "We train dogs throughout the Knoxville metro",
+          "body": "K9 Services Unlimited is based in Loudon, TN and regularly works with dog owners across the following nearby areas.",
+          "links": [
+            {
+              "label": "Knoxville, TN",
+              "url": "/dog-training-knoxville-tn",
+              "body": "Dog training in Knoxville"
+            },
+            {
+              "label": "Loudon, TN",
+              "url": "/dog-training-loudon-tn",
+              "body": "Dog training in Loudon"
+            },
+            {
+              "label": "Oak Ridge, TN",
+              "url": "/dog-training-oak-ridge-tn",
+              "body": "Dog training in Oak Ridge"
+            },
+            {
+              "label": "Lenoir City, TN",
+              "url": "/dog-training-lenoir-city-tn",
+              "body": "Dog training in Lenoir City"
+            },
+            {
+              "label": "Farragut, TN",
+              "url": "/dog-training-farragut-tn",
+              "body": "Dog training in Farragut"
+            }
+          ]
+        },
+        "cta": {
+          "headline": "Ready to start training in Maryville?",
+          "body": "Book a free consultation and we'll build a plan specific to your dog.",
+          "cta_url": "/contact",
+          "cta_label": "Schedule a consultation"
+        }
+      }
+    },
+    {
+      "slug": "dog-training-oak-ridge-tn",
+      "town": "Oak Ridge, TN",
+      "url": "/dog-training-oak-ridge-tn",
+      "content": {
+        "hero": {
+          "eyebrow": "Knoxville metro service area",
+          "headline": "Dog Behavior Training in Oak Ridge, TN",
+          "subcopy": "A structured, holistic program for aggression, anxiety and fear in Oak Ridge dogs \u2014 5.0\u2605 from 151 Google reviews.",
+          "image_url": "IMG:aggressive_dog",
+          "image_alt": "Focused dog during a structured behavior modification session near Oak Ridge, TN",
+          "cta_url": "/contact",
+          "cta_label": "Book a free consultation"
+        },
+        "local_demand": {
+          "eyebrow": "What local dog owners search for",
+          "headline": "Real demand from the Oak Ridge / Knoxville-metro market",
+          "body": "Anxiety, fear and nervousness are among the most frequently mentioned challenges from Knoxville-area dog owners \u2014 not rare problems, and very treatable with the right structure.",
+          "cards": [
+            {
+              "title": "Anxiety is a top local concern",
+              "body": "Anxious/nervous behavior is one of the most frequently mentioned challenges among Knoxville-area dog owners."
+            },
+            {
+              "title": "A managed-setting approach",
+              "body": "Triggers and outcomes are controlled in a managed setting, not left to chance, for a consistent, lasting change."
+            },
+            {
+              "title": "Aggression handled with structure",
+              "body": "A holistic plan built on structure, boundaries and engagement \u2014 not punishment-based quick fixes."
+            }
+          ]
+        },
+        "featured_program": {
+          "eyebrow": "Recommended for Oak Ridge dog owners",
+          "headline": "Aggression, Anxiety & Fear Program",
+          "description": "A holistic approach addressing aggressive, anxious, or fearful behaviors with a customized plan built on structure, boundaries and engagement.",
+          "bullets": [
+            "Managed-setting training \u2014 triggers and outcomes controlled",
+            "Consistent, controlled approach for lasting change"
+          ],
+          "image_url": "IMG:aggressive_dog",
+          "image_alt": "Black and tan dog, focused expression, dark background",
+          "cta_url": "/contact",
+          "cta_label": "Ask about Behavior Modification"
+        },
+        "why": {
+          "eyebrow": "Why K9 Services Unlimited",
+          "headline": "Why Oak Ridge families choose K9 Services Unlimited",
+          "cards": [
+            {
+              "title": "5.0\u2605, 151 reviews",
+              "body": "A perfect rating across every review on Google."
+            },
+            {
+              "title": "30+ years of experience",
+              "body": "Decades of experience handling behavior cases other programs won't take on."
+            },
+            {
+              "title": "A customized behavior plan",
+              "body": "Every behavior case gets its own plan \u2014 never a generic script."
+            }
+          ]
+        },
+        "faq": {
+          "eyebrow": "Frequently asked questions",
+          "headline": "Dog training questions from Oak Ridge owners",
+          "list": [
+            {
+              "question": "My dog is anxious or fearful \u2014 is that something you can help with?",
+              "answer": "Yes \u2014 anxiety and fear/nervousness are among the most common challenges we hear about from Knoxville-area dog owners, and our Behavior Modification program is built specifically around them."
+            },
+            {
+              "question": "Do you take aggression cases?",
+              "answer": "Yes \u2014 our Behavior Modification program uses a structured, managed-setting approach for aggressive, anxious or fearful dogs, built on structure, boundaries and engagement."
+            },
+            {
+              "question": "Is this a quick fix?",
+              "answer": "No \u2014 real behavior change takes a consistent, controlled approach over time. We won't promise an instant fix, but we will build a plan specific to your dog."
+            }
+          ]
+        },
+        "nearby": {
+          "eyebrow": "Also serving nearby",
+          "headline": "We train dogs throughout the Knoxville metro",
+          "body": "K9 Services Unlimited is based in Loudon, TN and regularly works with dog owners across the following nearby areas.",
+          "links": [
+            {
+              "label": "Knoxville, TN",
+              "url": "/dog-training-knoxville-tn",
+              "body": "Dog training in Knoxville"
+            },
+            {
+              "label": "Loudon, TN",
+              "url": "/dog-training-loudon-tn",
+              "body": "Dog training in Loudon"
+            },
+            {
+              "label": "Maryville, TN",
+              "url": "/dog-training-maryville-tn",
+              "body": "Dog training in Maryville"
+            },
+            {
+              "label": "Lenoir City, TN",
+              "url": "/dog-training-lenoir-city-tn",
+              "body": "Dog training in Lenoir City"
+            },
+            {
+              "label": "Farragut, TN",
+              "url": "/dog-training-farragut-tn",
+              "body": "Dog training in Farragut"
+            }
+          ]
+        },
+        "cta": {
+          "headline": "Ready to start training in Oak Ridge?",
+          "body": "Book a free consultation and we'll build a plan specific to your dog.",
+          "cta_url": "/contact",
+          "cta_label": "Schedule a consultation"
+        }
+      }
+    },
+    {
+      "slug": "dog-training-lenoir-city-tn",
+      "town": "Lenoir City, TN",
+      "url": "/dog-training-lenoir-city-tn",
+      "content": {
+        "hero": {
+          "eyebrow": "Knoxville metro service area",
+          "headline": "Dog Reactivity & Behavior Rehabilitation in Lenoir City, TN",
+          "subcopy": "Structured rehabilitation for reactive, unsafe or unpredictable dogs near Lenoir City \u2014 5.0\u2605 from 151 Google reviews.",
+          "image_url": "IMG:field_walk",
+          "image_alt": "Trainer and dog walking together in a field near Lenoir City, TN",
+          "cta_url": "/contact",
+          "cta_label": "Book a free consultation"
+        },
+        "local_demand": {
+          "eyebrow": "What local dog owners search for",
+          "headline": "Real demand from the Lenoir City / Knoxville-metro market",
+          "body": "Reactivity is one of the most frequently mentioned behavior challenges from dog owners across the Knoxville metro \u2014 and it's exactly where a structured rehabilitation plan makes the difference.",
+          "cards": [
+            {
+              "title": "Reactivity, a top local request",
+              "body": "Reactivity is one of the most frequently mentioned behavior challenges among Knoxville-area dog owners."
+            },
+            {
+              "title": "Root-cause focused",
+              "body": "Structured evaluation and threshold management identify root causes and triggers instead of just managing symptoms."
+            },
+            {
+              "title": "Built for unsafe or unpredictable dogs",
+              "body": "Consistent reinforcement rebuilds control, confidence and stability for dogs other programs have turned away."
+            }
+          ]
+        },
+        "featured_program": {
+          "eyebrow": "Recommended for Lenoir City dog owners",
+          "headline": "Aggression, Reactivity & Severe Control Issues",
+          "description": "Structured evaluation, threshold management and consistent reinforcement to rebuild control, confidence and stability for unsafe or unpredictable dogs.",
+          "bullets": [
+            "Identifies root causes and behavioral triggers",
+            "Builds tolerance and confidence over time"
+          ],
+          "image_url": "IMG:field_walk",
+          "image_alt": "Trainer and black dog walking together in a grassy field",
+          "cta_url": "/contact",
+          "cta_label": "Ask about Behavior Rehabilitation"
+        },
+        "why": {
+          "eyebrow": "Why K9 Services Unlimited",
+          "headline": "Why Lenoir City families choose K9 Services Unlimited",
+          "cards": [
+            {
+              "title": "5.0\u2605, 151 reviews",
+              "body": "A perfect rating across every review on Google."
+            },
+            {
+              "title": "30+ years of experience",
+              "body": "Decades of experience with the hardest behavior cases, not just basic manners."
+            },
+            {
+              "title": "A plan built for your dog's safety",
+              "body": "Threshold management and consistent reinforcement, customized to your dog's specific triggers."
+            }
+          ]
+        },
+        "faq": {
+          "eyebrow": "Frequently asked questions",
+          "headline": "Dog training questions from Lenoir City owners",
+          "list": [
+            {
+              "question": "My dog reacts to other dogs or people \u2014 can you help?",
+              "answer": "Yes \u2014 reactivity is one of the most common behavior challenges we hear about from dog owners across the Knoxville area, and Behavior Rehabilitation is built specifically to rebuild control and confidence around it."
+            },
+            {
+              "question": "Is my dog's case too severe?",
+              "answer": "We regularly work with unsafe or unpredictable dogs through a structured evaluation and threshold-management process \u2014 call us to talk through your dog's specific situation before assuming it's beyond help."
+            },
+            {
+              "question": "How far is Lenoir City from your location?",
+              "answer": "We're based in Loudon, TN and regularly serve Lenoir City as part of our Knoxville-metro service area \u2014 call (865) 455-5191 to talk through scheduling."
+            }
+          ]
+        },
+        "nearby": {
+          "eyebrow": "Also serving nearby",
+          "headline": "We train dogs throughout the Knoxville metro",
+          "body": "K9 Services Unlimited is based in Loudon, TN and regularly works with dog owners across the following nearby areas.",
+          "links": [
+            {
+              "label": "Knoxville, TN",
+              "url": "/dog-training-knoxville-tn",
+              "body": "Dog training in Knoxville"
+            },
+            {
+              "label": "Loudon, TN",
+              "url": "/dog-training-loudon-tn",
+              "body": "Dog training in Loudon"
+            },
+            {
+              "label": "Maryville, TN",
+              "url": "/dog-training-maryville-tn",
+              "body": "Dog training in Maryville"
+            },
+            {
+              "label": "Oak Ridge, TN",
+              "url": "/dog-training-oak-ridge-tn",
+              "body": "Dog training in Oak Ridge"
+            },
+            {
+              "label": "Farragut, TN",
+              "url": "/dog-training-farragut-tn",
+              "body": "Dog training in Farragut"
+            }
+          ]
+        },
+        "cta": {
+          "headline": "Ready to start training in Lenoir City?",
+          "body": "Book a free consultation and we'll build a plan specific to your dog.",
+          "cta_url": "/contact",
+          "cta_label": "Schedule a consultation"
+        }
+      }
+    },
+    {
+      "slug": "dog-training-farragut-tn",
+      "town": "Farragut, TN",
+      "url": "/dog-training-farragut-tn",
+      "content": {
+        "hero": {
+          "eyebrow": "Knoxville metro service area",
+          "headline": "Puppy Training in Farragut, TN",
+          "subcopy": "Crate training, potty training, socialization and foundations during your puppy's critical window \u2014 5.0\u2605 from 151 Google reviews.",
+          "image_url": "IMG:puppy_hold",
+          "image_alt": "Puppy training session with a K9 Services Unlimited trainer near Farragut, TN",
+          "cta_url": "/contact",
+          "cta_label": "Book a free consultation"
+        },
+        "local_demand": {
+          "eyebrow": "What local dog owners search for",
+          "headline": "Real demand from the Farragut / Knoxville-metro market",
+          "body": "\"Puppy training\" is one of the highest-intent searches a Knoxville-area dog owner runs \u2014 families start looking the moment a new puppy comes home, and starting early matters.",
+          "cards": [
+            {
+              "title": "High-intent local search",
+              "body": "Puppy training searches run roughly 880/month across the Knoxville market \u2014 one of the most active categories a new puppy owner searches."
+            },
+            {
+              "title": "A real local request",
+              "body": "Puppy training is one of the most frequently mentioned requests from Knoxville-area dog owners, and it comes up across the widest range of businesses in the market."
+            },
+            {
+              "title": "The 4-6 month window matters",
+              "body": "Our Puppy Development Program is timed to the critical 4-6 month development period, before bad habits set in."
+            }
+          ]
+        },
+        "featured_program": {
+          "eyebrow": "Recommended for Farragut dog owners",
+          "headline": "Puppy Development Program",
+          "description": "Covers crate training, potty training, nipping, sit, down, recall, leash pressure and impulse control during the critical 4-6 month development period.",
+          "bullets": [
+            "Socialization and confidence building",
+            "Correction-free, positive reinforcement approach",
+            "Prevents long-term behavioral issues"
+          ],
+          "image_url": "IMG:puppy_leash",
+          "image_alt": "German shepherd puppy sitting on grass, looking up at a person holding its leash",
+          "cta_url": "/contact",
+          "cta_label": "Ask about Puppy Training"
+        },
+        "why": {
+          "eyebrow": "Why K9 Services Unlimited",
+          "headline": "Why Farragut families choose K9 Services Unlimited",
+          "cards": [
+            {
+              "title": "5.0\u2605, 151 reviews",
+              "body": "A perfect rating across every review on Google."
+            },
+            {
+              "title": "Correction-free puppy approach",
+              "body": "Socialization and confidence-building through a positive reinforcement approach, not corrections."
+            },
+            {
+              "title": "Prevents problems before they start",
+              "body": "Early foundations work heads off long-term behavioral issues, not just basic commands."
+            }
+          ]
+        },
+        "faq": {
+          "eyebrow": "Frequently asked questions",
+          "headline": "Dog training questions from Farragut owners",
+          "list": [
+            {
+              "question": "When should I start training my puppy?",
+              "answer": "As early as possible \u2014 our Puppy Development Program is built around the critical 4-6 month window, covering crate training, potty training, nipping, sit/down/recall, leash pressure and impulse control."
+            },
+            {
+              "question": "Is puppy training in demand in the Farragut area?",
+              "answer": "Yes \u2014 puppy training is one of the highest-volume, highest-intent searches across the whole Knoxville metro, and one of the most common requests we get from local families."
+            },
+            {
+              "question": "Do you also handle other programs once my puppy grows up?",
+              "answer": "Yes \u2014 board & train, advanced obedience, behavior modification and behavior rehabilitation are all available as your dog grows."
+            }
+          ]
+        },
+        "nearby": {
+          "eyebrow": "Also serving nearby",
+          "headline": "We train dogs throughout the Knoxville metro",
+          "body": "K9 Services Unlimited is based in Loudon, TN and regularly works with dog owners across the following nearby areas.",
+          "links": [
+            {
+              "label": "Knoxville, TN",
+              "url": "/dog-training-knoxville-tn",
+              "body": "Dog training in Knoxville"
+            },
+            {
+              "label": "Loudon, TN",
+              "url": "/dog-training-loudon-tn",
+              "body": "Dog training in Loudon"
+            },
+            {
+              "label": "Maryville, TN",
+              "url": "/dog-training-maryville-tn",
+              "body": "Dog training in Maryville"
+            },
+            {
+              "label": "Oak Ridge, TN",
+              "url": "/dog-training-oak-ridge-tn",
+              "body": "Dog training in Oak Ridge"
+            },
+            {
+              "label": "Lenoir City, TN",
+              "url": "/dog-training-lenoir-city-tn",
+              "body": "Dog training in Lenoir City"
+            }
+          ]
+        },
+        "cta": {
+          "headline": "Ready to start training in Farragut?",
+          "body": "Book a free consultation and we'll build a plan specific to your dog.",
+          "cta_url": "/contact",
+          "cta_label": "Schedule a consultation"
+        }
+      }
+    }
+  ]
+}

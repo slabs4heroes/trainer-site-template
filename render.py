@@ -38,7 +38,7 @@ def resolve_images(node, images):
     return node
 
 
-def build_schema(pack, page_key):
+def build_schema(pack, page_key, area_served_override=None):
     biz = pack["business"]
     seo = pack["seo"][page_key]
     return {
@@ -59,7 +59,7 @@ def build_schema(pack, page_key):
                 "postalCode": biz["postal_code"],
                 "addressCountry": "US",
             },
-            "areaServed": biz["area_served"],
+            "areaServed": area_served_override or biz["area_served"],
         },
     }
 
@@ -70,6 +70,8 @@ PAGES = {
     "about": "about.html.j2",
     "contact": "contact.html.j2",
 }
+
+SERVICE_AREA_TEMPLATE = "service_area.html.j2"
 
 # Fixed legal pages: same boilerplate (A2P/SMS consent language) every client needs,
 # filled only from business.* fields — never authored per-client, never in content_pack
@@ -160,6 +162,12 @@ def main():
         "Reply STOP to opt out, HELP for help. Consent is not a condition of purchase."
     )
 
+    # Footer "Service areas" list, shared by every page (home/programs/about/contact,
+    # legal pages, and the area pages themselves) — see trainer-snapshot-spec.md 1a.
+    footer_areas = [
+        {"town": a["town"], "url": a["url"]} for a in pack.get("service_areas", [])
+    ]
+
     for page_key, template_name in PAGES.items():
         tpl = env.get_template(template_name)
         ctx = dict(pack)
@@ -168,6 +176,7 @@ def main():
         ctx["sms_consent_text"] = sms_consent_text
         ctx["seo"] = pack["seo"][page_key]
         ctx["local_business_schema"] = build_schema(pack, page_key)
+        ctx["service_areas"] = footer_areas
         # mark the current-page nav link so the header highlights it correctly per page
         nav = dict(pack["nav"])
         nav["links"] = [
@@ -177,6 +186,26 @@ def main():
         ctx["nav"] = nav
         html = tpl.render(**ctx)
         out_path = out_dir / f"{page_key}.html"
+        out_path.write_text(html)
+        print(f"wrote {out_path} ({len(html)} bytes)")
+
+    # Service-area pages (one per town in pack["service_areas"]) — the biggest ranking
+    # lever an SEO audit usually finds missing on a trainer site (trainer-snapshot-spec.md 1a).
+    for area in pack.get("service_areas", []):
+        tpl = env.get_template(SERVICE_AREA_TEMPLATE)
+        ctx = dict(pack)
+        ctx["design_css"] = design_css
+        ctx["theme_css"] = theme_css
+        ctx["sms_consent_text"] = sms_consent_text
+        ctx["area"] = area["content"]
+        ctx["seo"] = pack["seo"][area["slug"]]
+        ctx["local_business_schema"] = build_schema(pack, area["slug"], area_served_override=[area["town"]])
+        ctx["service_areas"] = footer_areas
+        nav = dict(pack["nav"])
+        nav["links"] = [{**link, "current": False} for link in pack["nav"]["links"]]
+        ctx["nav"] = nav
+        html = tpl.render(**ctx)
+        out_path = out_dir / f"{area['slug']}.html"
         out_path.write_text(html)
         print(f"wrote {out_path} ({len(html)} bytes)")
 
@@ -198,6 +227,7 @@ def main():
         }
         ctx["seo"] = legal_seo
         ctx["local_business_schema"] = build_schema({**pack, "seo": {**pack["seo"], page_key: legal_seo}}, page_key)
+        ctx["service_areas"] = footer_areas
         nav = dict(pack["nav"])
         nav["links"] = [{**link, "current": False} for link in pack["nav"]["links"]]
         ctx["nav"] = nav
@@ -205,6 +235,25 @@ def main():
         out_path = out_dir / f"{page_key}.html"
         out_path.write_text(html)
         print(f"wrote {out_path} ({len(html)} bytes)")
+
+    # sitemap.xml + robots.txt — a standing gap in the template until this build (see
+    # trainer-snapshot-spec.md 1a: "clean sitemap.xml + robots.txt per client, no leftover
+    # demo/template pages indexed"). Lists the real content pages only (not legal pages).
+    site_root = pack["seo"]["home"]["canonical_url"].rsplit("/", 1)[0]
+    sitemap_urls = [pack["seo"][k]["canonical_url"] for k in PAGES]
+    sitemap_urls += [pack["seo"][a["slug"]]["canonical_url"] for a in pack.get("service_areas", [])]
+    sitemap_xml = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "".join(f"  <url><loc>{u}</loc></url>\n" for u in sitemap_urls)
+        + "</urlset>\n"
+    )
+    (out_dir / "sitemap.xml").write_text(sitemap_xml)
+    print(f"wrote {out_dir / 'sitemap.xml'} ({len(sitemap_urls)} urls)")
+
+    robots_txt = f"User-agent: *\nAllow: /\nSitemap: {site_root}/sitemap.xml\n"
+    (out_dir / "robots.txt").write_text(robots_txt)
+    print(f"wrote {out_dir / 'robots.txt'}")
 
 
 if __name__ == "__main__":

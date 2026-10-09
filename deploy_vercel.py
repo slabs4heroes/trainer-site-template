@@ -77,6 +77,11 @@ async def deploy(site_dir: str, project_name: str, prod: bool = False, inline: b
         {"src": "/about", "dest": "/about.html"},
         {"src": "/contact", "dest": "/contact.html"},
     ]
+    # Service-area pages (one per town) — any file named "dog-training-*.html" in
+    # site_dir gets its own pretty route automatically, so new towns need no edit here.
+    for p in sorted(site_path.glob("dog-training-*.html")):
+        slug = p.stem
+        routes.append({"src": f"/{slug}", "dest": f"/{slug}.html"})
     body = {
         "name": project_name,
         "target": "production" if prod else "staging",

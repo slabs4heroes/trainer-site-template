@@ -94,6 +94,11 @@
 <section class="final-cta"><div class="wrap">
 <h2>{{ home.service_area.headline }}</h2>
 <p>{{ home.service_area.body }}</p>
+{% if home.service_area.area_links %}
+<div class="area-link-row" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px 0;">
+{% for link in home.service_area.area_links %}<a class="btn-secondary" style="border:1px solid var(--border);border-radius:999px;padding:8px 18px;font-size:14px;text-decoration:none;color:inherit;" href="{{ link.url }}">{{ link.label }}</a>{% endfor %}
+</div>
+{% endif %}
 <a class="btn-primary" href="{{ home.service_area.cta_url }}">{{ home.service_area.cta_label }}</a>
 </div></section>
 {% endblock %}

@@ -1,0 +1,16 @@
+{
+  "logo": "/images/logo.png",
+  "hero": "/images/hero.jpg",
+  "gsd_field": "/images/gsd_field.jpg",
+  "puppy_leash": "/images/puppy_leash.jpg",
+  "puppy_hold": "/images/puppy_hold.jpg",
+  "protection_net": "/images/protection_net.jpg",
+  "aggressive_dog": "/images/aggressive_dog.jpg",
+  "gsd_slope": "/images/gsd_slope.jpg",
+  "camp_van": "/images/camp_van.jpg",
+  "park_bench": "/images/park_bench.jpg",
+  "field_walk": "/images/field_walk.jpg",
+  "city_walk": "/images/city_walk.jpg",
+  "track_rest": "/images/track_rest.jpg",
+  "porch_lab": "/images/porch_lab.jpg"
+}

@@ -72,6 +72,7 @@ PAGES = {
 }
 
 SERVICE_AREA_TEMPLATE = "service_area.html.j2"
+AREAS_SERVED_TEMPLATE = "areas_served.html.j2"
 
 # Fixed legal pages: same boilerplate (A2P/SMS consent language) every client needs,
 # filled only from business.* fields — never authored per-client, never in content_pack
@@ -105,8 +106,10 @@ def validate_pack(pack, images, publish=False):
             errors.append(f"seo.{page}.canonical_url must be HTTPS")
         if not pack.get(page) or not (pack[page].get("hero") or {}).get("headline"):
             errors.append(f"{page}.hero.headline is required")
-    if len(links) != len(PAGES) or len({x.get("url") for x in links if isinstance(x, dict)}) != len(PAGES):
-        errors.append("nav.links must contain four distinct page URLs")
+    link_urls = {x.get("url") for x in links if isinstance(x, dict)}
+    required_urls = {f"/{p}" if p != "home" else nav.get("home_url", "/home") for p in PAGES}
+    if len(link_urls) != len(links) or not required_urls.issubset(link_urls):
+        errors.append("nav.links must contain the four core page URLs (duplicates not allowed); extra links (e.g. areas-served) are fine")
 
     def walk(node, label="pack"):
         if isinstance(node, dict):
@@ -209,6 +212,36 @@ def main():
         out_path.write_text(html)
         print(f"wrote {out_path} ({len(html)} bytes)")
 
+    # Combined "Areas Served" page — one page listing every town in pack["service_areas"],
+    # each summarized with its real stats and linking to its own full service-area page.
+    if pack.get("service_areas"):
+        tpl = env.get_template(AREAS_SERVED_TEMPLATE)
+        ctx = dict(pack)
+        ctx["design_css"] = design_css
+        ctx["theme_css"] = theme_css
+        ctx["sms_consent_text"] = sms_consent_text
+        ctx["areas"] = pack["service_areas"]
+        areas_seo = {
+            "title": f"Areas We Serve | {pack['business']['name']}",
+            "description": f"{pack['business']['name']} serves {', '.join(a['town'] for a in pack['service_areas'])}.",
+            "canonical_url": pack["seo"]["home"]["canonical_url"].rsplit("/", 1)[0] + "/areas-served",
+            "robots": "index,follow",
+        }
+        ctx["seo"] = areas_seo
+        ctx["local_business_schema"] = build_schema(
+            {**pack, "seo": {**pack["seo"], "areas-served": areas_seo}},
+            "areas-served",
+            area_served_override=[a["town"] for a in pack["service_areas"]],
+        )
+        ctx["service_areas"] = footer_areas
+        nav = dict(pack["nav"])
+        nav["links"] = [{**link, "current": link.get("url") == "/areas-served"} for link in pack["nav"]["links"]]
+        ctx["nav"] = nav
+        html = tpl.render(**ctx)
+        out_path = out_dir / "areas-served.html"
+        out_path.write_text(html)
+        print(f"wrote {out_path} ({len(html)} bytes)")
+
     # Fixed legal pages — same context shape, no page-specific content-pack section required.
     from datetime import date
     legal_updated = date.today().strftime("%B %-d, %Y")
@@ -242,6 +275,8 @@ def main():
     site_root = pack["seo"]["home"]["canonical_url"].rsplit("/", 1)[0]
     sitemap_urls = [pack["seo"][k]["canonical_url"] for k in PAGES]
     sitemap_urls += [pack["seo"][a["slug"]]["canonical_url"] for a in pack.get("service_areas", [])]
+    if pack.get("service_areas"):
+        sitemap_urls.append(site_root + "/areas-served")
     sitemap_xml = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

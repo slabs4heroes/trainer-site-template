@@ -1,0 +1,35 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<section class="hero" id="top">
+  <div class="hero-bg"><img src="{{ business.logo_url }}" alt="{{ business.name }} service area map" loading="eager"></div>
+  <div class="hero-inner"><div class="wrap">
+  <div class="eyebrow">Greater Knoxville metro</div>
+  <h1>Areas We Serve</h1>
+  <p class="sub">{{ business.name }} trains dogs across the greater Knoxville, TN metro &mdash; {{ areas | map(attribute="town") | join(", ") }}. Pick your town below for local reviews, demand data, and the program most dog owners there choose first.</p>
+  <div class="trust-strip"><span class="rating-num">{{ business.google_rating }}&#9733;</span><span class="rating-sub">{{ business.google_review_count }} Google reviews</span></div>
+  <a class="btn-primary" href="{{ nav.cta_url }}">{{ nav.cta_label }}</a>
+  </div></div>
+</section>
+
+<section class="section"><div class="wrap">
+<div class="eyebrow">{{ areas | length }} towns served</div>
+<h2>Find your town</h2>
+<div class="cards3">
+{% for a in areas %}
+<a class="info-card" href="{{ a.url }}" style="display:block;text-decoration:none;color:inherit;">
+<h3>{{ a.town }}</h3>
+<p>{{ a.content.hero.subcopy }}</p>
+<p><strong>{{ a.content.why.cards[0].title }}</strong> &mdash; {{ a.content.why.cards[0].body }}</p>
+<p class="fine">View the {{ a.town }} page &rarr;</p>
+</a>
+{% endfor %}
+</div>
+</div></section>
+
+<section class="section alt" style="text-align:center;"><div class="wrap">
+<h2>Not sure which town fits your dog's training plan?</h2>
+<p class="lead-text">Every area above gets the same 30+ years of experience, the same {{ business.google_rating }}&#9733; standard, and the same programs &mdash; we'll point you to the right one.</p>
+<a class="btn-primary" href="{{ nav.cta_url }}">{{ nav.cta_label }}</a>
+<p class="fine" style="margin-top:10px;"><a href="tel:{{ business.phone_e164 }}">{{ business.phone_display }}</a></p>
+</div></section>
+{% endblock %}

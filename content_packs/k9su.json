@@ -55,6 +55,10 @@
         "url": "/programs"
       },
       {
+        "label": "Areas Served",
+        "url": "/areas-served"
+      },
+      {
         "label": "About Us",
         "url": "/about"
       },

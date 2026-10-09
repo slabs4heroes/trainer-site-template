@@ -76,6 +76,7 @@ async def deploy(site_dir: str, project_name: str, prod: bool = False, inline: b
         {"src": "/programs", "dest": "/programs.html"},
         {"src": "/about", "dest": "/about.html"},
         {"src": "/contact", "dest": "/contact.html"},
+        {"src": "/areas-served", "dest": "/areas-served.html"},
     ]
     # Service-area pages (one per town) — any file named "dog-training-*.html" in
     # site_dir gets its own pretty route automatically, so new towns need no edit here.

@@ -34,12 +34,21 @@ manifest, deployed to its own Vercel project.
 - `scrape_client_site.py` — crawls a client's existing site to pull real copy/photos
   before rebuilding.
 
+## Service-area pages (built 2026-10-09)
+Add a `service_areas` list to the content pack (one entry per town: `slug`, `town`, `content` —
+see `content_packs/k9su.json` for a worked example with 6 Knoxville-metro towns) plus a matching
+`seo.<slug>` entry each. `render.py` loops over it automatically and renders each with
+`templates/service_area.html.j2`; `deploy_vercel.py` auto-adds a pretty route for every
+`dog-training-*.html` file in the output dir. Every page also gets a shared "Service areas" footer
+column and the homepage's `home.service_area.area_links` cross-links to all of them. `render.py` also
+now writes `sitemap.xml` + `robots.txt`. Don't invent per-town facts the client/market-intel data
+doesn't have — differentiate each town's page by assigning a different one of the client's real
+programs + real metro-level demand data instead of swapping the city name over identical copy.
+
 ## Known gaps / open items
 - GitHub repo was previously blocked from auto-creation by the connected GitHub App's
   permissions (`Resource not accessible by integration`) — this repo was created
   manually by Mike; code push works fine once the repo exists.
-- Per-page SEO detail (unique title/meta/H1/canonical/OG image per page, LocalBusiness
-  schema, service-area pages) is not yet built into the shared templates.
 - Vercel deploys are currently inline/API-based (`deploy_vercel.py`), not linked to
   this GitHub repo for auto-deploy-on-push — pushing here is for version control/backup,
   not yet the deploy trigger.

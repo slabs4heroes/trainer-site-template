@@ -181,6 +181,10 @@ def home():
                 schema(faq_ld)) + header() + f'''
 <main id="main">
 <section class="hero hero-photo"><div class="hphoto" style="aspect-ratio:{w01}/{h01}"><img src="/assets/img01.jpg" alt="Jacob Soos and Chloe walking their dogs in Parrish, Florida" width="{w01}" height="{h01}" fetchpriority="high"></div>
+<div class="fx" aria-hidden="true"><div class="rays" data-speed=".03"></div><div class="sunglow"></div>
+<img class="palm p1" src="/assets/palm.svg" alt="" width="760" height="560" data-speed=".08"><img class="palm p2" src="/assets/palm.svg" alt="" width="760" height="560" data-speed=".14">
+<svg class="gull g1" viewBox="0 0 48 20"><path d="M2 14 Q12 0 24 12 Q36 0 46 14" fill="none" stroke="#0b2e3a" stroke-width="2.2" stroke-linecap="round"/></svg><svg class="gull g2" viewBox="0 0 48 20"><path d="M2 14 Q12 0 24 12 Q36 0 46 14" fill="none" stroke="#0b2e3a" stroke-width="2.2" stroke-linecap="round"/></svg><svg class="gull g3" viewBox="0 0 48 20"><path d="M2 14 Q12 0 24 12 Q36 0 46 14" fill="none" stroke="#0b2e3a" stroke-width="2.2" stroke-linecap="round"/></svg>
+<div class="waves"><i class="wa"></i><i class="wb"></i><i class="wc"></i></div></div>
 <div class="wrap hero-copy"><div class="status fade"><i></i>Dog training in Parrish, Florida</div>
 <h1><span class="ln"><span>Reliable obedience</span></span><span class="ln"><span>built for <span class="swash">real life<svg viewBox="0 0 300 6" preserveAspectRatio="none" aria-hidden="true"><path d="M0 3 H300"/></svg></span>.</span></span></h1>
 <p class="lede fade">Gator Alley Dog Training offers personally led board-and-train programs for owners who want calm, trustworthy and obedient dogs.</p>

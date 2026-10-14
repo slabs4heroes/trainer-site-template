@@ -75,6 +75,15 @@
         r.addEventListener('mouseleave', function () { peek.classList.remove('on'); run = false; });
       });
     }
+    /* 3D tilt + light on cards */
+    $('.pcard,.hero-card').forEach(function (c) {
+      c.addEventListener('mousemove', function (e) {
+        var r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        c.style.setProperty('--mx', (x * 100) + '%'); c.style.setProperty('--my', (y * 100) + '%');
+        c.style.transform = 'perspective(900px) rotateX(' + ((.5 - y) * 7).toFixed(2) + 'deg) rotateY(' + ((x - .5) * 9).toFixed(2) + 'deg) translateY(-6px)';
+      });
+      c.addEventListener('mouseleave', function () { c.style.transform = ''; });
+    });
     /* magnetic buttons */
     $('.btn').forEach(function (b) {
       b.addEventListener('mousemove', function (e) { var r = b.getBoundingClientRect(); b.style.transform = 'translate(' + ((e.clientX - r.left - r.width / 2) * .12).toFixed(1) + 'px,' + ((e.clientY - r.top - r.height / 2) * .22).toFixed(1) + 'px)'; });

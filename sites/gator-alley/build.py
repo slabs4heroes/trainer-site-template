@@ -217,7 +217,7 @@ def home():
 <section class="section" id="faq" style="padding-top:0"><div class="wrap faq-grid"><div class="rv"><h2>Frequently asked questions</h2></div><div>{faq}</div></div></section>
 <section class="section" id="area" style="padding-top:0"><div class="wrap area-grid"><div class="rv"><h2>Serving Parrish &amp; nearby areas</h2><p class="lede" style="margin-top:20px">Gator Alley is based in Parrish and serves owners in {", ".join(AREAS[1:-1])} and {AREAS[-1]}, while also welcoming board-and-train clients from around the country.</p>
 <ul class="towns">{"".join(f"<li>{a}</li>" for a in AREAS)}<li>Nationwide board &amp; train</li></ul></div>
-<div class="mapcard rv" data-d="100"><iframe title="Map of Parrish, Florida" loading="lazy" referrerpolicy="no-referrer" src="https://www.openstreetmap.org/export/embed.html?bbox=-82.645%2C27.426%2C-82.205%2C27.746&amp;layer=mapnik"></iframe>
+<div class="mapcard rv" data-d="100"><iframe title="Map of Parrish, Florida" loading="lazy" referrerpolicy="no-referrer" src="https://www.openstreetmap.org/export/embed.html?bbox=-82.585%2C27.466%2C-82.265%2C27.706&amp;layer=mapnik"></iframe>
 <div class="mpin" aria-hidden="true"><i></i><i></i><i></i><b>{PIN}</b><span>Gator Alley<br><small>Parrish, FL</small></span></div>
 <a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=10328+Charlotte+Dr+Parrish+FL+34219" rel="noopener">Get directions</a></div></div></section>
 {contact("Wednesday–Sunday, 9 AM–7 PM Eastern.")}

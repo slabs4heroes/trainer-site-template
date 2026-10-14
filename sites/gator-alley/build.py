@@ -66,7 +66,7 @@ FAQ = [
 AREAS = ["Parrish", "Palmetto", "Ellenton", "Bradenton", "Lakewood Ranch", "Sarasota"]
 
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
-         '<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght,SOFT@9..144,400..600,0..100&display=swap" rel="stylesheet">')
+         '<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">')
 
 ARROW_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
 ARROW = '<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>'
@@ -91,7 +91,7 @@ def btn(href, label, cls=""):
 def head(title, desc, path, extra=""):
     return f'''<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)}</title><meta name="description" content="{html.escape(desc)}">
-<link rel="canonical" href="{DOMAIN}{path}"><meta name="theme-color" content="#f7efe3">
+<link rel="canonical" href="{DOMAIN}{path}"><meta name="theme-color" content="#f6f1ea">
 <meta property="og:title" content="{html.escape(title)}"><meta property="og:description" content="{html.escape(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{DOMAIN}{path}"><meta property="og:image" content="{DOMAIN}/assets/img05.jpg">
 <link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script>document.documentElement.classList.add('js')</script>
@@ -160,7 +160,7 @@ def home():
     for p in PROGRAMS:
         w, h = ar(p["img"])
         rows += f'''<a class="prow rv" href="/{p["slug"]}" data-img="/assets/{p["img"]}" data-ar="{w}/{h}"><span class="meta">{p["tag"].title()}</span><h3>{display_name(p["name"])}</h3><p>{p["blurb"]}</p><span class="go">{ARROW_SVG}</span>
-<img class="thumb-m" src="/assets/{p["img"]}" alt="{html.escape(p["alt"])}" width="{w}" height="{h}" loading="lazy" style="aspect-ratio:3/2"></a>'''
+<img class="thumb-m" src="/assets/{p["img"]}" alt="{html.escape(p["alt"])}" width="{w}" height="{h}" loading="lazy"></a>'''
     faq = "".join(f'<details class="rv"><summary>{q}<span class="pm"></span></summary><div class="ans"><p>{a}</p></div></details>' for q, a in FAQ)
     faq_ld = '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}) + "</script>"
     g1 = [("img06.jpg", "Jacob Soos and his German Shepherd on the waterfront"), ("img09.jpg", "Dogs practicing calm impulse control inside a home"), ("img11.jpg", "Dogs holding a down command during neighborhood obedience training"), ("img03.jpg", "Jacob kneeling with his German Shepherd Gator"), ("img13.jpg", "Puppy practicing leash skills")]
@@ -179,14 +179,14 @@ def home():
 <main id="main">
 <section class="hero"><div class="wrap hero-grid"><div>
 <div class="status fade"><i></i>Now booking consultations in Parrish, FL</div>
-<h1><span class="ln"><span>Reliable obedience</span></span><span class="ln"><span>built for <span class="swash">real life<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 14 C 60 2, 120 18, 180 8 S 270 4, 296 10"/></svg></span>.</span></span></h1>
+<h1><span class="ln"><span>Reliable obedience</span></span><span class="ln"><span>built for <span class="swash">real life<svg viewBox="0 0 300 6" preserveAspectRatio="none" aria-hidden="true"><path d="M0 3 H300"/></svg></span>.</span></span></h1>
 <p class="lede fade">Gator Alley Dog Training offers personally led board-and-train programs for owners who want calm, trustworthy and obedient dogs.</p>
 <div class="cta-row fade">{btn("#consult", "Free consultation")}{btn("#programs", "See the programs", "ghost")}</div>
 <div class="trust fade"><div>{STAR}<span><span class="stars">★★★★★</span><br>5.0 on Google, 16 reviews</span></div><div>{HOME_IC}<span>A real home,<br>not a kennel</span></div><div>{SHIELD}<span>Trained by Jacob,<br>personally</span></div></div></div>
-<div class="stage" aria-hidden="false"><div class="sun"><div class="sun-in"></div></div>
+<div class="stage" aria-hidden="false"><div class="sun"><div class="sun-in"></div></div><div class="topo" data-speed=".05"></div>
 <div class="arch" style="aspect-ratio:{w19}/{h19}">{img("img19.jpg", "Two German Shepherds resting near a boat in Parrish, Florida", eager=True).replace('loading="lazy" decoding="async"', '')}</div>
 <div class="chip c3">{STAR}<span>5.0 on Google</span></div><div class="chip c1">{PIN}<span>Parrish, Florida</span></div><div class="chip c2">{SHIELD}<span>Handover and<br>ongoing support</span></div>
-<div class="thumb" style="aspect-ratio:{w03}/{h03}">{img("img03.jpg", "Jacob Soos kneeling with his German Shepherd Gator")}</div></div></div></section>
+<div class="thumb" data-speed="-.06" style="aspect-ratio:{w03}/{h03}">{img("img03.jpg", "Jacob Soos kneeling with his German Shepherd Gator")}</div></div></div></section>
 {proof_strip()}
 <section class="section statement"><div class="wrap"><p class="big rv">When everyday dog life feels harder than it should, you want <em>a clear plan and support that fits your household</em>, not a gimmick.</p>
 <div class="worries"><blockquote class="rv"><q>I love my dog, but I feel overwhelmed.</q><span>Training should make daily life more manageable, not leave you guessing what to do next.</span></blockquote>
@@ -228,7 +228,7 @@ def program_page(p, v=False):
 <main id="main"><section class="phero"><div class="wrap hero-grid"><div><div class="status fade"><i></i>{"One-on-one over Zoom" if v else p["tag"].title()}</div>
 <h1><span class="ln"><span>{h1}</span></span></h1><p class="lede fade" style="margin:26px 0 32px">{p["lead"]}</p>
 <div class="cta-row fade">{btn("#consult", "Free consultation")}<a class="btn ghost" href="tel:{TEL}">{PHONE}</a></div></div>
-<div class="arch-solo"><div class="sun"><div class="sun-in"></div></div><div class="arch" style="aspect-ratio:{w}/{h}">{img(p["img"], p["alt"], eager=True).replace('loading="lazy" decoding="async"', '')}</div></div></div></section>
+<div class="arch-solo"><div class="sun"><div class="sun-in"></div></div><div class="topo" data-speed=".05"></div><div class="arch" style="aspect-ratio:{w}/{h}">{img(p["img"], p["alt"], eager=True).replace('loading="lazy" decoding="async"', '')}</div></div></div></section>
 {proof_strip()}
 <section class="section"><div class="wrap split"><div class="rv"><h2>{display_name(p["name"])}</h2><p class="lede" style="margin-top:22px">{p["blurb"]}</p></div>
 <div class="rv" data-d="100"><h3>A good fit for</h3><ul class="fit">{who}</ul><p class="note">Program fit and scope are discussed during your consultation. Contact Jacob for current availability and details rather than relying on an assumed price.</p></div></div></section>
@@ -247,7 +247,7 @@ def about():
 <main id="main"><section class="phero"><div class="wrap hero-grid"><div><div class="status fade"><i></i>Meet your trainer</div>
 <h1><span class="ln"><span>Jacob Soos,</span></span><span class="ln"><span>dog trainer in Parrish, FL</span></span></h1><p class="lede fade" style="margin:26px 0 32px">Gator Alley Dog Training is built around patient, consistent work and clearer communication between dogs and their families.</p>
 <div class="cta-row fade">{btn("#consult", "Talk with Jacob")}</div></div>
-<div class="arch-solo"><div class="sun"><div class="sun-in"></div></div><div class="arch" style="aspect-ratio:{w14}/{h14}">{img("img14.jpg", "Jacob Soos serving in the United States Coast Guard", eager=True).replace('loading="lazy" decoding="async"', '')}</div></div></div></section>
+<div class="arch-solo"><div class="sun"><div class="sun-in"></div></div><div class="topo" data-speed=".05"></div><div class="arch" style="aspect-ratio:{w14}/{h14}">{img("img14.jpg", "Jacob Soos serving in the United States Coast Guard", eager=True).replace('loading="lazy" decoding="async"', '')}</div></div></div></section>
 {proof_strip()}
 <section class="section"><div class="wrap story-grid"><div class="rv"><h2>A lifelong respect for dogs, and the work behind their behavior</h2></div><div class="rv" data-d="100"><p>Born and raised in Palmetto, Florida, Jacob grew up around dogs, including dogs with challenging behaviors. His training approach was shaped by years of learning how patience, consistency and clear communication change a dog’s relationship with its owner.</p><p>While serving in the U.S. Coast Guard along the Mississippi Gulf Coast, Jacob began training dogs to build experience and deepen that knowledge. Today he lives in Parrish with his wife and high-school sweetheart, Chloe, their German Shepherd Gator, and their cats Guru and Goose.</p></div></div></section>
 <section class="section" style="padding-top:0"><div class="wrap story-grid"><div class="photo rv" style="aspect-ratio:{w06}/{h06}">{img("img06.jpg", "Jacob Soos working obedience with his German Shepherd")}</div><div class="rv" data-d="100"><h2>Your family becomes part of ours</h2><p>During Board &amp; Train, dogs live and learn in a real home environment, not a kennel. Daily structure, socialization and individualized work prepare them for the household routines and distractions that matter after they go home.</p><p>Every program ends with a detailed handover session and ongoing support so owners can confidently continue their dog’s progress.</p></div></div></section>

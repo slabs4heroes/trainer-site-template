@@ -478,3 +478,19 @@ html,body{overflow-x:clip}
 .sticker{top:560px;right:6%}
 @media(max-width:1000px){.sticker{top:auto;bottom:auto;right:4%;top:calc(96px + 52vw)}}
 .local3 q{quotes:none}
+
+/* map */
+.mapcard{position:relative;aspect-ratio:5/4;width:100%;border:2px solid var(--navy);border-radius:18px;overflow:hidden;box-shadow:12px 12px 0 var(--gulf);background:#cfeae6}
+.mapcard iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(1.15) hue-rotate(-6deg) contrast(1.02)}
+.mpin{position:absolute;left:50%;top:50%;width:0;height:0;pointer-events:none}
+.mpin i{position:absolute;left:0;top:0;width:36px;height:36px;margin:-18px 0 0 -18px;border-radius:50%;border:3px solid var(--orange);background:rgba(216,58,23,.18);animation:mping 3s ease-out infinite}
+.mpin i:nth-child(2){animation-delay:1s}.mpin i:nth-child(3){animation-delay:2s}
+@keyframes mping{from{transform:scale(.6);opacity:1}to{transform:scale(5.2);opacity:0}}
+.mpin b{position:absolute;left:-23px;top:-52px;width:46px;height:46px;border-radius:50% 50% 50% 0;rotate:-45deg;background:var(--orange);border:2px solid var(--navy);display:grid;place-items:center;box-shadow:0 5px 0 rgba(8,48,61,.35);animation:drop 3s ease-in-out infinite}
+.mpin b svg{rotate:45deg;width:22px;height:22px;color:#fff}
+@keyframes drop{50%{translate:0 -6px}}
+.mpin span{position:absolute;left:34px;top:-48px;background:#fff;border:2px solid var(--navy);border-radius:10px;padding:6px 12px;font:800 14px/1.15 var(--sans);color:var(--navy);white-space:nowrap;box-shadow:3px 3px 0 var(--sun)}
+.mpin span small{font:600 12px var(--sans);color:var(--ink-2)}
+.mlink{position:absolute;right:12px;bottom:12px;background:var(--sun);color:var(--navy);border:2px solid var(--navy);border-radius:999px;padding:8px 16px;font-weight:800;font-size:14px;text-decoration:none;box-shadow:0 3px 0 var(--navy)}.mlink:hover{background:#fff}
+@media(max-width:620px){.mapcard{aspect-ratio:1/1;box-shadow:6px 6px 0 var(--gulf)}}
+@media(prefers-reduced-motion:reduce){.mpin i,.mpin b{animation:none}}

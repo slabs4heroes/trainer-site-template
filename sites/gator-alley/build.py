@@ -75,11 +75,11 @@ def head(title, desc, path, extra=""):
 <link rel="canonical" href="{DOMAIN}{path}"><meta name="theme-color" content="#14301f">
 <meta property="og:title" content="{html.escape(title)}"><meta property="og:description" content="{html.escape(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{DOMAIN}{path}"><meta property="og:image" content="{DOMAIN}/assets/img05.jpg">
 <link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-{FONTS}<link rel="stylesheet" href="/styles.css">{extra}</head><body>'''
+{FONTS}<link rel="stylesheet" href="/styles.css">{extra}</head><body><svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="paw" viewBox="0 0 64 64"><ellipse cx="32" cy="42" rx="14" ry="11"/><ellipse cx="14" cy="26" rx="6" ry="8"/><ellipse cx="26" cy="16" rx="6" ry="8.5"/><ellipse cx="38" cy="16" rx="6" ry="8.5"/><ellipse cx="50" cy="26" rx="6" ry="8"/></symbol></svg>'''
 
 
 def header():
-    return f'''<div class="notice"><span>◆</span> PARRISH, FLORIDA <span>◆</span> PERSONALLY LED BOARD &amp; TRAIN <span>◆</span> REAL HOME. REAL WORLD. <span>◆</span></div>
+    return f'''<div class="progress" aria-hidden="true"><i></i></div><div class="notice"><span>◆</span> PARRISH, FLORIDA <span>◆</span> PERSONALLY LED BOARD &amp; TRAIN <span>◆</span> REAL HOME. REAL WORLD. <span>◆</span></div>
 <header class="header" id="top"><div class="wrap bar"><a href="/" class="brand" aria-label="Gator Alley Dog Training home"><img src="/assets/logo.png" alt="Gator Alley Dog Training Academy" width="739" height="356"></a>
 <nav aria-label="Main"><a href="/#programs">Programs</a><a href="/about-jacob-soos">About Jacob</a><a href="/#faq">FAQ</a><a href="/#consult">Contact</a></nav>
 <a class="small-cta" href="/#consult">Free consultation <b>→</b></a></div></header>'''
@@ -115,9 +115,12 @@ def schema(extra=""):
 
 
 def marquee():
-    items = ["PUPPY HEAD START", "BASIC OBEDIENCE", "ADVANCED &amp; OFF-LEASH", "BEHAVIOR MODIFICATION", "PUPPY RAISE &amp; TRAIN", "VIRTUAL COACHING"]
-    row = "".join(f"<span>{i}</span><b>◆</b>" for i in items)
-    return f'<div class="marquee" aria-hidden="true"><div class="track">{row}{row}</div></div>'
+    a = ["PUPPY HEAD START", "BASIC OBEDIENCE", "ADVANCED &amp; OFF-LEASH", "BEHAVIOR MODIFICATION", "PUPPY RAISE &amp; TRAIN", "VIRTUAL COACHING"]
+    b = ["PARRISH, FL", "PERSONALLY LED", "REAL HOME, NOT A KENNEL", "HANDOVER &amp; ONGOING SUPPORT", "BOARD &amp; TRAIN NATIONWIDE", "5.0 ON GOOGLE"]
+    r1 = "".join(f"<span>{i}</span><b>◆</b>" for i in a)
+    r2 = "".join(f"<span>{i}</span><b>✦</b>" for i in b)
+    return (f'<div class="marquee" aria-hidden="true"><div class="track">{r1}{r1}</div></div>'
+            f'<div class="marquee alt" aria-hidden="true"><div class="track rev">{r2}{r2}</div></div>')
 
 
 def home():
@@ -141,25 +144,25 @@ def home():
                 schema(faq_ld)) + header() + f'''
 <main>
 <section class="hero wrap"><div class="hero-copy"><p class="kicker">DOG TRAINING IN PARRISH, FLORIDA</p>
-<h1>Reliable obedience <i>built for</i> real life.</h1>
+<h1 data-split>Reliable obedience <i>built for</i> real life.</h1>
 <p class="lede">Gator Alley Dog Training offers personally led board-and-train programs for owners who want calm, trustworthy and obedient dogs.</p>
 <div class="hero-buttons"><a class="primary" href="#consult">Free consultation <b>→</b></a><a class="play-link" href="#programs"><span>↓</span>See the programs</a></div>
 <div class="hero-details"><span>5.0 ★ GOOGLE · 16 REVIEWS</span><span>HOME ENVIRONMENT, NOT A KENNEL</span><span>TRAINED BY JACOB, PERSONALLY</span></div></div>
-<div class="hero-art"><div class="blob"></div><figure class="hero-photo" style="--ar:1150/762"><img src="/assets/img05.jpg" alt="German Shepherd Gator walking a sandy path in Parrish, Florida" width="1150" height="762" fetchpriority="high"></figure>
+<div class="hero-art" data-tilt><div class="blob"></div><svg class="paw p1" viewBox="0 0 64 64" aria-hidden="true"><use href="#paw"/></svg><svg class="paw p2" viewBox="0 0 64 64" aria-hidden="true"><use href="#paw"/></svg><svg class="paw p3" viewBox="0 0 64 64" aria-hidden="true"><use href="#paw"/></svg><figure class="hero-photo" style="--ar:1150/762"><img src="/assets/img05.jpg" alt="German Shepherd Gator walking a sandy path in Parrish, Florida" width="1150" height="762" fetchpriority="high"></figure>
 <figure class="hero-photo sm" style="--ar:1150/762"><img src="/assets/img03.jpg" alt="Jacob Soos kneeling with his German Shepherd" width="1150" height="762" loading="lazy"></figure>
-<div class="badge"><b>5.0</b><span>★★★★★<br>GOOGLE REVIEWS</span></div></div></section>
+<div class="badge"><b>5.0</b><span>★★★★★<br>GOOGLE REVIEWS</span></div><div class="ring" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#circ">PERSONALLY LED ◆ BOARD &amp; TRAIN ◆ PARRISH, FL ◆ </textPath></text></svg><span>🐾</span></div></div></section><section class="stats wrap"><div class="stat reveal"><b data-count="5.0" data-dec="1">5.0</b><span>Google rating</span></div><div class="stat reveal"><b data-count="16">16</b><span>five-star reviews</span></div><div class="stat reveal"><b data-count="4">4</b><span>board &amp; train programs</span></div><div class="stat reveal"><b data-count="5" data-suffix=" yrs">5 yrs</b><span>U.S. Coast Guard service</span></div></section>
 {marquee()}
-<section class="problem wrap"><p class="big-number reveal">01</p><div class="reveal"><p class="kicker">IS THIS YOU?</p><h2>When everyday dog life feels <i>harder than it should.</i></h2></div>
+<section class="problem wrap"><p class="big-number reveal">01</p><div class="reveal"><p class="kicker">IS THIS YOU?</p><h2 data-split>When everyday dog life feels <i>harder than it should.</i></h2></div>
 <p class="reveal">Maybe walks are stressful, guests bring out jumping or barking, recall feels unreliable, or you’re not sure how to help a puppy build good foundations. You’re not looking for a gimmick — you want a clearer plan and support that fits your household.</p></section>
 <section class="quotes wrap"><blockquote class="reveal"><p>“I love my dog, but I feel overwhelmed.”</p><span>Training should make daily life more manageable, not leave you guessing what to do next.</span></blockquote>
 <blockquote class="reveal"><p>“The behavior changes depending on the situation.”</p><span>Real-world routines and distractions matter. The goal is usable communication beyond a quiet training space.</span></blockquote>
 <blockquote class="reveal"><p>“I want my family to feel confident.”</p><span>Clear handover guidance helps owners continue the work consistently once their dog returns home.</span></blockquote></section>
 <section class="programs" id="programs"><div class="wrap"><div class="section-head reveal"><div><p class="kicker">GATOR ALLEY BOARD &amp; TRAIN</p><h2>Four paths.<br>One goal: <i>a better life with your dog.</i></h2></div>
 <p>Every Gator Alley program is structured around your dog’s history, home life and training goals. The work is personally led by Jacob in a real home environment, with focused training, practical routines and a clear owner handoff so progress carries into everyday life.</p></div>
-<div class="pgrid">{cards}</div>
+<div class="pgrid" data-spot>{cards}</div>
 <a class="virtual reveal" href="/{VIRTUAL["slug"]}"><span class="mono">NEW — ONE-ON-ONE, FROM ANYWHERE</span><h3>Can’t make it to Parrish? <i>Train with Jacob over Zoom.</i></h3><p>Live virtual coaching for leash manners, puppy foundations, or behavior and consistency. Every session is recorded for you to keep.</p><b>See virtual coaching →</b></a></div></section>
 <section class="path wrap"><div class="reveal"><p class="kicker">A SIMPLE PATH FORWARD</p><h2>Book. Train. <i>Thrive.</i></h2><p class="sub">Every conversation begins with your dog’s needs, your goals and the right fit — not a one-size-fits-all promise.</p></div>
-<ol><li class="reveal"><b>01</b><h3>Book</h3><p>Share what is happening at home and speak directly with Jacob about your goals.</p></li><li class="reveal"><b>02</b><h3>Train</h3><p>Your dog receives personally led work, structure and real-world exposure in the appropriate program.</p></li><li class="reveal"><b>03</b><h3>Thrive</h3><p>Use the handover and ongoing support to carry clearer communication into everyday life.</p></li></ol></section>
+<ol data-line><li class="reveal"><b>01</b><h3>Book</h3><p>Share what is happening at home and speak directly with Jacob about your goals.</p></li><li class="reveal"><b>02</b><h3>Train</h3><p>Your dog receives personally led work, structure and real-world exposure in the appropriate program.</p></li><li class="reveal"><b>03</b><h3>Thrive</h3><p>Use the handover and ongoing support to carry clearer communication into everyday life.</p></li></ol></section>
 <section class="meet" id="meet"><div class="wrap meet-grid"><figure class="frame reveal tall" style="--ar:1150/762">{img("img17.jpg", "Portrait of Jacob Soos outdoors in Parrish, Florida")}<figcaption>JACOB SOOS · FOUNDER &amp; LEAD TRAINER</figcaption></figure>
 <div class="reveal"><p class="kicker">MEET JACOB</p><h2>Built around the dog. <i>Led by one trainer.</i></h2>
 <p>Born and raised in Palmetto, Florida, Jacob grew up around dogs, including dogs with challenging behaviors. After five years in the U.S. Coast Guard, he brings that same structure, calm and follow-through to every dog in his care — in a real home, with his wife Chloe, their German Shepherd Gator, and a couple of cats.</p>
@@ -194,7 +197,7 @@ def program_page(p, v=False):
 <section class="pdetail wrap"><div class="reveal"><p class="kicker">THE PROGRAM</p><h2>{p["name"]}</h2><p class="big">{p["blurb"]}</p></div>
 <div class="reveal"><p class="kicker">A GOOD FIT FOR</p><ul class="fit">{who}</ul><p class="note">Program fit and scope are discussed during your consultation — contact Jacob for current availability and details rather than relying on an assumed price.</p></div></section>
 <section class="path wrap"><div class="reveal"><p class="kicker">HOW IT WORKS</p><h2>Book. Train. <i>Thrive.</i></h2></div>
-<ol><li class="reveal"><b>01</b><h3>Book</h3><p>Share what is happening at home and speak directly with Jacob.</p></li><li class="reveal"><b>02</b><h3>Train</h3><p>{"Live one-on-one Zoom coaching, recorded so you can keep it." if v else "Personally led work, structure and real-world exposure in a real home — not a kennel."}</p></li><li class="reveal"><b>03</b><h3>Thrive</h3><p>{"Practice from your recording and carry the work into everyday life." if v else "A detailed handover and ongoing support so progress carries into everyday life."}</p></li></ol></section>
+<ol data-line><li class="reveal"><b>01</b><h3>Book</h3><p>Share what is happening at home and speak directly with Jacob.</p></li><li class="reveal"><b>02</b><h3>Train</h3><p>{"Live one-on-one Zoom coaching, recorded so you can keep it." if v else "Personally led work, structure and real-world exposure in a real home — not a kennel."}</p></li><li class="reveal"><b>03</b><h3>Thrive</h3><p>{"Practice from your recording and carry the work into everyday life." if v else "A detailed handover and ongoing support so progress carries into everyday life."}</p></li></ol></section>
 <section class="more-programs wrap"><p class="kicker reveal">EXPLORE MORE</p><div class="mp-grid reveal">{oth}</div></section>
 <section class="lead" id="consult"><div class="wrap lead-grid"><div class="reveal"><p class="kicker">TALK WITH JACOB</p><h2>Book your <i>free consultation.</i></h2><p>Tell us about you and your dog — Jacob will follow up personally. Prefer to talk first? Call <a href="tel:{TEL}">{PHONE}</a>.</p></div><div class="reveal">{form()}</div></div></section></main>''' + footer()
 

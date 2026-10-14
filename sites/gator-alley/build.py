@@ -33,23 +33,23 @@ PROGRAMS = [
          who=["New puppy owners who want clear foundations before habits set in", "Households that need a reliable potty routine and calmer manners", "Families who want a personal handover so everyone can carry the work forward"]),
     dict(slug="basic-obedience-parrish-fl", track="02", tag="BOARD & TRAIN", name="Basic Obedience",
          it="Program", blurb="A focused program for clearer communication, better manners, reliable routines and practical obedience matched to your household.",
-         img="img07.jpg", alt="Jacob Soos training a dog in Parrish, Florida",
+         img="img10.jpg", alt="Dogs practicing loose-leash walking during basic obedience training in Parrish, Florida",
          h1="Basic Obedience Board & Train in Parrish, FL", lead="Clearer communication, better manners and routines that hold up at home — built around your dog and your household, not a script.",
          who=["Dogs who pull, jump, bark or struggle to settle", "Owners who want practical obedience that works in everyday life", "Anyone who wants direct, personal guidance from the trainer doing the work"]),
     dict(slug="advanced-obedience-behavior-parrish-fl", track="03", tag="ADVANCED", name="Advanced Obedience, Off-Leash & Behavior Modification",
          it="", blurb="For owners navigating reactivity, anxiety, difficult behavior, or a higher standard of advanced obedience, calmness, communication and off-leash reliability.",
-         img="img10.jpg", alt="Dogs practicing socialization and impulse control outdoors in Parrish, Florida",
+         img="img09.jpg", alt="Dogs practicing calm impulse control during behavior training in Parrish, Florida",
          h1="Advanced Obedience & Behavior Modification in Parrish, FL", lead="For the harder cases and the higher standard: reactivity, anxiety, difficult behavior, calm communication and off-leash reliability.",
          who=["Dogs with reactivity, fear, anxiety or a behavior history", "Owners who want advanced obedience and off-leash reliability", "Households ready to be candid about what has happened so the plan can be responsible"]),
     dict(slug="puppy-raise-and-train-parrish-fl", track="04", tag="12 WEEKS", name="Puppy Raise & Train",
          it="", blurb="A longer foundation-focused program personally led by Jacob during the key early stages of development, with structured routines, socialization, real-world exposure and advanced foundations.",
-         img="img12.jpg", alt="Jacob Soos with a young dog during puppy training in Parrish, Florida",
+         img="img11.jpg", alt="Dogs holding a down-stay during puppy foundations training in Parrish, Florida",
          h1="Puppy Raise & Train in Parrish, FL", lead="Twelve weeks of structured routines, socialization and real-world exposure during the stages of development that matter most.",
          who=["Puppy owners who want a deeper foundation than a short program", "Families who want Jacob personally leading the key early stages", "Owners planning for advanced foundations from the start"]),
 ]
 VIRTUAL = dict(slug="virtual-dog-training-coaching", track="+", tag="ZOOM", name="Virtual Coaching Sessions",
                blurb="Live one-on-one coaching with Jacob over Zoom — leash manners, puppy foundations, or behavior and consistency. Every session is recorded for you to keep.",
-               img="img11.jpg", alt="Dogs holding a down command during neighborhood obedience training",
+               img="img12.jpg", alt="Jacob Soos holding a dog during virtual coaching preparation",
                h1="Virtual Dog Training Coaching with Jacob Soos", lead="Can't make it to Parrish? Train one-on-one with Jacob over Zoom on the topic you need most — and keep the recording.",
                who=["Owners outside the Parrish area", "Dog owners who want help with one specific topic", "Anyone who wants a recording to practice from between sessions"])
 
@@ -124,6 +124,14 @@ def footer():
 <script src="/script.js" defer></script></body></html>'''
 
 
+def form_compact():
+    return f'''<form class="form compact" data-form action="https://formsubmit.co/ajax/{EMAIL_FORM}" method="post">
+<input type="hidden" name="_subject" value="New consultation request — Gator Alley website"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+<label>First name<input name="name" required autocomplete="given-name"></label><label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+<label class="wide">Email<input name="email" type="email" required autocomplete="email"></label>
+<button class="btn" type="submit">Book phone consultation{ARROW}</button><p class="form-msg" role="status" aria-live="polite"></p></form>'''
+
+
 def form():
     opts = "".join(f"<option>{o}</option>" for o in ["Puppy Head Start (2 weeks)", "Basic Obedience", "Advanced Obedience, Off-Leash & Behavior", "Puppy Raise & Train (12 weeks)", "Virtual Coaching (Zoom)", "Not sure yet — help me choose"])
     return f'''<form class="form" data-form action="https://formsubmit.co/ajax/{EMAIL_FORM}" method="post">
@@ -156,61 +164,56 @@ def display_name(n):
 
 
 def home():
-    rows = ""
+    cards = ""
     for p in PROGRAMS:
         w, h = ar(p["img"])
-        rows += f'''<a class="prow rv" href="/{p["slug"]}" data-img="/assets/{p["img"]}" data-ar="{w}/{h}"><span class="meta">{p["tag"].title()}</span><h3>{display_name(p["name"])}</h3><p>{p["blurb"]}</p><span class="go">{ARROW_SVG}</span>
-<img class="thumb-m" src="/assets/{p["img"]}" alt="{html.escape(p["alt"])}" width="{w}" height="{h}" loading="lazy"></a>'''
+        cards += f'''<a class="pcard rv" href="/{p["slug"]}"><div class="pph"><img src="/assets/{p["img"]}" alt="{html.escape(p["alt"])}" width="{w}" height="{h}" loading="lazy"></div><div class="pbody"><span class="meta">{p["tag"].title()}</span><h3>{display_name(p["name"])}</h3><p>{p["blurb"]}</p><span class="more-l">Explore program {ARROW_SVG}</span></div></a>'''
     faq = "".join(f'<details class="rv"><summary>{q}<span class="pm"></span></summary><div class="ans"><p>{a}</p></div></details>' for q, a in FAQ)
     faq_ld = '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}) + "</script>"
-    g1 = [("img06.jpg", "Jacob Soos and his German Shepherd on the waterfront"), ("img09.jpg", "Dogs practicing calm impulse control inside a home"), ("img11.jpg", "Dogs holding a down command during neighborhood obedience training"), ("img03.jpg", "Jacob kneeling with his German Shepherd Gator"), ("img13.jpg", "Puppy practicing leash skills")]
-    g2 = [("img19.jpg", "Two German Shepherds resting near a boat"), ("img10.jpg", "Dogs practicing socialization outdoors"), ("img12.jpg", "Jacob Soos with a young dog"), ("img05.jpg", "German Shepherd walking a sandy path in Parrish"), ("img07.jpg", "Jacob Soos training a dog")]
-    def strip(g, cls=""):
-        t = "".join(img(n, a) for n, a in g)
-        dup = "".join(img(n, "").replace('alt=""', 'alt="" aria-hidden="true"') for n, a in g)
-        return f'<div class="strip {cls}">{t}{dup}</div>'
-    w19, h19 = ar("img19.jpg")
-    w03, h03 = ar("img03.jpg")
+    cap = [("img03.jpg", "Jacob Soos giving a hand-signal cue to a German Shepherd during training", "Hand signals and verbal cues layered together during an obedience session."),
+           ("img04.jpg", "Jacob and Chloe with their German Shepherd Gator", "Jacob and Chloe with Gator, the same balanced approach used with client dogs."),
+           ("img05.jpg", "German Shepherd walking a path in Parrish, Florida", "Real-world reliability, practiced outside the training space.")]
+    media = "".join(f'<figure class="mfig rv" data-d="{i*100}"><div class="photo" style="aspect-ratio:{"/".join(map(str, ar(n)))}">{img(n, a)}</div><figcaption>{c}</figcaption></figure>' for i, (n, a, c) in enumerate(cap))
+    w01, h01 = ar("img01.jpg")
     w06, h06 = ar("img06.jpg")
-    w07, h07 = ar("img07.jpg")
     return head("Dog Trainer in Parrish, FL | Gator Alley Dog Training",
                 "Personally led board-and-train dog training in Parrish, FL. Puppy head start, basic and advanced obedience, behavior modification and virtual coaching with Jacob Soos.", "/",
                 schema(faq_ld)) + header() + f'''
 <main id="main">
-<section class="hero"><div class="wrap hero-grid"><div>
-<div class="status fade"><i></i>Now booking consultations in Parrish, FL</div>
+<section class="hero hero-photo"><div class="hphoto" style="aspect-ratio:{w01}/{h01}"><img src="/assets/img01.jpg" alt="Jacob Soos and Chloe walking their dogs in Parrish, Florida" width="{w01}" height="{h01}" fetchpriority="high"></div>
+<div class="wrap hero-copy"><div class="status fade"><i></i>Dog training in Parrish, Florida</div>
 <h1><span class="ln"><span>Reliable obedience</span></span><span class="ln"><span>built for <span class="swash">real life<svg viewBox="0 0 300 6" preserveAspectRatio="none" aria-hidden="true"><path d="M0 3 H300"/></svg></span>.</span></span></h1>
 <p class="lede fade">Gator Alley Dog Training offers personally led board-and-train programs for owners who want calm, trustworthy and obedient dogs.</p>
-<div class="cta-row fade">{btn("#consult", "Free consultation")}{btn("#programs", "See the programs", "ghost")}</div>
-<div class="trust fade"><div>{STAR}<span><span class="stars">★★★★★</span><br>5.0 on Google, 16 reviews</span></div><div>{HOME_IC}<span>A real home,<br>not a kennel</span></div><div>{SHIELD}<span>Trained by Jacob,<br>personally</span></div></div></div>
-<div class="stage" aria-hidden="false"><div class="sun"><div class="sun-in"></div></div><div class="topo" data-speed=".05"></div>
-<div class="arch" style="aspect-ratio:{w19}/{h19}">{img("img19.jpg", "Two German Shepherds resting near a boat in Parrish, Florida", eager=True).replace('loading="lazy" decoding="async"', '')}</div>
-<div class="chip c3">{STAR}<span>5.0 on Google</span></div><div class="chip c1">{PIN}<span>Parrish, Florida</span></div><div class="chip c2">{SHIELD}<span>Handover and<br>ongoing support</span></div>
-<div class="thumb" data-speed="-.06" style="aspect-ratio:{w03}/{h03}">{img("img03.jpg", "Jacob Soos kneeling with his German Shepherd Gator")}</div></div></div></section>
+<div class="rating fade"><span class="g">G</span><div><b>5.0</b> <span class="stars">★★★★★</span><br><small>Google reviews · 16 reviews</small></div></div>
+<div class="hero-card fade"><h2>Free consultation</h2><p>Tell us about you and your dog. We’ll follow up shortly.</p>{form_compact()}</div></div></section>
 {proof_strip()}
-<section class="section statement"><div class="wrap"><p class="big rv">When everyday dog life feels harder than it should, you want <em>a clear plan and support that fits your household</em>, not a gimmick.</p>
+<section class="section" id="programs"><div class="wrap"><div class="sec-head"><h2 class="rv">Gator Alley board &amp; train</h2><p class="rv" data-d="100">Every program is built around your dog’s history, home life and training goals. Jacob leads the work in a real home environment, with practical routines and a clear owner handoff so progress carries into everyday life.</p></div>
+<div class="pgrid">{cards}</div>
+<a class="virtual rv" href="/{VIRTUAL["slug"]}"><div><h3>New: train with Jacob over Zoom</h3><p>Live one-on-one virtual coaching for leash manners, puppy foundations, or behavior and consistency. Every session is recorded for you to keep.</p></div><span class="btn">See virtual coaching{ARROW}</span></a></div></section>
+<section class="section local"><div class="wrap"><div class="sec-head"><h2 class="rv">What Parrish dog owners come to us for</h2><p class="rv" data-d="100">These are topics we discuss during a consultation, not guaranteed fixes. Every dog and household is different.</p></div>
+<div class="worries local3"><blockquote class="rv"><q>Puppy foundations</q><span>Basic obedience, potty training and real-world exposure while habits are still forming.</span></blockquote>
+<blockquote class="rv" data-d="100"><q>Everyday obedience challenges</q><span>Pulling, jumping, barking or trouble settling, and routines that hold up at home.</span></blockquote>
+<blockquote class="rv" data-d="200"><q>Behavior history</q><span>Reactivity, fear or anxiety, discussed candidly so the plan can be responsible.</span></blockquote></div></div></section>
+<section class="section statement"><div class="wrap"><p class="big rv">Is this you? When everyday dog life feels harder than it should, you want <em>a clear plan and support that fits your household</em>.</p>
 <div class="worries"><blockquote class="rv"><q>I love my dog, but I feel overwhelmed.</q><span>Training should make daily life more manageable, not leave you guessing what to do next.</span></blockquote>
 <blockquote class="rv" data-d="100"><q>The behavior changes depending on the situation.</q><span>Real-world routines and distractions matter. The goal is usable communication beyond a quiet training space.</span></blockquote>
 <blockquote class="rv" data-d="200"><q>I want my family to feel confident.</q><span>Clear handover guidance helps owners continue the work consistently once their dog returns home.</span></blockquote></div></div></section>
-<section class="section" id="programs"><div class="wrap"><div class="sec-head"><h2 class="rv">Four board &amp; train programs, one personal approach</h2><p class="rv" data-d="100">Every program is built around your dog’s history, home life and training goals. Jacob leads the work in a real home environment, with practical routines and a clear owner handoff so progress carries into everyday life.</p></div>
-<div class="plist">{rows}</div>
-<a class="virtual rv" href="/{VIRTUAL["slug"]}"><div><h3>Can’t make it to Parrish? Train with Jacob over Zoom.</h3><p>Live virtual coaching for leash manners, puppy foundations, or behavior and consistency. Every session is recorded for you to keep.</p></div><span class="btn">See virtual coaching{ARROW}</span></a></div></section>
-<section class="section method"><div class="wrap method-grid"><div class="sticky"><h2 class="rv">Book. Train. Thrive.</h2><p class="rv" data-d="100">Every conversation begins with your dog’s needs, your goals and the right fit, never a one-size-fits-all promise.</p></div>
+<section class="section method"><div class="wrap method-grid"><div class="sticky"><h2 class="rv">A simple path forward: Book. Train. Thrive.</h2><p class="rv" data-d="100">Every conversation begins with your dog’s needs, your goals and the right fit, never a one-size-fits-all promise.</p></div>
 <div class="steps"><div class="step"><span class="n">1</span><h3>Book</h3><p>Share what is happening at home and speak directly with Jacob about your goals.</p></div>
 <div class="step"><span class="n">2</span><h3>Train</h3><p>Your dog receives personally led work, structure and real-world exposure in the appropriate program.</p></div>
 <div class="step"><span class="n">3</span><h3>Thrive</h3><p>Use the handover and ongoing support to carry clearer communication into everyday life.</p></div></div></div></section>
-<section class="section"><div class="wrap jacob-grid"><div class="jacob-photos rv"><div class="photo p1" style="aspect-ratio:{w06}/{h06}" data-speed=".04">{img("img06.jpg", "Jacob Soos and his German Shepherd on the waterfront")}</div><div class="photo p2" style="aspect-ratio:{w07}/{h07}" data-speed="-.05">{img("img07.jpg", "Jacob Soos training a dog in Parrish, Florida")}</div></div>
-<div class="rv" data-d="100"><h2>Built around the dog. Led by one trainer.</h2>
-<p>Born and raised in Palmetto, Florida, Jacob grew up around dogs, including dogs with challenging behaviors. After five years in the U.S. Coast Guard, he brings that same structure, calm and follow-through to every dog in his care, in a real home with his wife Chloe, their German Shepherd Gator, and a couple of cats.</p>
-<div class="facts"><div><b data-count="5">5</b><span>years in the U.S. Coast Guard</span></div><div><b data-count="4">4</b><span>board &amp; train programs</span></div><div><b data-count="1">1</b><span>trainer for every dog</span></div></div>
-<p>Dogs live and learn in a real home environment, not a facility. Jacob personally works with each dog through the routines, people and distractions that make reliable behavior matter.</p><p style="margin-top:28px">{btn("/about-jacob-soos", "Meet Jacob")}</p></div></div></section>
-<section class="gallery"><div class="wrap"><h2 class="rv">Real sessions, real dogs</h2></div>{strip(g1)}{strip(g2, "rev")}</section>
-<section class="section"><div class="wrap"><div class="google rv"><div class="score">5.0</div><div><span class="stars">★★★★★</span><h3>Sixteen Google reviews, every one five stars</h3><p class="muted">See what Parrish dog owners say about training with Jacob.</p></div>{btn("https://www.google.com/search?q=Gator+Alley+Dog+Training+Parrish+FL", "Read the reviews")}</div></div></section>
-<section class="section" id="area" style="padding-top:0"><div class="wrap area-grid"><div class="rv"><h2>Starts in Parrish, travels home with you</h2><p class="lede" style="margin-top:20px">Gator Alley is based in Parrish and serves owners in {", ".join(AREAS[1:-1])} and {AREAS[-1]}, while also welcoming board-and-train clients from around the country.</p>
+<section class="section"><div class="wrap"><h2 class="rv" style="margin-bottom:40px">More from the program</h2><div class="media3">{media}</div></div></section>
+<section class="section difference"><div class="wrap jacob-grid"><div class="photo rv" style="aspect-ratio:{w06}/{h06};max-width:560px">{img("img06.jpg", "Jacob Soos working obedience with his German Shepherd")}</div>
+<div class="rv" data-d="100"><h2>The Gator Alley difference</h2>
+<p>Dogs live and learn in a real home environment, not a facility. Jacob personally trains and cares for every dog, working through the routines, people and distractions that make reliable behavior matter.</p>
+<p>Born and raised in Palmetto, Florida, Jacob spent five years in the U.S. Coast Guard before bringing that same structure, calm and follow-through to dog training, with his wife Chloe, their German Shepherd Gator, and a couple of cats.</p>
+<p style="margin-top:28px">{btn("/about-jacob-soos", "Meet Jacob")}</p></div></div></section>
+<section class="section" style="padding-top:0"><div class="wrap"><div class="google rv"><div class="score">5.0</div><div><span class="stars">★★★★★</span><h3>Proof from the program</h3><p class="muted">Sixteen Google reviews, every one five stars. See what Parrish dog owners say about training with Jacob.</p></div>{btn("https://www.google.com/search?q=Gator+Alley+Dog+Training+Parrish+FL", "Read the reviews")}</div></div></section>
+<section class="section" id="faq" style="padding-top:0"><div class="wrap faq-grid"><div class="rv"><h2>Frequently asked questions</h2></div><div>{faq}</div></div></section>
+<section class="section" id="area" style="padding-top:0"><div class="wrap area-grid"><div class="rv"><h2>Serving Parrish &amp; nearby areas</h2><p class="lede" style="margin-top:20px">Gator Alley is based in Parrish and serves owners in {", ".join(AREAS[1:-1])} and {AREAS[-1]}, while also welcoming board-and-train clients from around the country.</p>
 <ul class="towns">{"".join(f"<li>{a}</li>" for a in AREAS)}<li>Nationwide board &amp; train</li></ul></div>
 <div class="pin rv" data-d="100" aria-hidden="true"><i></i><i></i><i></i><b>{PIN}</b><span>Parrish, FL</span></div></div></section>
-<section class="section" id="faq" style="padding-top:0"><div class="wrap faq-grid"><div class="rv"><h2>What to know before you call</h2></div><div>{faq}</div></div></section>
-{contact("Prefer to talk first? Call or text the number below.")}
+{contact("Wednesday–Sunday, 9 AM–7 PM Eastern.")}
 </main>''' + footer()
 
 

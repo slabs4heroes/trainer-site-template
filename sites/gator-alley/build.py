@@ -3,6 +3,7 @@
 Copy, page structure, photos, consultation form and booking calendar mirror https://gatoralleyk9.com exactly."""
 import os, html, json
 from PIL import Image
+from seo_data import AREA_ORDER, AREAS_LOCAL, LANDINGS, PROBLEMS, PROB_PROGRAM, PROBLEM_LABELS
 
 OUT = os.path.dirname(os.path.abspath(__file__))
 DOMAIN = "https://gatoralleyk9.com"
@@ -15,7 +16,7 @@ ADDR = "10328 Charlotte Dr, Parrish, FL 34219"
 GOOGLE = "https://www.google.com/search?q=Gator+Alley+Dog+Training+Parrish+FL"
 FORM_ID = "omIJGkHDTkJ2ZCKIWgPn"
 BOOK_ID = "fItaqpy8rCCNlzdk7IhM"
-AREAS = ["Parrish", "Palmetto", "Ellenton", "Bradenton", "Lakewood Ranch", "Sarasota"]
+AREAS = ["Parrish", "Palmetto", "Ellenton", "Bradenton", "Lakewood Ranch", "Sarasota", "Ruskin", "Apollo Beach", "Sun City Center", "Riverview", "Brandon", "Tampa", "St. Petersburg", "Venice", "North Port"]
 
 
 def E(s):
@@ -195,15 +196,24 @@ def header(cur=""):
     sub = "".join(f'<a href="/{p["slug"]}">{E(p["nav"])}</a>' for p in PROGRAMS)
     links = (a("/", "Home", "home") +
              f'<span class="dd"><a href="/programs"{" aria-current=page" if cur in ("programs",) else ""}>Programs</a><span class="sub">{sub}</span></span>' +
-             a("/about-jacob", "About Jacob", "about") + a("/contact", "Contact", "contact"))
+             a("/service-areas", "Service Areas", "areas") + a("/about-jacob", "About Jacob", "about") + a("/contact", "Contact", "contact"))
     drawer = "".join(f'<a href="{h}">{t}</a>' for h, t in [("/", "Home"), ("/programs", "Programs")]) + \
              "".join(f'<a class="s" href="/{p["slug"]}">{E(p["nav"])}</a>' for p in PROGRAMS) + \
-             "".join(f'<a href="{h}">{t}</a>' for h, t in [("/about-jacob", "About Jacob"), ("/contact", "Contact")])
+             "".join(f'<a href="{h}">{t}</a>' for h, t in [("/service-areas", "Service Areas"), ("/about-jacob", "About Jacob"), ("/contact", "Contact")])
     return f'''<a class="skip" href="#main">Skip to content</a><div class="progress" aria-hidden="true"><i></i></div>
 <header class="header" id="top"><div class="pill"><a href="/" class="brand" aria-label="Gator Alley Dog Training home"><img src="/assets/logo.png" alt="Gator Alley Dog Training Academy" width="739" height="356"></a>
 <nav class="nav" aria-label="Main">{links}</nav>{btn("/contact", "Request a consultation", "sm")}
 <button class="menu-btn" aria-label="Menu" aria-expanded="false"><i></i></button></div></header>
 <div class="drawer">{drawer}{btn("/contact", "Request a consultation")}</div>'''
+
+
+def footer_links():
+    towns = "".join(f'<li><a href="/{AREAS_LOCAL[k]["slug"]}">{E(AREAS_LOCAL[k]["town"])}</a></li>' for k in AREA_ORDER)
+    helps = "".join(f'<li><a href="/{p["slug"]}">{E(PROBLEM_LABELS[p["slug"]])}</a></li>' for p in PROBLEMS)
+    specs = "".join(f'<li><a href="/{l["slug"]}">{E(LANDING_LABEL[l["slug"]])}</a></li>' for l in LANDINGS)
+    return (f'<div class="foot-areas"><div><h4>Dog training near you</h4><ul class="cols">{towns}<li><a href="/service-areas">All service areas</a></li></ul></div>'
+            f'<div><h4>Help with common problems</h4><ul class="cols">{helps}</ul></div>'
+            f'<div><h4>Programs by need and location</h4><ul class="cols">{specs}</ul></div></div>')
 
 
 def footer():
@@ -212,7 +222,7 @@ def footer():
 <div><h4>Explore</h4><ul><li><a href="/">Home</a></li><li><a href="/programs">Programs</a></li><li><a href="/about-jacob">About Jacob</a></li><li><a href="/contact">Contact</a></li></ul></div>
 <div><h4>Programs</h4><ul>{"".join(f'<li><a href="/{p["slug"]}">{E(p["nav"])}</a></li>' for p in PROGRAMS)}</ul></div>
 <div><h4>Get in touch</h4><ul><li><a href="tel:{TEL}">{PHONE}</a></li><li>Wed–Sun, 9 AM–8 PM</li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li><a href="{IG}" rel="noopener">Instagram</a> · <a href="{FB}" rel="noopener">Facebook</a></li><li><a href="/contact">Request a consultation</a></li></ul></div>
-</div><div class="legal"><span>© Gator Alley Dog Training Academy, LLC · <a href="https://k9pn.com" title="Dog trainer websites, CRM and SEO by K9PN">Dog Trainer Websites by K9PN</a></span><a href="#top">Back to top ↑</a></div></div></footer>
+</div>{footer_links()}<div class="legal"><span>© Gator Alley Dog Training Academy, LLC · <a href="https://k9pn.com" title="Dog trainer websites, CRM and SEO by K9PN">Dog Trainer Websites by K9PN</a></span><a href="#top">Back to top ↑</a></div></div></footer>
 <div class="mbar"><a href="tel:{TEL}">Call</a><a href="/contact" class="go">Request a consultation</a></div>
 <script src="/script.js" defer></script></body></html>'''
 
@@ -328,6 +338,7 @@ def home():
 <section class="section" id="faq" style="padding-top:0"><div class="wrap faq-grid"><div class="rv">{eyebrow("Frequently asked questions")}<h2>What to know before you call.</h2></div><div>{faq_html(HOME_FAQ)}</div></div></section>
 <section class="section area" id="area" style="padding-top:0"><div class="wrap story-grid"><div class="rv">{eyebrow("Serving Parrish & nearby areas")}<h2>Dog training that starts in Parrish and travels home with you.</h2></div>
 <div class="rv" data-d="100"><p>Gator Alley Dog Training is based in Parrish and serves owners in Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota, while also welcoming board-and-train clients from around the country. The page is local by design: the conversation starts with your dog's actual routines, behavior history and household goals, not a generic city-page promise.</p><p style="margin-top:28px">{btn("/contact", "Talk with Jacob")}</p></div></div></section>
+{links_block()}
 <section class="section contact" id="book-consultation"><div class="wrap contact-grid"><div class="rv">{eyebrow("Book your free consultation")}<h2>Pick a time that works — Jacob will confirm personally.</h2><p class="lede">Available Wednesday through Sunday, 9 AM–7 PM Eastern, in 30-minute slots. Prefer to talk first? Call <a href="tel:{TEL}">{PHONE}</a>.</p></div><div class="rv" data-d="120">{booking_embed()}</div></div></section>
 </main>''' + footer()
 
@@ -353,6 +364,8 @@ def program_page(p):
 <section class="section method"><div class="wrap method-grid"><div class="sticky"><h2 class="rv">{E(p["how"])}</h2></div>{steps_html(p["steps"])}</div></section>
 {second}
 <section class="section" id="faq"><div class="wrap faq-grid"><div class="rv"><h2>Questions before you reach out.</h2><p class="lede" style="margin-top:20px">A few things owners usually ask before their consultation.</p></div><div>{faq_html(p["faq"])}</div></div></section>
+{service_links(p)}
+{links_block()}
 <section class="section contact"><div class="wrap story-grid"><div class="rv"><h2>Talk with Jacob about your dog.</h2></div><div class="rv" data-d="100"><p class="lede">Share your dog’s age, breed, training history and goals so the right next step can be discussed.</p><p style="margin-top:28px">{btn("/contact", "Request a consultation")}</p></div></div></section>
 </main>''' + footer()
 
@@ -406,6 +419,7 @@ def programs():
 <p class="rv" style="margin-top:56px;color:#cfe0d8;max-width:46em">Sessions are held over Zoom, and you get the recording afterward to keep. To be confirmed by Jacob: price, session length, availability and how many follow-ups are included. This section describes the concept; exact terms will be added once he confirms them.</p></div></section>
 <section class="section" id="faq"><div class="wrap faq-grid"><div class="rv">{eyebrow("Questions about the programs")}<h2>Before you choose a program.</h2></div><div>{faq_html(PROG_FAQ)}</div></div></section>
 <section class="section contact"><div class="wrap story-grid"><div class="rv">{eyebrow("Join the pack")}<h2>Tell Jacob what you want to change.</h2></div><div class="rv" data-d="100"><p class="lede">Share your dog’s age, breed, biggest challenge and training goals to begin the conversation.</p><p style="margin-top:28px">{btn("/contact", "Book a free call")}</p></div></div></section>
+{links_block()}
 </main>''' + footer()
 
 
@@ -443,6 +457,254 @@ def contact_page():
 </main>''' + footer()
 
 
+# ---------------------------------------------------------------- local SEO pages
+AREA_IMG = {"parrish": ("img01.jpg", "Jacob Soos and Chloe walking with their dogs in Parrish, Florida"),
+            "bradenton": ("img03.jpg", "Jacob Soos giving a hand-signal cue to a German Shepherd during obedience training"),
+            "sarasota": ("img05.jpg", "German Shepherd walking a path in Parrish, Florida"),
+            "lakewood-ranch": ("img04.jpg", "Jacob and Chloe with their German Shepherd Gator"),
+            "palmetto": ("img17.jpg", "Portrait of Jacob Soos outdoors in Parrish, Florida"),
+            "ellenton": ("img18.jpg", "Jacob, Chloe and their dog walking together"),
+            "ruskin": ("prog-programs-hero.jpg", "Jacob Soos with his German Shepherd, Gator Alley Dog Training"),
+            "apollo-beach": ("img01.jpg", "Jacob Soos and Chloe walking with their dogs in Parrish, Florida"),
+            "sun-city-center": ("img18.jpg", "Jacob, Chloe and their dog walking together"),
+            "riverview": ("img04.jpg", "Jacob and Chloe with their German Shepherd Gator"),
+            "brandon": ("img17.jpg", "Portrait of Jacob Soos outdoors in Parrish, Florida"),
+            "tampa": ("img03.jpg", "Jacob Soos giving a hand-signal cue to a German Shepherd during obedience training"),
+            "st-petersburg": ("img05.jpg", "German Shepherd walking a path in Parrish, Florida"),
+            "venice": ("prog-programs-hero.jpg", "Jacob Soos with his German Shepherd, Gator Alley Dog Training"),
+            "north-port": ("img04.jpg", "Jacob and Chloe with their German Shepherd Gator")}
+
+CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-7"/></svg>'
+
+
+def inline(t):
+    out = E(t)
+    parts = out.split("**")
+    return "".join(f"<strong>{x}</strong>" if i % 2 else x for i, x in enumerate(parts))
+
+
+def biz_ref():
+    return {"@type": "LocalBusiness", "@id": f"{DOMAIN}/#business", "name": "Gator Alley Dog Training", "telephone": TEL, "url": f"{DOMAIN}/"}
+
+
+def crumbs_ld(items):
+    return '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": n, "item": DOMAIN + p} for i, (n, p) in enumerate(items)]}) + "</script>"
+
+
+def service_ld(name, desc, area=None):
+    d = {"@context": "https://schema.org", "@type": "Service", "serviceType": "Dog training", "name": name, "description": desc, "provider": biz_ref()}
+    d["areaServed"] = {"@type": "City", "name": f"{area}, FL"} if area else AREAS
+    return '<script type="application/ld+json">' + json.dumps(d) + "</script>"
+
+
+def chips(items):
+    return '<ul class="chips">' + "".join(f'<li><a href="{h}">{E(t)}</a></li>' for t, h in items) + "</ul>"
+
+
+def town_items(exclude=None):
+    return [(f"Dog training in {AREAS_LOCAL[k]['town']}", f"/{AREAS_LOCAL[k]['slug']}") for k in AREA_ORDER if k != exclude]
+
+
+def help_items(exclude=()):
+    return [(PROBLEM_LABELS[p["slug"]], f"/{p['slug']}") for p in PROBLEMS if p["slug"] not in exclude]
+
+
+LANDING_LABEL = {"puppy-training-sarasota-fl": "Puppy training in Sarasota", "puppy-training-bradenton-fl": "Puppy training in Bradenton",
+                 "puppy-training-tampa-fl": "Puppy training in Tampa", "board-and-train-sarasota-fl": "Board and train in Sarasota",
+                 "board-and-train-tampa-fl": "Board and train in Tampa", "virtual-dog-training": "Virtual dog training over Zoom"}
+
+# which specialty pages and problem guides belong to which service
+SERVICE_RELATED = {
+    "puppy-head-start": (["puppy-training-sarasota-fl", "puppy-training-bradenton-fl", "puppy-training-tampa-fl", "virtual-dog-training"],
+                         ["potty-training-puppy", "crate-training-puppy", "stop-dog-jumping", "dog-pulling-on-leash"]),
+    "basic-obedience": (["board-and-train-sarasota-fl", "board-and-train-tampa-fl", "virtual-dog-training"],
+                        ["dog-pulling-on-leash", "stop-dog-jumping", "stop-dog-barking", "dog-wont-come-when-called"]),
+    "behavioral-issues-reactivity": (["board-and-train-sarasota-fl", "board-and-train-tampa-fl", "virtual-dog-training"],
+                                     ["reactive-dog-training", "dog-wont-come-when-called", "dog-separation-anxiety", "stop-dog-barking"]),
+    "puppy-foundations": (["puppy-training-sarasota-fl", "puppy-training-bradenton-fl", "puppy-training-tampa-fl", "virtual-dog-training"],
+                          ["potty-training-puppy", "crate-training-puppy", "dog-separation-anxiety", "stop-dog-jumping"]),
+}
+
+
+def landing_items(slugs=None, exclude=()):
+    return [(LANDING_LABEL[l["slug"]], f"/{l['slug']}") for l in LANDINGS if (slugs is None or l["slug"] in slugs) and l["slug"] not in exclude]
+
+
+def links_block(ex_town=None, ex_help=(), ex_land=()):
+    return ('<section class="section local"><div class="wrap"><div class="split two rv"><div><h3>Dog training near you</h3>'
+            '<p class="muted" style="margin:10px 0 0">Gator Alley is based in Parrish and serves owners across Manatee, Sarasota and Hillsborough counties.</p>' + chips(town_items(ex_town)) + '</div>'
+            '<div><h3>Help with common problems</h3><p class="muted" style="margin:10px 0 0">Guides from Jacob on the issues Florida dog owners ask about most.</p>' + chips(help_items(ex_help)) + '</div></div>'
+            '<div class="rv" style="margin-top:48px"><h3>Programs by need and location</h3><p class="muted" style="margin:10px 0 0">Puppy training, board and train, and live virtual coaching.</p>' + chips(landing_items(None, ex_land)) + '</div></div></section>')
+
+
+def town_programs(k):
+    town = AREAS_LOCAL[k]["town"]
+    items = [(LANDING_LABEL[l["slug"]], f"/{l['slug']}") for l in LANDINGS if l.get("area_slug") == k]
+    items += [(q["name"], f"/{q['slug']}") for q in PROGRAMS] + [("Virtual coaching over Zoom", "/virtual-dog-training")]
+    return (f'<section class="section local"><div class="wrap"><div class="rv"><h3>Training programs for {E(town)} owners</h3>'
+            '<p class="muted" style="margin:10px 0 0">Every program Gator Alley offers, plus live virtual coaching.</p>' + chips(items) + '</div></div></section>')
+
+
+def service_links(p):
+    lands, probs = SERVICE_RELATED[p["slug"]]
+    others = [(q["name"], f"/{q['slug']}") for q in PROGRAMS if q["slug"] != p["slug"]]
+    return ('<section class="section local"><div class="wrap"><div class="split two rv"><div><h3>' + E(p["short"]) + ' by location</h3>'
+            '<p class="muted" style="margin:10px 0 0">Where this program is available and how to get started from your town.</p>' + chips(landing_items(lands)) + '</div>'
+            '<div><h3>Common problems this program solves</h3><p class="muted" style="margin:10px 0 0">Jacob’s guides on the issues owners bring to this program.</p>' + chips([(PROBLEM_LABELS[r], f"/{r}") for r in probs]) + '</div></div>'
+            '<div class="rv" style="margin-top:48px"><h3>Other programs</h3>' + chips(others + [("Virtual coaching over Zoom", "/virtual-dog-training")]) + '</div></div></section>')
+
+
+def prog_cards(slugs=None):
+    cards = ""
+    for p in PROGRAMS:
+        if slugs and p["slug"] not in slugs:
+            continue
+        n, alt = p["card"]
+        w, h = ar(n)
+        cards += (f'<a class="pcard rv" href="/{p["slug"]}"><div class="pph" style="aspect-ratio:{w}/{h}"><img src="/assets/{n}" alt="{A(alt)}" width="{w}" height="{h}" loading="lazy" decoding="async"></div>'
+                  f'<div class="pbody"><span class="meta">{E(p["track"])} · {E(p["tag"])}</span><h3>{E(p["name"])}</h3><p>{E(p["blurb"])}</p><span class="more-l">{E(p["cta"])} {ARROW_SVG}</span></div></a>')
+    return f'<div class="pgrid">{cards}</div>'
+
+
+def cta_section(h2="Talk with Jacob about your dog."):
+    return (f'<section class="section contact"><div class="wrap story-grid"><div class="rv"><h2>{E(h2)}</h2></div><div class="rv" data-d="100"><p class="lede">Share your dog’s age, breed, training history and goals so the right next step can be discussed. Call <a href="tel:{TEL}">{PHONE}</a> or request a consultation.</p>'
+            f'<p style="margin-top:28px">{btn("/contact", "Request a consultation")}</p></div></div></section>')
+
+
+HOW_STEPS = [("Consultation first", "Share your dog’s age, breed, history and goals. Jacob talks through the right fit before anything is booked."),
+             ("Personal training", "Jacob trains and cares for your dog himself, in a real home environment in Parrish. No rotating staff, no group classes."),
+             ("Real-world practice", "Skills are practiced around the routines and distractions of everyday life, not just a quiet training space."),
+             ("Owner handoff", "You get a detailed walkthrough of the commands and routines, plus ongoing support so the training holds up at home.")]
+
+
+def area_page(k):
+    a = AREAS_LOCAL[k]
+    town, path = a["town"], f'/{a["slug"]}'
+    n, alt = AREA_IMG[k]
+    if k == "parrish":
+        q1 = ("Where is Gator Alley Dog Training located?", f"Gator Alley Dog Training Academy is at {ADDR}, in {a['county']}. Call {PHONE} Wednesday through Sunday or request a free consultation online.")
+    else:
+        q1 = (f"Do you offer dog training in {town}, FL?", f"Yes. Gator Alley Dog Training is based in Parrish and serves {town} owners with personally led board-and-train programs, plus live virtual coaching over Zoom. Contact Jacob to talk through logistics from {town}.")
+    faqs = [
+        q1,
+        (f"Which programs are available to {town} owners?", "Four board-and-train programs: Puppy Head Start (2 weeks), Basic Obedience, Advanced Obedience, Off-Leash & Behavior Modification, and Puppy Raise & Train (12 weeks). Jacob also offers live one-on-one virtual coaching sessions over Zoom."),
+        ("Will my dog be kenneled?", "No. Dogs live and learn in Jacob’s real home environment in Parrish rather than a kennel facility, and Jacob personally trains and cares for every dog throughout the program."),
+        ("Can you help with reactivity, anxiety or aggression?", "Behavior history matters. Be candid about fear, aggression, reactivity or any bite history during the consultation so the situation can be discussed responsibly. It is a personalized plan, not a guaranteed outcome."),
+        ("What does training cost?", "Program fit and scope are discussed during the free consultation. Contact Jacob for current availability and program details rather than relying on an assumed price."),
+    ]
+    paras = "".join(f"<p>{E(t)}</p>" for t in a["paras"])
+    challenge_items = "".join(f'<li>{CHECK}<span><strong>{E(t)}.</strong> {E(x)}</span></li>' for t, x in a["challenges"])
+    ld = service_ld(f"Dog training in {town}, FL", a["desc"], town) + faq_ld(faqs) + crumbs_ld([("Home", "/"), ("Service areas", "/service-areas"), (f"Dog training in {town}", path)])
+    ctas = btn("/contact", "Request a consultation") + f'<a class="btn ghost" href="tel:{TEL}">{PHONE}</a>'
+    return head(a["title"], a["desc"], path, ld) + header("areas") + f'''
+<main id="main">{hero_block(f'{a["county"]} · Gator Alley Dog Training', a["h1"], a["lede"], ctas, pfig(n, alt))}
+{proof_strip()}
+<section class="section"><div class="wrap split"><div class="rv">{eyebrow("Local dog training")}<h2>{E(a["headline"])}</h2><div class="prose">{paras}<p>Owners here walk and train around {E(a["places"])}. {E(a["focus"])}</p></div></div>
+<div class="rv" data-d="100"><h3>What {E(town)} owners ask for</h3><ul class="fit">{challenge_items}</ul></div></div></section>
+<section class="section local"><div class="wrap">{section_head(f"Programs for {town} dogs", "Four board-and-train programs, one trainer.", "Every program is personally led by Jacob. The right one depends on your dog’s age, history and goals, and it is chosen together in the consultation.")}
+{prog_cards()}
+<p class="note rv">Not able to come to Parrish? Jacob also offers <a class="tlink" href="/programs#virtual-coaching">live virtual coaching over Zoom</a> for leash manners, puppy foundations and behavior consistency.</p></div></section>
+<section class="section method"><div class="wrap method-grid"><div class="sticky"><div class="rv">{eyebrow("How it works")}</div><h2 class="rv">From first call to confident dog.</h2><p class="rv" data-d="100">Every conversation begins with your dog’s needs and your goals, not a one-size-fits-all promise.</p></div>{steps_html(HOW_STEPS)}</div></section>
+<section class="section" id="faq"><div class="wrap faq-grid"><div class="rv">{eyebrow(f"Dog training in {town}")}<h2>Questions {E(town)} owners ask.</h2></div><div>{faq_html(faqs)}</div></div></section>
+{town_programs(k)}
+{links_block(k)}
+{cta_section(f"Ready to talk about your {town} dog?")}
+</main>''' + footer()
+
+
+def landing_page(l):
+    path = f'/{l["slug"]}'
+    n, alt = l["img"]
+    prog = "".join(f'<a class="pcard rv" href="/{ps}"><div class="pbody"><h3>{E(nm)}</h3><p>{E(bl)}</p><span class="more-l">See the program {ARROW_SVG}</span></div></a>' for ps, nm, bl in l["programs"])
+    intro = "".join(f"<p>{E(t)}</p>" for t in l["intro"])
+    who = l.get("who") or f"{l['town']} owners"
+    rel = chips([(PROBLEM_LABELS[r], f"/{r}") for r in l["related"]] + ([(f"Dog training in {l['town']}", f"/{AREAS_LOCAL[l['area_slug']]['slug']}")] if l.get("area_slug") else []))
+    why = "".join(f'<li>{CHECK}<span>{E(t)}</span></li>' for t in ["Personally led by Jacob, no rotating staff", "A real home environment, not a kennel", "Real-world practice around everyday distractions", "A detailed handover and ongoing support", "Consultation first, with no one-size-fits-all promise"])
+    ld = service_ld(l["h1"].split(" in ")[0], l["desc"], l.get("town")) + faq_ld(l["faqs"]) + crumbs_ld([("Home", "/"), ("Programs", "/programs"), (l["h1"], path)])
+    ctas = btn("/contact", "Request a consultation") + f'<a class="btn ghost" href="tel:{TEL}">{PHONE}</a>'
+    return head(l["title"], l["desc"], path, ld) + header("programs") + f'''
+<main id="main">{hero_block(l["eyebrow"], l["h1"], l["lede"], ctas, pfig(n, alt))}
+{proof_strip()}
+<section class="section"><div class="wrap split"><div class="rv">{eyebrow("Gator Alley Dog Training")}<h2>Training built around your dog and your home.</h2><div class="prose">{intro}</div></div>
+<div class="rv" data-d="100"><h3>Why owners choose Gator Alley</h3><ul class="fit">{why}</ul></div></div></section>
+<section class="section local"><div class="wrap">{section_head("Programs to consider", f"Where {who} usually start.", "Jacob helps you choose after hearing about your dog. Here are the programs that fit this need.")}<div class="pgrid prog-list">{prog}</div></div></section>
+<section class="section method"><div class="wrap method-grid"><div class="sticky"><div class="rv">{eyebrow("How it works")}</div><h2 class="rv">Book. Train. Thrive.</h2></div>{steps_html(HOW_STEPS)}</div></section>
+<section class="section" id="faq"><div class="wrap faq-grid"><div class="rv">{eyebrow(who.capitalize())}<h2>Questions before you reach out.</h2></div><div>{faq_html(l["faqs"])}</div></div></section>
+<section class="section local"><div class="wrap"><div class="rv"><h3>Related help</h3>{rel}</div></div></section>
+{links_block(l.get("area_slug"), (), [l["slug"]])}
+{cta_section(f"Talk with Jacob about your {l['town']} dog." if l.get("town") else "Talk with Jacob about your dog.")}
+</main>''' + footer()
+
+
+def problem_page(p):
+    path = f'/{p["slug"]}'
+    n, alt = p["img"]
+    ps, pn = PROB_PROGRAM[p["slug"]]
+    body = ""
+    for t, x in p["blocks"]:
+        if t == "h":
+            body += f"<h2>{E(x)}</h2>"
+        elif t == "p":
+            body += f"<p>{inline(x)}</p>"
+        elif t in ("ul", "ol"):
+            body += f"<{t}>" + "".join(f"<li>{inline(i)}</li>" for i in x) + f"</{t}>"
+    rel = chips([(PROBLEM_LABELS[r], f"/{r}") for r in p["related"]])
+    ld = faq_ld(p["faqs"]) + crumbs_ld([("Home", "/"), ("Programs", "/programs"), (p["h1"], path)])
+    ctas = btn("/contact", "Request a consultation") + f'<a class="btn ghost" href="tel:{TEL}">{PHONE}</a>'
+    return head(p["title"], p["desc"], path, ld) + header("programs") + f'''
+<main id="main">{hero_block("Dog training help · Parrish, FL", p["h1"], p["lede"], ctas, pfig(n, alt))}
+{proof_strip()}
+<section class="section"><div class="wrap article-grid"><article class="article rv">{body}</article>
+<aside class="rv" data-d="100"><div class="callout"><p class="status">The program that fits</p><h3>{E(pn)}</h3><p>Personally led by Jacob in a real home environment, with a detailed handover so the training holds up at home.</p><p style="margin-top:18px"><a class="tlink" href="/{ps}">See the program →</a></p></div>
+<div class="callout"><p class="status">Serving</p><p>Parrish, Bradenton, Sarasota, Lakewood Ranch, Palmetto, Ellenton, Tampa, St. Petersburg and nearby, plus virtual coaching anywhere.</p><p style="margin-top:14px"><a class="tlink" href="/service-areas">Where we train →</a></p></div></aside></div></section>
+<section class="section" id="faq"><div class="wrap faq-grid"><div class="rv">{eyebrow("Common questions")}<h2>Questions owners ask.</h2></div><div>{faq_html(p["faqs"])}</div></div></section>
+<section class="section local"><div class="wrap"><div class="rv"><h3>Related help</h3>{rel}</div></div></section>
+{links_block(None, [p["slug"]] + list(p["related"]))}
+{cta_section("Ready to talk with Jacob?")}
+</main>''' + footer()
+
+
+def service_areas():
+    cards = ""
+    for k in AREA_ORDER:
+        a = AREAS_LOCAL[k]
+        cards += (f'<a class="pcard rv" href="/{a["slug"]}"><div class="pbody"><span class="meta">{E(a["county"])}</span><h3>{E(a["town"])}, FL</h3><p>{E(a["headline"])}.</p><span class="more-l">Dog training in {E(a["town"])} {ARROW_SVG}</span></div></a>')
+    desc = "Gator Alley Dog Training is based in Parrish, FL and serves Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota. Board and train plus virtual coaching."
+    ld = ('<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@type": "ItemList", "name": "Gator Alley Dog Training service areas", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": f"Dog training in {AREAS_LOCAL[k]['town']}, FL", "url": f"{DOMAIN}/{AREAS_LOCAL[k]['slug']}"} for i, k in enumerate(AREA_ORDER)]}) + "</script>"
+          + crumbs_ld([("Home", "/"), ("Service areas", "/service-areas")]))
+    return head("Dog Training in Parrish, Bradenton & Sarasota | Gator Alley", desc, "/service-areas", ld) + header("areas") + f'''
+<main id="main">{hero_block("Service areas · Manatee, Sarasota & Hillsborough", "Dog training across Parrish and nearby Florida.", "Based in Parrish and serving owners in Bradenton, Sarasota, Lakewood Ranch, Palmetto, Ellenton and beyond, from Venice to Tampa and St. Petersburg. Pick your town to see how Jacob can help.", btn("/contact", "Request a consultation"), pfig("img01.jpg", "Jacob Soos and Chloe walking with their dogs in Parrish, Florida"))}
+{proof_strip()}
+<section class="section"><div class="wrap">{section_head("Where we train", f"{len(AREA_ORDER)} communities. One personal trainer.", "The same four programs are open to owners in every town, personally led by Jacob in a real home environment, plus live virtual coaching over Zoom.")}<div class="pgrid prog-list">{cards}</div></div></section>
+<section class="section local"><div class="wrap">{section_head("What we offer", "Four board-and-train programs, plus virtual coaching.", "Choose the track that fits your dog’s age, behavior history and goals.")}{prog_cards()}</div></section>
+<section class="section"><div class="wrap story-grid"><div class="rv">{eyebrow("Find us")}<h2>Our Parrish location.</h2></div><div class="rv prose" data-d="100"><p>Gator Alley Dog Training Academy, LLC · {ADDR}. Call <a href="tel:{TEL}">{PHONE}</a> Wednesday through Sunday, 9 AM–8 PM.</p><p>Not sure whether your town is covered, or want to talk logistics? Ask Jacob in your consultation request. We also welcome board-and-train clients from around the country and offer live virtual coaching over Zoom.</p><p style="margin-top:24px">{btn("/contact", "Ask about your area")}</p></div></div></section>
+{links_block()}
+</main>''' + footer()
+
+
+def llms_txt():
+    L = ["# Gator Alley Dog Training", "",
+         "> Dog training in Parrish, FL (Manatee County), serving Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota.",
+         "> Personally led by Jacob Soos in a real home environment, not a kennel. Board-and-train programs for puppies and adult dogs,",
+         "> plus live one-on-one virtual coaching over Zoom.", "", "## Programs"]
+    for p in PROGRAMS:
+        L.append(f"- {p['name']}: {DOMAIN}/{p['slug']}")
+    L += ["", "## Service areas"]
+    for k in AREA_ORDER:
+        a = AREAS_LOCAL[k]
+        L.append(f"- {a['town']}, FL: {DOMAIN}/{a['slug']}")
+    L += ["", "## Local program pages"]
+    for l in LANDINGS:
+        L.append(f"- {l['h1']}: {DOMAIN}/{l['slug']}")
+    L += ["", "## Dog training help"]
+    for p in PROBLEMS:
+        L.append(f"- {PROBLEM_LABELS[p['slug']]}: {DOMAIN}/{p['slug']}")
+    L += ["", "## More", f"- About Jacob: {DOMAIN}/about-jacob", f"- Contact: {DOMAIN}/contact", f"- All service areas: {DOMAIN}/service-areas", ""]
+    return "\n".join(L)
+
+
 def write(path, content):
     full = os.path.join(OUT, path)
     os.makedirs(os.path.dirname(full) or OUT, exist_ok=True)
@@ -458,12 +720,20 @@ if __name__ == "__main__":
     write("index.html", home()); write("programs.html", programs()); write("about-jacob.html", about()); write("contact.html", contact_page())
     for p in PROGRAMS:
         write(f'{p["slug"]}.html', program_page(p)); pages[f'{p["slug"]}.html'] = f'/{p["slug"]}'
+    write("service-areas.html", service_areas()); pages["service-areas.html"] = "/service-areas"
+    for k in AREA_ORDER:
+        a = AREAS_LOCAL[k]; write(f'{a["slug"]}.html', area_page(k)); pages[f'{a["slug"]}.html'] = f'/{a["slug"]}'
+    for l in LANDINGS:
+        write(f'{l["slug"]}.html', landing_page(l)); pages[f'{l["slug"]}.html'] = f'/{l["slug"]}'
+    for p in PROBLEMS:
+        write(f'{p["slug"]}.html', problem_page(p)); pages[f'{p["slug"]}.html'] = f'/{p["slug"]}'
     # drop pages from the earlier 7-page layout
     for old in OLD:
         f = os.path.join(OUT, old + ".html")
         if os.path.exists(f): os.remove(f)
     urls = "".join(f"<url><loc>{DOMAIN}{u}</loc></url>" for u in pages.values())
     write("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>')
+    write("llms.txt", llms_txt())
     write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {DOMAIN}/sitemap.xml\n")
     redirects = [{"source": f"/{o}", "destination": d, "permanent": True} for o, d in OLD.items()]
     write("vercel.json", json.dumps({"cleanUrls": True, "trailingSlash": False, "redirects": redirects,

@@ -229,7 +229,7 @@ def footer():
 
 def form_embed():
     return (f'<div class="embed"><iframe src="https://api.leadconnectorhq.com/widget/form/{FORM_ID}" id="inline-{FORM_ID}" title="Request a consultation with Gator Alley Dog Training" '
-            f'style="width:100%;height:920px;border:none;border-radius:6px" data-layout="{{\'id\':\'INLINE\'}}" data-trigger-type="alwaysShow" data-activation-type="alwaysActivated" '
+            f'style="width:100%;height:240px;border:none;border-radius:6px" data-layout="{{\'id\':\'INLINE\'}}" data-trigger-type="alwaysShow" data-activation-type="alwaysActivated" '
             f'data-form-name="Gator Alley consultation form" data-form-id="{FORM_ID}"></iframe></div>')
 
 

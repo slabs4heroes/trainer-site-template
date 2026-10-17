@@ -196,10 +196,10 @@ def header(cur=""):
     sub = "".join(f'<a href="/{p["slug"]}">{E(p["nav"])}</a>' for p in PROGRAMS)
     links = (a("/", "Home", "home") +
              f'<span class="dd"><a href="/programs"{" aria-current=page" if cur in ("programs",) else ""}>Programs</a><span class="sub">{sub}</span></span>' +
-             a("/service-areas", "Service Areas", "areas") + a("/about-jacob", "About Jacob", "about") + a("/contact", "Contact", "contact"))
+             a("/service-areas", "Service Areas", "areas") + a("/videos", "Videos", "videos") + a("/about-jacob", "About Jacob", "about") + a("/contact", "Contact", "contact"))
     drawer = "".join(f'<a href="{h}">{t}</a>' for h, t in [("/", "Home"), ("/programs", "Programs")]) + \
              "".join(f'<a class="s" href="/{p["slug"]}">{E(p["nav"])}</a>' for p in PROGRAMS) + \
-             "".join(f'<a href="{h}">{t}</a>' for h, t in [("/service-areas", "Service Areas"), ("/about-jacob", "About Jacob"), ("/contact", "Contact")])
+             "".join(f'<a href="{h}">{t}</a>' for h, t in [("/service-areas", "Service Areas"), ("/videos", "Videos"), ("/about-jacob", "About Jacob"), ("/contact", "Contact")])
     return f'''<a class="skip" href="#main">Skip to content</a><div class="progress" aria-hidden="true"><i></i></div>
 <header class="header" id="top"><div class="pill"><a href="/" class="brand" aria-label="Gator Alley Dog Training home"><img src="/assets/logo.png" alt="Gator Alley Dog Training Academy" width="739" height="356"></a>
 <nav class="nav" aria-label="Main">{links}</nav>{btn("/contact", "Request a consultation", "sm")}
@@ -219,7 +219,7 @@ def footer_links():
 def footer():
     return f'''<footer class="foot"><div class="wrap"><div class="foot-grid">
 <div><img src="/assets/logo.png" alt="Gator Alley Dog Training Academy" width="739" height="356" loading="lazy"><p>Dog training in Parrish, Florida · Serving board-and-train clients nationwide</p><p style="margin-top:12px">Gator Alley Dog Training Academy, LLC · {ADDR}</p></div>
-<div><h4>Explore</h4><ul><li><a href="/">Home</a></li><li><a href="/programs">Programs</a></li><li><a href="/about-jacob">About Jacob</a></li><li><a href="/contact">Contact</a></li></ul></div>
+<div><h4>Explore</h4><ul><li><a href="/">Home</a></li><li><a href="/programs">Programs</a></li><li><a href="/videos">Videos</a></li><li><a href="/about-jacob">About Jacob</a></li><li><a href="/contact">Contact</a></li></ul></div>
 <div><h4>Programs</h4><ul>{"".join(f'<li><a href="/{p["slug"]}">{E(p["nav"])}</a></li>' for p in PROGRAMS)}</ul></div>
 <div><h4>Get in touch</h4><ul><li><a href="tel:{TEL}">{PHONE}</a></li><li>Wed–Sun, 9 AM–8 PM</li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li><a href="{IG}" rel="noopener">Instagram</a> · <a href="{FB}" rel="noopener">Facebook</a></li><li><a href="/contact">Request a consultation</a></li></ul></div>
 </div>{footer_links()}<div class="legal"><span>© Gator Alley Dog Training Academy, LLC · <a href="https://k9pn.com" title="Dog trainer websites, CRM and SEO by K9PN">Dog Trainer Websites by K9PN</a></span><a href="#top">Back to top ↑</a></div></div></footer>
@@ -684,6 +684,87 @@ def service_areas():
 </main>''' + footer()
 
 
+# ---------------------------------------------------------------- videos page
+VIDEO_PAGE_DESC = "Watch Jacob Soos of Gator Alley Dog Training work with real dogs in Parrish, FL: leash pulling, crate manners, verbal commands, off-leash German Shepherd obedience and behavior progress."
+VIDEOS = [
+    {"id": "DeewbXFA9Nk", "date": "2026-10-14", "thumb": "prog-pomsky.jpg",
+     "title": "Dog that can’t sit still? Settling help in Parrish, FL",
+     "blurb": "A dog that can’t settle makes every walk, visitor and quiet evening harder. This clip is about that exact struggle, and Jacob’s invitation is simple: book a call and talk through what your dog is doing and what you want daily life to look like.",
+     "links": [("Basic Obedience board and train", "/basic-obedience"), ("Virtual coaching over Zoom", "/virtual-dog-training")]},
+    {"id": "DecCWgosKux", "date": "2026-10-13", "thumb": "img03.jpg",
+     "title": "Positioning work and body awareness with a Belgian Malinois",
+     "blurb": "Jacob shapes behaviors and builds mobility with a Belgian Malinois, focusing on body awareness and fluid movement before introducing verbal commands. It is foundation work: get the movement right first, then layer cues on top.",
+     "links": [("Basic Obedience board and train", "/basic-obedience"), ("Advanced obedience and behavior", "/behavioral-issues-reactivity")]},
+    {"id": "DeR-RpZPiWg", "date": "2026-10-09", "thumb": "prog-gsd-down.webp",
+     "title": "Leash pulling: why it is the tip of the iceberg, from 130 lb to 10 lb dogs",
+     "blurb": "Whether a dog weighs 130 pounds or 10, solving leash pulling is only the start. Jacob explains why it points to a bigger communication gap, and why a consultation is the best place to map out the fix.",
+     "links": [("Dog pulling on leash: Jacob’s guide", "/dog-pulling-on-leash"), ("Basic Obedience board and train", "/basic-obedience")]},
+    {"id": "DeIZbnRMvDO", "date": "2026-10-05", "thumb": "prog-puppy-leash-wide.jpg",
+     "title": "Leash pulling help for Parrish, FL dog owners",
+     "blurb": "Struggling with a dog that drags you down the street in Parrish? This short video is Jacob’s local call to action for owners who want calmer walks, with a free consultation as the first step.",
+     "links": [("Dog training in Parrish, FL", "/dog-training-parrish-fl"), ("Dog pulling on leash: Jacob’s guide", "/dog-pulling-on-leash")]},
+    {"id": "DdrBHcvxOmW", "date": "2026-09-24", "thumb": "img17.jpg",
+     "title": "Pugsly’s progress: aggression work, then training the owners",
+     "blurb": "Pugsly made great progress in a short amount of time. As Jacob notes, once the dog is where he needs to be, the next job is training the owners so the changes hold up at home. That handover is built into every program.",
+     "links": [("Reactive dog training: Jacob’s guide", "/reactive-dog-training"), ("Advanced obedience and behavior", "/behavioral-issues-reactivity")]},
+    {"id": "DdhFgzchJ_-", "date": "2026-09-20", "thumb": "img04.jpg",
+     "title": "Crate-free TV time: Kane’s German Shepherd training results",
+     "blurb": "After training, Kane’s owners no longer have to crate him whenever they watch TV. A calm, settled dog in the living room is exactly the kind of everyday result owners hire a trainer for.",
+     "links": [("Crate training: Jacob’s guide", "/crate-training-puppy"), ("Basic Obedience board and train", "/basic-obedience")]},
+    {"id": "Ddb7Fq-tmya", "date": "2026-09-18", "thumb": "img05.jpg",
+     "title": "Off-leash German Shepherd obedience with Kane",
+     "blurb": "Kane, a German Shepherd, working off-leash with Jacob. Reliable off-leash behavior takes proper foundation and real-world practice, which is what the advanced obedience program is built around.",
+     "links": [("Advanced obedience, off-leash and behavior", "/behavioral-issues-reactivity"), ("Dog won’t come when called: Jacob’s guide", "/dog-wont-come-when-called")]},
+    {"id": "DcEpwX_RSmc", "date": "2026-08-15", "thumb": "img06.jpg",
+     "title": "How to condition a verbal command with a German Shepherd",
+     "blurb": "A short lesson on conditioning a verbal command so your dog understands what a word means in any environment, not just in the living room. Jacob uses a German Shepherd to show the idea.",
+     "links": [("Basic Obedience board and train", "/basic-obedience"), ("Virtual coaching over Zoom", "/virtual-dog-training")]},
+    {"id": "DbQlSEzxLTd", "date": "2026-07-26", "thumb": "prog-frenchie-puppy.jpg",
+     "title": "Puppy crate manners: teaching Mr. Charlie first thing in the morning",
+     "blurb": "Jacob teaches Mr. Charlie, a puppy, calm crate manners first thing in the morning. Good crate habits make potty training, naps and alone time far easier for the whole household.",
+     "links": [("Crate training a puppy: Jacob’s guide", "/crate-training-puppy"), ("Puppy Head Start program", "/puppy-head-start")]},
+]
+VIDEOS_BY_DATE = sorted(VIDEOS, key=lambda v: v["date"], reverse=True)
+MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+
+def nice_date(d):
+    y, m, dd = d.split("-")
+    return f"{MONTHS[int(m) - 1]} {int(dd)}, {y}"
+
+
+def video_ld():
+    items = []
+    for v in VIDEOS_BY_DATE:
+        items.append({"@type": "VideoObject", "name": v["title"], "description": v["blurb"], "thumbnailUrl": f'{DOMAIN}/assets/{v["thumb"]}',
+                      "uploadDate": v["date"], "embedUrl": f'https://www.instagram.com/reel/{v["id"]}/embed/',
+                      "url": f'https://www.instagram.com/reel/{v["id"]}/', "inLanguage": "en", "publisher": biz_ref()})
+    return '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@graph": items}) + "</script>"
+
+
+def videos_page():
+    cards = ""
+    for i, v in enumerate(VIDEOS_BY_DATE):
+        links = "".join(f'<a class="tlink" href="{h}">{E(t)} →</a>' for t, h in v["links"])
+        cards += (f'<article class="vcard rv" data-d="{(i % 3) * 80}"><div class="vframe"><iframe src="https://www.instagram.com/reel/{v["id"]}/embed/" '
+                  f'title="{A(v["title"])}" loading="lazy" allowfullscreen scrolling="no"></iframe></div>'
+                  f'<div class="vbody"><span class="meta">Posted {nice_date(v["date"])}</span><h3>{E(v["title"])}</h3><p>{E(v["blurb"])}</p>'
+                  f'<p class="vlinks">{links}</p><a class="vig" href="https://www.instagram.com/reel/{v["id"]}/" rel="noopener">Watch on Instagram</a></div></article>')
+    topics = chips([("Leash pulling", "/dog-pulling-on-leash"), ("Crate training", "/crate-training-puppy"), ("Reactive dogs", "/reactive-dog-training"),
+                    ("Recall and off-leash", "/dog-wont-come-when-called"), ("Puppy foundations", "/puppy-foundations"), ("Virtual coaching", "/virtual-dog-training")])
+    ld = video_ld() + crumbs_ld([("Home", "/"), ("Videos", "/videos")])
+    ctas = btn("/contact", "Request a consultation") + f'<a class="btn ghost" href="{IG}" rel="noopener">Follow on Instagram</a>'
+    return head("Dog Training Videos from Parrish, FL | Gator Alley", VIDEO_PAGE_DESC, "/videos", ld) + header("videos") + f'''
+<main id="main">{hero_block("Videos · Parrish, FL", "Dog training videos from Parrish, Florida.", "Real dogs, real training sessions and straight answers from Jacob Soos on leash pulling, crate manners, verbal commands, off-leash obedience and behavior progress.", ctas, pfig("img04.jpg", "Jacob and Chloe with their German Shepherd Gator"))}
+{proof_strip()}
+<section class="section"><div class="wrap">{section_head("Watch Jacob work", "Short training clips from the Gator Alley Instagram.", "Jacob posts what he is working on with client dogs and his own. Each clip below links to the program or guide that goes deeper, so you can go from watching to a plan for your own dog.")}<div class="vgrid">{cards}</div></div></section>
+<section class="section local"><div class="wrap"><div class="rv"><h3>Watch by topic</h3><p class="muted" style="margin:10px 0 0">Jump to Jacob’s written guides for the problems owners ask about most.</p>{topics}</div></div></section>
+<section class="section"><div class="wrap story-grid"><div class="rv">{eyebrow("Based in Parrish")}<h2>Want results like these with your dog?</h2></div><div class="rv prose" data-d="100"><p>Gator Alley Dog Training is based in Parrish and serves owners in Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota, with board-and-train clients welcome from around the country. Every dog is trained personally by Jacob in a real home environment, with a detailed handover so the training carries over at home.</p><p>Videos show moments, not guarantees. Every dog is different, so the best next step is a conversation about your dog’s age, history and goals.</p></div></div></section>
+{links_block()}
+{cta_section("Ready to talk with Jacob about your dog?")}
+</main>''' + footer()
+
+
 def llms_txt():
     L = ["# Gator Alley Dog Training", "",
          "> Dog training in Parrish, FL (Manatee County), serving Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota.",
@@ -701,7 +782,7 @@ def llms_txt():
     L += ["", "## Dog training help"]
     for p in PROBLEMS:
         L.append(f"- {PROBLEM_LABELS[p['slug']]}: {DOMAIN}/{p['slug']}")
-    L += ["", "## More", f"- About Jacob: {DOMAIN}/about-jacob", f"- Contact: {DOMAIN}/contact", f"- All service areas: {DOMAIN}/service-areas", ""]
+    L += ["", "## More", f"- Dog training videos: {DOMAIN}/videos", f"- About Jacob: {DOMAIN}/about-jacob", f"- Contact: {DOMAIN}/contact", f"- All service areas: {DOMAIN}/service-areas", ""]
     return "\n".join(L)
 
 
@@ -721,6 +802,7 @@ if __name__ == "__main__":
     for p in PROGRAMS:
         write(f'{p["slug"]}.html', program_page(p)); pages[f'{p["slug"]}.html'] = f'/{p["slug"]}'
     write("service-areas.html", service_areas()); pages["service-areas.html"] = "/service-areas"
+    write("videos.html", videos_page()); pages["videos.html"] = "/videos"
     for k in AREA_ORDER:
         a = AREAS_LOCAL[k]; write(f'{a["slug"]}.html', area_page(k)); pages[f'{a["slug"]}.html'] = f'/{a["slug"]}'
     for l in LANDINGS:

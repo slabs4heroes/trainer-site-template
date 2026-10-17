@@ -280,3 +280,16 @@ h2{font-size:clamp(36px,4.8vw,66px)}
 .pgrid.prog-list .pbody{padding-top:26px}
 @media(max-width:1000px){.article-grid{grid-template-columns:1fr;gap:40px}.article-grid aside{position:static}.foot-areas{grid-template-columns:1fr;gap:32px}}
 @media(max-width:620px){.foot ul.cols{grid-template-columns:1fr 1fr}}
+
+/* ---- videos page ---- */
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:start}
+.vcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.vframe{background:var(--mist);height:640px}
+.vframe iframe{display:block;width:100%;height:100%;border:0}
+.vbody{padding:22px 22px 24px;display:grid;gap:10px}
+.vbody .meta{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.vbody h3{font-size:22px;line-height:1.15}.vbody p{color:var(--ink-2);font-size:16px}
+.vlinks{display:grid;gap:8px;margin-top:4px}.vlinks .tlink{justify-self:start}
+.vig{justify-self:start;font-weight:700;font-size:15px;color:var(--ink-2);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:980px){.vgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.vgrid{grid-template-columns:1fr}.vframe{height:620px}}

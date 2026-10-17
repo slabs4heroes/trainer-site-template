@@ -65,3 +65,21 @@
     });
   });
 })();
+
+/* videos page: size each Instagram reel embed to the height it reports */
+(function () {
+  var frames = document.querySelectorAll('.vframe iframe');
+  if (!frames.length) return;
+  window.addEventListener('message', function (e) {
+    if (e.origin !== 'https://www.instagram.com') return;
+    var d = e.data;
+    try { if (typeof d === 'string') d = JSON.parse(d); } catch (err) { return; }
+    if (!d || d.type !== 'MEASURE' || !d.details || !d.details.height) return;
+    for (var i = 0; i < frames.length; i++) {
+      if (frames[i].contentWindow === e.source) {
+        frames[i].style.height = d.details.height + 'px';
+        frames[i].parentNode.style.height = d.details.height + 'px';
+      }
+    }
+  });
+})();

@@ -229,13 +229,13 @@ def footer():
 
 def form_embed():
     return (f'<div class="embed"><iframe src="https://api.leadconnectorhq.com/widget/form/{FORM_ID}" id="inline-{FORM_ID}" title="Request a consultation with Gator Alley Dog Training" '
-            f'style="width:100%;height:920px;border:none;border-radius:6px" loading="lazy" data-layout="{{\'id\':\'INLINE\'}}" data-trigger-type="alwaysShow" data-activation-type="alwaysActivated" '
+            f'style="width:100%;height:920px;border:none;border-radius:6px" data-layout="{{\'id\':\'INLINE\'}}" data-trigger-type="alwaysShow" data-activation-type="alwaysActivated" '
             f'data-form-name="Gator Alley consultation form" data-form-id="{FORM_ID}"></iframe></div>')
 
 
 def booking_embed():
     return (f'<div class="embed"><iframe src="https://api.leadconnectorhq.com/widget/booking/{BOOK_ID}" id="{BOOK_ID}_booking" scrolling="no" '
-            f'title="Book a consultation with Gator Alley Dog Training" style="width:100%;min-height:760px;border:none;overflow:hidden;border-radius:6px" loading="lazy"></iframe></div>')
+            f'title="Book a consultation with Gator Alley Dog Training" style="width:100%;min-height:760px;border:none;overflow:hidden;border-radius:6px"></iframe></div>')
 
 
 def schema(extra=""):
@@ -450,6 +450,7 @@ def contact_page():
 <main id="main">{hero_block("Request a consultation", "Start the conversation about your dog.", "Tell Jacob what is going on, the goals you have and which board-and-train program you are considering. Puppy foundations, common obedience challenges and behavior-history cases are all useful context to include.", f'<a class="btn" href="tel:{TEL}">{PHONE}{ARROW}</a><span class="hrs">Wed–Sun, 9 AM–8 PM</span>', pfig("img01.jpg", "Jacob Soos and Chloe walking with their dogs in Parrish, Florida"))}
 {proof_strip()}
 <section class="section contact" id="consult"><div class="wrap contact-grid"><div class="rv">{eyebrow("Consultation request")}<h2>How can we help?</h2><div class="ways" style="margin-top:28px"><a href="tel:{TEL}">{PHONE_IC}{PHONE}</a><a href="mailto:{EMAIL}">{EMAIL}</a></div></div><div class="rv" data-d="120">{form_embed()}</div></div></section>
+<section class="section contact" id="book-consultation"><div class="wrap contact-grid"><div class="rv">{eyebrow("Book your free consultation")}<h2>Pick a time that works — Jacob will confirm personally.</h2><p class="lede">Available Wednesday through Sunday, 9 AM–7 PM Eastern, in 30-minute slots. Prefer to talk first? Call <a href="tel:{TEL}">{PHONE}</a>.</p></div><div class="rv" data-d="120">{booking_embed()}</div></div></section>
 <section class="section"><div class="wrap story-grid"><div class="rv">{eyebrow("Parrish dog training")}<h2>Based in Parrish. Serving nearby owners and board-and-train clients nationwide.</h2></div><div class="rv" data-d="100"><p>Gator Alley Dog Training is located at {ADDR}. Service conversations commonly begin with owners from Parrish, Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota.</p><p class="note"><strong>Important:</strong> Reach out before visiting. This is a training business, not a walk-in storefront.</p></div></div></section>
 <section class="section local"><div class="wrap">{section_head("Help Jacob understand the fit", "The more context you share, the more useful the first conversation can be.")}
 {trio([("Your dog's profile", "Include age, breed, health considerations, training history and the routines that matter most in your home."), ("The challenge", "Share examples of leash pulling, jumping, barking, poor recall, reactivity, anxiety, fear, aggression or other behavior concerns."), ("Your location and goals", "Let Jacob know whether you are in Parrish, Palmetto, Ellenton, Bradenton, Lakewood Ranch, Sarasota or elsewhere and what you want daily life to feel like.")])}</div></section>

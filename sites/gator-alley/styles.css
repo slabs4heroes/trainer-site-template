@@ -257,7 +257,7 @@ h2{font-size:clamp(36px,4.8vw,66px)}
   .split.two{grid-template-columns:1fr;gap:28px}.gal{grid-template-columns:repeat(2,1fr)}
   .vsteps .steps{padding-left:64px}
 }
-@media(max-width:620px){.gal{grid-template-columns:1fr 1fr;gap:12px}.embed iframe{min-height:900px}}
+@media(max-width:620px){.gal{grid-template-columns:1fr 1fr;gap:12px}.embed iframe[src*="/booking/"]{min-height:900px}}
 .split h2,.story-grid h2{margin-bottom:22px}.split h2+.prose,.story-grid h2+.prose{margin-top:0}
 .sec-head h2{margin-bottom:0}
 .hrs{margin-left:6px}

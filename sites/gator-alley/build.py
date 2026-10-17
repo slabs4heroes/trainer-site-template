@@ -16,7 +16,7 @@ ADDR = "10328 Charlotte Dr, Parrish, FL 34219"
 GOOGLE = "https://www.google.com/search?q=Gator+Alley+Dog+Training+Parrish+FL"
 FORM_ID = "omIJGkHDTkJ2ZCKIWgPn"
 BOOK_ID = "fItaqpy8rCCNlzdk7IhM"
-AREAS = ["Parrish", "Palmetto", "Ellenton", "Bradenton", "Lakewood Ranch", "Sarasota"]
+AREAS = ["Parrish", "Palmetto", "Ellenton", "Bradenton", "Lakewood Ranch", "Sarasota", "Ruskin", "Apollo Beach", "Sun City Center", "Riverview", "Brandon", "Tampa", "St. Petersburg", "Venice", "North Port"]
 
 
 def E(s):
@@ -458,7 +458,16 @@ AREA_IMG = {"parrish": ("img01.jpg", "Jacob Soos and Chloe walking with their do
             "sarasota": ("img05.jpg", "German Shepherd walking a path in Parrish, Florida"),
             "lakewood-ranch": ("img04.jpg", "Jacob and Chloe with their German Shepherd Gator"),
             "palmetto": ("img17.jpg", "Portrait of Jacob Soos outdoors in Parrish, Florida"),
-            "ellenton": ("img18.jpg", "Jacob, Chloe and their dog walking together")}
+            "ellenton": ("img18.jpg", "Jacob, Chloe and their dog walking together"),
+            "ruskin": ("prog-programs-hero.jpg", "Jacob Soos with his German Shepherd, Gator Alley Dog Training"),
+            "apollo-beach": ("img01.jpg", "Jacob Soos and Chloe walking with their dogs in Parrish, Florida"),
+            "sun-city-center": ("img18.jpg", "Jacob, Chloe and their dog walking together"),
+            "riverview": ("img04.jpg", "Jacob and Chloe with their German Shepherd Gator"),
+            "brandon": ("img17.jpg", "Portrait of Jacob Soos outdoors in Parrish, Florida"),
+            "tampa": ("img03.jpg", "Jacob Soos giving a hand-signal cue to a German Shepherd during obedience training"),
+            "st-petersburg": ("img05.jpg", "German Shepherd walking a path in Parrish, Florida"),
+            "venice": ("prog-programs-hero.jpg", "Jacob Soos with his German Shepherd, Gator Alley Dog Training"),
+            "north-port": ("img04.jpg", "Jacob and Chloe with their German Shepherd Gator")}
 
 CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-7"/></svg>'
 
@@ -498,7 +507,7 @@ def help_items(exclude=()):
 
 def links_block(ex_town=None, ex_help=()):
     return ('<section class="section local"><div class="wrap"><div class="split two rv"><div><h3>Dog training near you</h3>'
-            '<p class="muted" style="margin:10px 0 0">Gator Alley is based in Parrish and serves nearby Manatee and Sarasota County owners.</p>' + chips(town_items(ex_town)) + '</div>'
+            '<p class="muted" style="margin:10px 0 0">Gator Alley is based in Parrish and serves owners across Manatee, Sarasota and Hillsborough counties.</p>' + chips(town_items(ex_town)) + '</div>'
             '<div><h3>Help with common problems</h3><p class="muted" style="margin:10px 0 0">Guides from Jacob on the issues Florida dog owners ask about most.</p>' + chips(help_items(ex_help)) + '</div></div></div></section>')
 
 
@@ -564,20 +573,21 @@ def landing_page(l):
     n, alt = l["img"]
     prog = "".join(f'<a class="pcard rv" href="/{ps}"><div class="pbody"><h3>{E(nm)}</h3><p>{E(bl)}</p><span class="more-l">See the program {ARROW_SVG}</span></div></a>' for ps, nm, bl in l["programs"])
     intro = "".join(f"<p>{E(t)}</p>" for t in l["intro"])
-    rel = chips([(PROBLEM_LABELS[r], f"/{r}") for r in l["related"]] + [(f"Dog training in {l['town']}", f"/{AREAS_LOCAL[l['area_slug']]['slug']}")])
+    who = l.get("who") or f"{l['town']} owners"
+    rel = chips([(PROBLEM_LABELS[r], f"/{r}") for r in l["related"]] + ([(f"Dog training in {l['town']}", f"/{AREAS_LOCAL[l['area_slug']]['slug']}")] if l.get("area_slug") else []))
     why = "".join(f'<li>{CHECK}<span>{E(t)}</span></li>' for t in ["Personally led by Jacob, no rotating staff", "A real home environment, not a kennel", "Real-world practice around everyday distractions", "A detailed handover and ongoing support", "Consultation first, with no one-size-fits-all promise"])
-    ld = service_ld(l["h1"].split(" in ")[0], l["desc"], l["town"]) + faq_ld(l["faqs"]) + crumbs_ld([("Home", "/"), ("Programs", "/programs"), (l["h1"], path)])
+    ld = service_ld(l["h1"].split(" in ")[0], l["desc"], l.get("town")) + faq_ld(l["faqs"]) + crumbs_ld([("Home", "/"), ("Programs", "/programs"), (l["h1"], path)])
     ctas = btn("/contact", "Request a consultation") + f'<a class="btn ghost" href="tel:{TEL}">{PHONE}</a>'
     return head(l["title"], l["desc"], path, ld) + header("programs") + f'''
 <main id="main">{hero_block(l["eyebrow"], l["h1"], l["lede"], ctas, pfig(n, alt))}
 {proof_strip()}
 <section class="section"><div class="wrap split"><div class="rv">{eyebrow("Gator Alley Dog Training")}<h2>Training built around your dog and your home.</h2><div class="prose">{intro}</div></div>
 <div class="rv" data-d="100"><h3>Why owners choose Gator Alley</h3><ul class="fit">{why}</ul></div></div></section>
-<section class="section local"><div class="wrap">{section_head("Programs to consider", f"Where {l['town']} owners usually start.", "Jacob helps you choose after hearing about your dog. Here are the programs that fit this need.")}<div class="pgrid prog-list">{prog}</div></div></section>
+<section class="section local"><div class="wrap">{section_head("Programs to consider", f"Where {who} usually start.", "Jacob helps you choose after hearing about your dog. Here are the programs that fit this need.")}<div class="pgrid prog-list">{prog}</div></div></section>
 <section class="section method"><div class="wrap method-grid"><div class="sticky"><div class="rv">{eyebrow("How it works")}</div><h2 class="rv">Book. Train. Thrive.</h2></div>{steps_html(HOW_STEPS)}</div></section>
-<section class="section" id="faq"><div class="wrap faq-grid"><div class="rv">{eyebrow(f"{l['town']} owners")}<h2>Questions before you reach out.</h2></div><div>{faq_html(l["faqs"])}</div></div></section>
+<section class="section" id="faq"><div class="wrap faq-grid"><div class="rv">{eyebrow(who.capitalize())}<h2>Questions before you reach out.</h2></div><div>{faq_html(l["faqs"])}</div></div></section>
 <section class="section local"><div class="wrap"><div class="rv"><h3>Related help</h3>{rel}</div></div></section>
-{cta_section(f"Talk with Jacob about your {l['town']} dog.")}
+{cta_section(f"Talk with Jacob about your {l['town']} dog." if l.get("town") else "Talk with Jacob about your dog.")}
 </main>''' + footer()
 
 
@@ -601,7 +611,7 @@ def problem_page(p):
 {proof_strip()}
 <section class="section"><div class="wrap article-grid"><article class="article rv">{body}</article>
 <aside class="rv" data-d="100"><div class="callout"><p class="status">The program that fits</p><h3>{E(pn)}</h3><p>Personally led by Jacob in a real home environment, with a detailed handover so the training holds up at home.</p><p style="margin-top:18px"><a class="tlink" href="/{ps}">See the program →</a></p></div>
-<div class="callout"><p class="status">Serving</p><p>Parrish, Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota, FL.</p><p style="margin-top:14px"><a class="tlink" href="/service-areas">Where we train →</a></p></div></aside></div></section>
+<div class="callout"><p class="status">Serving</p><p>Parrish, Bradenton, Sarasota, Lakewood Ranch, Palmetto, Ellenton, Tampa, St. Petersburg and nearby, plus virtual coaching anywhere.</p><p style="margin-top:14px"><a class="tlink" href="/service-areas">Where we train →</a></p></div></aside></div></section>
 <section class="section" id="faq"><div class="wrap faq-grid"><div class="rv">{eyebrow("Common questions")}<h2>Questions owners ask.</h2></div><div>{faq_html(p["faqs"])}</div></div></section>
 <section class="section local"><div class="wrap"><div class="rv"><h3>Related help</h3>{rel}</div></div></section>
 {links_block(None, [p["slug"]] + list(p["related"]))}
@@ -619,9 +629,9 @@ def service_areas():
         {"@type": "ListItem", "position": i + 1, "name": f"Dog training in {AREAS_LOCAL[k]['town']}, FL", "url": f"{DOMAIN}/{AREAS_LOCAL[k]['slug']}"} for i, k in enumerate(AREA_ORDER)]}) + "</script>"
           + crumbs_ld([("Home", "/"), ("Service areas", "/service-areas")]))
     return head("Dog Training in Parrish, Bradenton & Sarasota | Gator Alley", desc, "/service-areas", ld) + header("areas") + f'''
-<main id="main">{hero_block("Service areas · Manatee & Sarasota counties", "Dog training across Parrish and nearby Florida.", "Based in Parrish and serving owners in Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota. Pick your town to see how Jacob can help.", btn("/contact", "Request a consultation"), pfig("img01.jpg", "Jacob Soos and Chloe walking with their dogs in Parrish, Florida"))}
+<main id="main">{hero_block("Service areas · Manatee, Sarasota & Hillsborough", "Dog training across Parrish and nearby Florida.", "Based in Parrish and serving owners in Bradenton, Sarasota, Lakewood Ranch, Palmetto, Ellenton and beyond, from Venice to Tampa and St. Petersburg. Pick your town to see how Jacob can help.", btn("/contact", "Request a consultation"), pfig("img01.jpg", "Jacob Soos and Chloe walking with their dogs in Parrish, Florida"))}
 {proof_strip()}
-<section class="section"><div class="wrap">{section_head("Where we train", "Six communities. One personal trainer.", "The same four programs are open to owners in every town, personally led by Jacob in a real home environment.")}<div class="pgrid prog-list">{cards}</div></div></section>
+<section class="section"><div class="wrap">{section_head("Where we train", f"{len(AREA_ORDER)} communities. One personal trainer.", "The same four programs are open to owners in every town, personally led by Jacob in a real home environment, plus live virtual coaching over Zoom.")}<div class="pgrid prog-list">{cards}</div></div></section>
 <section class="section local"><div class="wrap">{section_head("What we offer", "Four board-and-train programs, plus virtual coaching.", "Choose the track that fits your dog’s age, behavior history and goals.")}{prog_cards()}</div></section>
 <section class="section"><div class="wrap story-grid"><div class="rv">{eyebrow("Find us")}<h2>Our Parrish location.</h2></div><div class="rv prose" data-d="100"><p>Gator Alley Dog Training Academy, LLC · {ADDR}. Call <a href="tel:{TEL}">{PHONE}</a> Wednesday through Sunday, 9 AM–8 PM.</p><p>Not sure whether your town is covered, or want to talk logistics? Ask Jacob in your consultation request. We also welcome board-and-train clients from around the country and offer live virtual coaching over Zoom.</p><p style="margin-top:24px">{btn("/contact", "Ask about your area")}</p></div></div></section>
 {links_block()}

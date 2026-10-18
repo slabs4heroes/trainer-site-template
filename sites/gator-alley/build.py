@@ -222,7 +222,7 @@ def footer():
 <div><h4>Explore</h4><ul><li><a href="/">Home</a></li><li><a href="/programs">Programs</a></li><li><a href="/videos">Videos</a></li><li><a href="/about-jacob">About Jacob</a></li><li><a href="/contact">Contact</a></li></ul></div>
 <div><h4>Programs</h4><ul>{"".join(f'<li><a href="/{p["slug"]}">{E(p["nav"])}</a></li>' for p in PROGRAMS)}</ul></div>
 <div><h4>Get in touch</h4><ul><li><a href="tel:{TEL}">{PHONE}</a></li><li>Wed–Sun, 9 AM–8 PM</li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li><a href="{IG}" rel="noopener">Instagram</a> · <a href="{FB}" rel="noopener">Facebook</a></li><li><a href="/contact">Request a consultation</a></li></ul></div>
-</div>{footer_links()}<div class="legal"><span>© Gator Alley Dog Training Academy, LLC · <a href="https://k9pn.com" title="Dog trainer websites, CRM and SEO by K9PN">Dog Trainer Websites by K9PN</a></span><a href="#top">Back to top ↑</a></div></div></footer>
+</div>{footer_links()}<div class="legal"><span>© Gator Alley Dog Training Academy, LLC · <a href="https://k9pn.com/?utm_source=gatoralleyk9.com&utm_medium=referral&utm_campaign=footer-backlink" title="Dog trainer websites, CRM and SEO by K9PN">Dog Trainer Websites by K9PN</a></span><a href="#top">Back to top ↑</a></div></div></footer>
 <div class="mbar"><a href="tel:{TEL}">Call</a><a href="/contact" class="go">Request a consultation</a></div>
 <script src="/script.js" defer></script></body></html>'''
 

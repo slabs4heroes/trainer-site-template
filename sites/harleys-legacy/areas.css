@@ -1,0 +1,14 @@
+.towns.lk li{padding:0;transition:border-color .3s,background .3s}
+.towns.lk a{display:block;padding:9px 16px;text-decoration:none}
+.towns.lk li:hover{border-color:var(--gold);background:rgba(184,148,63,.12)}.towns.lk li:hover a{color:#fff}
+.near{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.ncard{display:flex;flex-direction:column;gap:10px;text-decoration:none;background:var(--bg3);border:1px solid var(--line);border-top:3px solid var(--gold);padding:28px;transition:border-color .4s,transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
+.ncard:hover{border-color:var(--gold);box-shadow:0 30px 60px -34px #000,0 0 40px -18px rgba(184,148,63,.4)}
+.ncard p{color:var(--mut);font-size:15.5px;line-height:1.55}
+.ncard .more{margin-top:auto;padding-top:8px;font:700 12.5px var(--f);letter-spacing:.14em;text-transform:uppercase;color:#fff;display:inline-flex;gap:8px;align-items:center}.ncard:hover .more svg{transform:translateX(4px)}
+.js .ncard.rv.in:hover{transform:translateY(-6px)}
+.hero-cta .btn+.btn,.phero .btn+.btn{margin-left:10px}
+.foot-towns{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:44px;padding-top:22px;border-top:1px solid var(--line);font-size:14px}
+.foot-towns span{font:700 12px var(--f);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-l)}
+.foot-towns a:hover{color:#fff}
+@media(max-width:620px){.phero .btn+.btn{margin:12px 0 0}}

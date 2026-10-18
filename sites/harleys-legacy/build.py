@@ -36,7 +36,7 @@ def footer():
     return f'''</main><footer class="foot"><div class="wrap"><div class="foot-grid"><div><img src="images/logo-footer.png" width="130" height="130" alt="Harley's Legacy K9 badge" loading="lazy"><p>Veteran-owned board &amp; train and behavior modification in Jacksonville, NC. Named after Harley, the Cane Corso who started it all.</p></div>
 <div><h4>Explore</h4><ul><li><a href="programs">Programs</a></li><li><a href="about">About George</a></li><li><a href="contact">Contact</a></li><li><a href="privacy">Privacy</a></li><li><a href="terms">Terms</a></li></ul></div>
 <div><h4>Talk to George</h4><ul><li><a href="tel:{TEL}">{PH}</a></li><li><a href="mailto:{EM}">{EM}</a></li><li>Mon–Fri · 8am–6pm</li><li>Jacksonville, NC</li></ul></div></div>
-<div class="legalbar"><span>© 2026 Harley’s Legacy K9 · Spohrer Innovations LLC</span><span>Site by K9PN</span></div></div></footer>
+<div class="legalbar"><span>© 2026 Harley’s Legacy K9 · Spohrer Innovations LLC</span><span><a href="https://k9pn.com" rel="noopener" title="Dog trainer websites, CRM and SEO by K9PN">Site by K9PN</a></span></div></div></footer>
 <div class="mbar"><a href="tel:{TEL}">Call</a><a class="go" href="contact">Request a Call</a></div><script src="script.js" defer></script></body></html>'''
 def band():
     w=['Veteran-owned','Board &amp; train','Behavior modification','Reactivity','Aggression','Private lessons','Boarding','Jacksonville, NC']

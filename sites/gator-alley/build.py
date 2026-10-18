@@ -613,6 +613,19 @@ def area_page(k):
 </main>''' + footer()
 
 
+EXT_GUIDES = {
+    "board-and-train-tampa-fl": ("Want a neutral explainer on how board and train works, what it costs and how to compare programs across Tampa Bay? Read the ", "https://tampabayboardandtrain.com", "Tampa Bay board and train guide"),
+    "puppy-training-tampa-fl": ("For a look at potty training, biting and socialization for Tampa Bay puppies, see the ", "https://tampabaypuppytraining.com", "Tampa Bay puppy training guide"),
+}
+
+
+def ext_guide(slug):
+    g = EXT_GUIDES.get(slug)
+    if not g:
+        return ""
+    return f'<p class="muted" style="margin:18px 0 0">{E(g[0])}<a href="{g[1]}">{E(g[2])}</a>.</p>'
+
+
 def landing_page(l):
     path = f'/{l["slug"]}'
     n, alt = l["img"]
@@ -631,7 +644,7 @@ def landing_page(l):
 <section class="section local"><div class="wrap">{section_head("Programs to consider", f"Where {who} usually start.", "Jacob helps you choose after hearing about your dog. Here are the programs that fit this need.")}<div class="pgrid prog-list">{prog}</div></div></section>
 <section class="section method"><div class="wrap method-grid"><div class="sticky"><div class="rv">{eyebrow("How it works")}</div><h2 class="rv">Book. Train. Thrive.</h2></div>{steps_html(HOW_STEPS)}</div></section>
 <section class="section" id="faq"><div class="wrap faq-grid"><div class="rv">{eyebrow(who.capitalize())}<h2>Questions before you reach out.</h2></div><div>{faq_html(l["faqs"])}</div></div></section>
-<section class="section local"><div class="wrap"><div class="rv"><h3>Related help</h3>{rel}</div></div></section>
+<section class="section local"><div class="wrap"><div class="rv"><h3>Related help</h3>{rel}{ext_guide(l["slug"])}</div></div></section>
 {links_block(l.get("area_slug"), (), [l["slug"]])}
 {cta_section(f"Talk with Jacob about your {l['town']} dog." if l.get("town") else "Talk with Jacob about your dog.")}
 </main>''' + footer()

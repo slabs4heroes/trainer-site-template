@@ -12,3 +12,12 @@
 .foot-towns span{font:700 12px var(--f);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-l)}
 .foot-towns a:hover{color:#fff}
 @media(max-width:620px){.phero .btn+.btn{margin:12px 0 0}}
+
+/* Logo: very subtle float and light pulse */
+@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+@keyframes logoGlow{0%,100%{filter:drop-shadow(0 0 3px rgba(168,85,247,.28)) brightness(1)}50%{filter:drop-shadow(0 0 11px rgba(190,120,255,.6)) brightness(1.07)}}
+@keyframes logoGlowFoot{0%,100%{filter:drop-shadow(0 0 8px rgba(168,85,247,.25)) brightness(1)}50%{filter:drop-shadow(0 0 22px rgba(190,120,255,.5)) brightness(1.06)}}
+.brand img{animation:logoFloat 7s ease-in-out infinite,logoGlow 5s ease-in-out infinite;will-change:transform,filter}
+.brand:hover img{animation-duration:4s,2.5s}
+.foot-grid img{animation:logoFloat 9s ease-in-out infinite,logoGlowFoot 6s ease-in-out infinite;will-change:transform,filter}
+@media (prefers-reduced-motion:reduce){.brand img,.foot-grid img{animation:none}}

@@ -15,9 +15,11 @@
 
 /* Logo: very subtle float and light pulse */
 @keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
-@keyframes logoGlow{0%,100%{filter:drop-shadow(0 0 3px rgba(168,85,247,.28)) brightness(1)}50%{filter:drop-shadow(0 0 11px rgba(190,120,255,.6)) brightness(1.07)}}
-@keyframes logoGlowFoot{0%,100%{filter:drop-shadow(0 0 8px rgba(168,85,247,.25)) brightness(1)}50%{filter:drop-shadow(0 0 22px rgba(190,120,255,.5)) brightness(1.06)}}
+@keyframes logoGlow{0%,100%{filter:drop-shadow(0 0 5px rgba(168,85,247,.45)) brightness(1.02)}50%{filter:drop-shadow(0 0 10px rgba(200,140,255,.9)) drop-shadow(0 0 22px rgba(168,85,247,.55)) brightness(1.14)}}
+@keyframes logoGlowFoot{0%,100%{filter:drop-shadow(0 0 12px rgba(168,85,247,.4)) brightness(1.02)}50%{filter:drop-shadow(0 0 20px rgba(200,140,255,.85)) drop-shadow(0 0 42px rgba(168,85,247,.5)) brightness(1.12)}}
 .brand img{animation:logoFloat 7s ease-in-out infinite,logoGlow 5s ease-in-out infinite;will-change:transform,filter}
 .brand:hover img{animation-duration:4s,2.5s}
 .foot-grid img{animation:logoFloat 9s ease-in-out infinite,logoGlowFoot 6s ease-in-out infinite;will-change:transform,filter}
 @media (prefers-reduced-motion:reduce){.brand img,.foot-grid img{animation:none}}
+.brand img{width:58px;height:58px}.header.shrink .brand img{width:46px;height:46px}
+.drawer .btn{padding:17px 28px;justify-content:center;gap:12px}

@@ -239,7 +239,7 @@ def booking_embed():
 
 
 def schema(extra=""):
-    return f'''<script type="application/ld+json">{{"@context":"https://schema.org","@type":"LocalBusiness","@id":"{DOMAIN}/#business","name":"Gator Alley Dog Training","legalName":"Gator Alley Dog Training Academy, LLC","url":"{DOMAIN}/","telephone":"{TEL}","email":"{EMAIL}","image":"{DOMAIN}/assets/img05.jpg","address":{{"@type":"PostalAddress","streetAddress":"10328 Charlotte Dr","addressLocality":"Parrish","addressRegion":"FL","postalCode":"34219","addressCountry":"US"}},"areaServed":{json.dumps(AREAS)},"sameAs":["{IG}","{FB}"],"aggregateRating":{{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"16"}}}}</script>{extra}'''
+    return f'''<script type="application/ld+json">{{"@context":"https://schema.org","@type":"LocalBusiness","@id":"{DOMAIN}/#business","name":"Gator Alley Dog Training","legalName":"Gator Alley Dog Training Academy, LLC","url":"{DOMAIN}/","telephone":"{TEL}","email":"{EMAIL}","image":"{DOMAIN}/assets/img05.jpg","address":{{"@type":"PostalAddress","streetAddress":"10328 Charlotte Dr","addressLocality":"Parrish","addressRegion":"FL","postalCode":"34219","addressCountry":"US"}},"areaServed":{json.dumps(AREAS)},"sameAs":["{IG}","{FB}"]}}</script>{extra}'''
 
 
 def faq_ld(items):

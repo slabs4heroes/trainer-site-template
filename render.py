@@ -43,7 +43,7 @@ def build_schema(pack, page_key, area_served_override=None):
     seo = pack["seo"][page_key]
     return {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": "WebPage",
         "name": seo["title"],
         "description": seo["description"],
         "url": seo["canonical_url"],

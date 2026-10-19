@@ -238,7 +238,9 @@ def booking_embed():
             f'title="Book a consultation with Gator Alley Dog Training" style="width:100%;min-height:760px;border:none;overflow:hidden;border-radius:6px"></iframe></div>')
 
 
-def schema(extra=""):
+def schema(extra="", home=False):
+    if not home:
+        return extra
     return f'''<script type="application/ld+json">{{"@context":"https://schema.org","@type":"LocalBusiness","@id":"{DOMAIN}/#business","name":"Gator Alley Dog Training","legalName":"Gator Alley Dog Training Academy, LLC","url":"{DOMAIN}/","telephone":"{TEL}","email":"{EMAIL}","image":"{DOMAIN}/assets/img05.jpg","address":{{"@type":"PostalAddress","streetAddress":"10328 Charlotte Dr","addressLocality":"Parrish","addressRegion":"FL","postalCode":"34219","addressCountry":"US"}},"areaServed":{json.dumps(AREAS)},"sameAs":["{IG}","{FB}"]}}</script>{extra}'''
 
 
@@ -306,7 +308,7 @@ def home():
     w01, h01 = ar("img01.jpg")
     return head("Dog Trainer in Parrish, FL | Gator Alley Dog Training",
                 "Obedience, board-and-train, and behavior programs in Parrish, FL from Gator Alley Dog Training. Serving Bradenton & Sarasota. Free consultations available.",
-                "/", schema(faq_ld(HOME_FAQ)), embed=True) + header("home") + f'''
+                "/", schema(faq_ld(HOME_FAQ), home=True), embed=True) + header("home") + f'''
 <main id="main">
 <section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><div class="status fade">Dog training in Parrish, Florida</div>
 <h1><span class="ln"><span>Reliable</span></span><span class="ln"><span>obedience built</span></span><span class="ln"><span>for <em>real life.</em></span></span></h1>
@@ -484,7 +486,7 @@ def inline(t):
 
 
 def biz_ref():
-    return {"@type": "LocalBusiness", "@id": f"{DOMAIN}/#business", "name": "Gator Alley Dog Training", "telephone": TEL, "url": f"{DOMAIN}/"}
+    return {"@id": f"{DOMAIN}/#business", "name": "Gator Alley Dog Training", "telephone": TEL, "url": f"{DOMAIN}/"}
 
 
 def crumbs_ld(items):

@@ -23,3 +23,9 @@
 @media (prefers-reduced-motion:reduce){.brand img,.foot-grid img{animation:none}}
 .brand img{width:58px;height:58px}.header.shrink .brand img{width:46px;height:46px}
 .drawer .btn{padding:17px 28px;justify-content:center;gap:12px}
+
+/* Heading word spacing: tight letter-spacing was collapsing the spaces (e.g. "Talk to George") */
+h1,h2,h3{word-spacing:.14em}
+.hero-card h2{letter-spacing:-.015em;word-spacing:.2em}
+.foot h4{word-spacing:.35em}
+h2.sp .w{margin-right:.14em}

@@ -16,7 +16,7 @@ ADDR = "10328 Charlotte Dr, Parrish, FL 34219"
 GOOGLE = "https://www.google.com/search?q=Gator+Alley+Dog+Training+Parrish+FL"
 FORM_ID = "omIJGkHDTkJ2ZCKIWgPn"
 BOOK_ID = "fItaqpy8rCCNlzdk7IhM"
-AREAS = ["Parrish", "Palmetto", "Ellenton", "Bradenton", "Lakewood Ranch", "Sarasota", "Ruskin", "Apollo Beach", "Sun City Center", "Riverview", "Brandon", "Tampa", "St. Petersburg", "Venice", "North Port"]
+AREAS = ["Parrish", "Palmetto", "Ellenton", "Bradenton", "Lakewood Ranch", "Sarasota", "Venice", "North Port"]
 
 
 def E(s):
@@ -336,7 +336,7 @@ def home():
 <div class="rv" data-d="100">{eyebrow("The Gator Alley difference")}<h2>Real-world exposure. Personal care. Clear standards.</h2>
 <p>Dogs live and learn in a real home environment, not a facility. Jacob personally works with each dog through the routines, people and distractions that make reliable behavior matter.</p>
 <p style="margin-top:28px">{btn("/about-jacob", "Meet Jacob")}</p></div></div></section>
-<section class="section" style="padding-top:0"><div class="wrap"><div class="google rv"><div class="score">5.0</div><div>{eyebrow("Proof from the program")}<h3>Real work deserves real stories.</h3><p class="muted" style="margin-top:10px">Client success stories coming after approval</p></div><a class="btn ghost" href="{GOOGLE}" rel="noopener">Google reviews · 16 reviews{ARROW}</a></div></div></section>
+<section class="section" style="padding-top:0"><div class="wrap"><div class="google rv"><div class="score">5.0</div><div>{eyebrow("Proof from the program")}<h3>Real work deserves real stories.</h3><p class="muted" style="margin-top:10px">Read what owners say about training with Jacob in the 16 reviews on Google.</p></div><a class="btn ghost" href="{GOOGLE}" rel="noopener">Google reviews · 16 reviews{ARROW}</a></div></div></section>
 <section class="section" id="faq" style="padding-top:0"><div class="wrap faq-grid"><div class="rv">{eyebrow("Frequently asked questions")}<h2>What to know before you call.</h2></div><div>{faq_html(HOME_FAQ)}</div></div></section>
 <section class="section area" id="area" style="padding-top:0"><div class="wrap story-grid"><div class="rv">{eyebrow("Serving Parrish & nearby areas")}<h2>Dog training that starts in Parrish and travels home with you.</h2></div>
 <div class="rv" data-d="100"><p>Gator Alley Dog Training is based in Parrish and serves owners in Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota, while also welcoming board-and-train clients from around the country. The page is local by design: the conversation starts with your dog's actual routines, behavior history and household goals, not a generic city-page promise.</p><p style="margin-top:28px">{btn("/contact", "Talk with Jacob")}</p></div></div></section>
@@ -466,13 +466,6 @@ AREA_IMG = {"parrish": ("img01.jpg", "Jacob Soos and Chloe walking with their do
             "lakewood-ranch": ("img04.jpg", "Jacob and Chloe with their German Shepherd Gator"),
             "palmetto": ("img17.jpg", "Portrait of Jacob Soos outdoors in Parrish, Florida"),
             "ellenton": ("img18.jpg", "Jacob, Chloe and their dog walking together"),
-            "ruskin": ("prog-programs-hero.jpg", "Jacob Soos with his German Shepherd, Gator Alley Dog Training"),
-            "apollo-beach": ("img01.jpg", "Jacob Soos and Chloe walking with their dogs in Parrish, Florida"),
-            "sun-city-center": ("img18.jpg", "Jacob, Chloe and their dog walking together"),
-            "riverview": ("img04.jpg", "Jacob and Chloe with their German Shepherd Gator"),
-            "brandon": ("img17.jpg", "Portrait of Jacob Soos outdoors in Parrish, Florida"),
-            "tampa": ("img03.jpg", "Jacob Soos giving a hand-signal cue to a German Shepherd during obedience training"),
-            "st-petersburg": ("img05.jpg", "German Shepherd walking a path in Parrish, Florida"),
             "venice": ("prog-programs-hero.jpg", "Jacob Soos with his German Shepherd, Gator Alley Dog Training"),
             "north-port": ("img04.jpg", "Jacob and Chloe with their German Shepherd Gator")}
 
@@ -513,18 +506,18 @@ def help_items(exclude=()):
 
 
 LANDING_LABEL = {"puppy-training-sarasota-fl": "Puppy training in Sarasota", "puppy-training-bradenton-fl": "Puppy training in Bradenton",
-                 "puppy-training-tampa-fl": "Puppy training in Tampa", "board-and-train-sarasota-fl": "Board and train in Sarasota",
-                 "board-and-train-tampa-fl": "Board and train in Tampa", "virtual-dog-training": "Virtual dog training over Zoom"}
+                 "board-and-train-sarasota-fl": "Board and train in Sarasota",
+                 "virtual-dog-training": "Virtual dog training over Zoom"}
 
 # which specialty pages and problem guides belong to which service
 SERVICE_RELATED = {
-    "puppy-head-start": (["puppy-training-sarasota-fl", "puppy-training-bradenton-fl", "puppy-training-tampa-fl", "virtual-dog-training"],
+    "puppy-head-start": (["puppy-training-sarasota-fl", "puppy-training-bradenton-fl", "virtual-dog-training"],
                          ["potty-training-puppy", "crate-training-puppy", "stop-dog-jumping", "dog-pulling-on-leash"]),
-    "basic-obedience": (["board-and-train-sarasota-fl", "board-and-train-tampa-fl", "virtual-dog-training"],
+    "basic-obedience": (["board-and-train-sarasota-fl", "virtual-dog-training"],
                         ["dog-pulling-on-leash", "stop-dog-jumping", "stop-dog-barking", "dog-wont-come-when-called"]),
-    "behavioral-issues-reactivity": (["board-and-train-sarasota-fl", "board-and-train-tampa-fl", "virtual-dog-training"],
+    "behavioral-issues-reactivity": (["board-and-train-sarasota-fl", "virtual-dog-training"],
                                      ["reactive-dog-training", "dog-wont-come-when-called", "dog-separation-anxiety", "stop-dog-barking"]),
-    "puppy-foundations": (["puppy-training-sarasota-fl", "puppy-training-bradenton-fl", "puppy-training-tampa-fl", "virtual-dog-training"],
+    "puppy-foundations": (["puppy-training-sarasota-fl", "puppy-training-bradenton-fl", "virtual-dog-training"],
                           ["potty-training-puppy", "crate-training-puppy", "dog-separation-anxiety", "stop-dog-jumping"]),
 }
 
@@ -535,7 +528,7 @@ def landing_items(slugs=None, exclude=()):
 
 def links_block(ex_town=None, ex_help=(), ex_land=()):
     return ('<section class="section local"><div class="wrap"><div class="split two rv"><div><h3>Dog training near you</h3>'
-            '<p class="muted" style="margin:10px 0 0">Gator Alley is based in Parrish and serves owners across Manatee, Sarasota and Hillsborough counties.</p>' + chips(town_items(ex_town)) + '</div>'
+            '<p class="muted" style="margin:10px 0 0">Gator Alley is based in Parrish and serves owners across Manatee and Sarasota counties.</p>' + chips(town_items(ex_town)) + '</div>'
             '<div><h3>Help with common problems</h3><p class="muted" style="margin:10px 0 0">Guides from Jacob on the issues Florida dog owners ask about most.</p>' + chips(help_items(ex_help)) + '</div></div>'
             '<div class="rv" style="margin-top:48px"><h3>Programs by need and location</h3><p class="muted" style="margin:10px 0 0">Puppy training, board and train, and live virtual coaching.</p>' + chips(landing_items(None, ex_land)) + '</div></div></section>')
 
@@ -615,10 +608,7 @@ def area_page(k):
 </main>''' + footer()
 
 
-EXT_GUIDES = {
-    "board-and-train-tampa-fl": ("Want a neutral explainer on how board and train works, what it costs and how to compare programs across Tampa Bay? Read the ", "https://tampabayboardandtrain.com", "Tampa Bay board and train guide"),
-    "puppy-training-tampa-fl": ("For a look at potty training, biting and socialization for Tampa Bay puppies, see the ", "https://tampabaypuppytraining.com", "Tampa Bay puppy training guide"),
-}
+EXT_GUIDES = {}
 
 
 def ext_guide(slug):
@@ -672,7 +662,7 @@ def problem_page(p):
 {proof_strip()}
 <section class="section"><div class="wrap article-grid"><article class="article rv">{body}</article>
 <aside class="rv" data-d="100"><div class="callout"><p class="status">The program that fits</p><h3>{E(pn)}</h3><p>Personally led by Jacob in a real home environment, with a detailed handover so the training holds up at home.</p><p style="margin-top:18px"><a class="tlink" href="/{ps}">See the program →</a></p></div>
-<div class="callout"><p class="status">Serving</p><p>Parrish, Bradenton, Sarasota, Lakewood Ranch, Palmetto, Ellenton, Tampa, St. Petersburg and nearby, plus virtual coaching anywhere.</p><p style="margin-top:14px"><a class="tlink" href="/service-areas">Where we train →</a></p></div></aside></div></section>
+<div class="callout"><p class="status">Serving</p><p>Parrish, Bradenton, Sarasota, Lakewood Ranch, Palmetto, Ellenton, Venice, North Port and nearby, plus virtual coaching anywhere.</p><p style="margin-top:14px"><a class="tlink" href="/service-areas">Where we train →</a></p></div></aside></div></section>
 <section class="section" id="faq"><div class="wrap faq-grid"><div class="rv">{eyebrow("Common questions")}<h2>Questions owners ask.</h2></div><div>{faq_html(p["faqs"])}</div></div></section>
 <section class="section local"><div class="wrap"><div class="rv"><h3>Related help</h3>{rel}</div></div></section>
 {links_block(None, [p["slug"]] + list(p["related"]))}
@@ -690,7 +680,7 @@ def service_areas():
         {"@type": "ListItem", "position": i + 1, "name": f"Dog training in {AREAS_LOCAL[k]['town']}, FL", "url": f"{DOMAIN}/{AREAS_LOCAL[k]['slug']}"} for i, k in enumerate(AREA_ORDER)]}) + "</script>"
           + crumbs_ld([("Home", "/"), ("Service areas", "/service-areas")]))
     return head("Dog Training in Parrish, Bradenton & Sarasota | Gator Alley", desc, "/service-areas", ld) + header("areas") + f'''
-<main id="main">{hero_block("Service areas · Manatee, Sarasota & Hillsborough", "Dog training across Parrish and nearby Florida.", "Based in Parrish and serving owners in Bradenton, Sarasota, Lakewood Ranch, Palmetto, Ellenton and beyond, from Venice to Tampa and St. Petersburg. Pick your town to see how Jacob can help.", btn("/contact", "Request a consultation"), pfig("img01.jpg", "Jacob Soos and Chloe walking with their dogs in Parrish, Florida"))}
+<main id="main">{hero_block("Service areas · Manatee & Sarasota", "Dog training across Parrish and nearby Florida.", "Based in Parrish and serving owners in Bradenton, Sarasota, Lakewood Ranch, Palmetto, Ellenton and nearby, from Venice to North Port. Pick your town to see how Jacob can help.", btn("/contact", "Request a consultation"), pfig("img01.jpg", "Jacob Soos and Chloe walking with their dogs in Parrish, Florida"))}
 {proof_strip()}
 <section class="section"><div class="wrap">{section_head("Where we train", f"{len(AREA_ORDER)} communities. One personal trainer.", "The same four programs are open to owners in every town, personally led by Jacob in a real home environment, plus live virtual coaching over Zoom.")}<div class="pgrid prog-list">{cards}</div></div></section>
 <section class="section local"><div class="wrap">{section_head("What we offer", "Four board-and-train programs, plus virtual coaching.", "Choose the track that fits your dog’s age, behavior history and goals.")}{prog_cards()}</div></section>
@@ -811,6 +801,10 @@ OLD = {"puppy-head-start-parrish-fl": "/puppy-head-start", "basic-obedience-parr
        "advanced-obedience-behavior-parrish-fl": "/behavioral-issues-reactivity", "puppy-raise-and-train-parrish-fl": "/puppy-foundations",
        "virtual-dog-training-coaching": "/programs#virtual-coaching", "about-jacob-soos": "/about-jacob"}
 
+# Hillsborough/Pinellas pages retired (that market is served by Serenity K-9 Training); send old URLs to the areas hub
+REMOVED = ["dog-training-ruskin-fl", "dog-training-apollo-beach-fl", "dog-training-sun-city-center-fl", "dog-training-riverview-fl",
+           "dog-training-brandon-fl", "dog-training-tampa-fl", "dog-training-st-petersburg-fl", "board-and-train-tampa-fl", "puppy-training-tampa-fl"]
+
 if __name__ == "__main__":
     pages = {"index.html": "/", "programs.html": "/programs", "about-jacob.html": "/about-jacob", "contact.html": "/contact"}
     write("index.html", home()); write("programs.html", programs()); write("about-jacob.html", about()); write("contact.html", contact_page())
@@ -825,14 +819,14 @@ if __name__ == "__main__":
     for p in PROBLEMS:
         write(f'{p["slug"]}.html', problem_page(p)); pages[f'{p["slug"]}.html'] = f'/{p["slug"]}'
     # drop pages from the earlier 7-page layout
-    for old in OLD:
+    for old in list(OLD) + REMOVED:
         f = os.path.join(OUT, old + ".html")
         if os.path.exists(f): os.remove(f)
     urls = "".join(f"<url><loc>{DOMAIN}{u}</loc></url>" for u in pages.values())
     write("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>')
     write("llms.txt", llms_txt())
     write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {DOMAIN}/sitemap.xml\n")
-    redirects = [{"source": f"/{o}", "destination": d, "permanent": True} for o, d in OLD.items()]
+    redirects = [{"source": f"/{o}", "destination": d, "permanent": True} for o, d in OLD.items()] + [{"source": f"/{o}", "destination": "/service-areas", "permanent": True} for o in REMOVED]
     write("vercel.json", json.dumps({"cleanUrls": True, "trailingSlash": False, "redirects": redirects,
           "headers": [{"source": "/assets/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]}]}))
     print("built", len(pages), "pages")

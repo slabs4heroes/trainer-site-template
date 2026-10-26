@@ -294,6 +294,17 @@ def split_photo(eb, h2, paras, name, alt, rev=False, cls=""):
 
 
 # ---------------------------------------------------------------- pages
+REVIEWS = [("Lexie Z.", "Gator Alley Dog Training has helped us so much with our 4.5 month Shichon, Rosie after just 2 at home sessions! Jacob has given us so much tangible training advice and we also love that he is so responsive & available outside of the sessions. Our Rosie girl can’t wait for more learning with him!"),
+           ("John B.", "It was awesome working with Jacob 1 on 1 with my 2 dogs! Tons of knowledge but he complies it into a easy to understand method. Great energy with the dogs! Easily a 5 star dog trainer, would highly recommend!")]
+
+
+def reviews_section():
+    cards = "".join(f'<figure class="rv" data-d="{i * 80}" style="margin:0"><div aria-label="5 out of 5 stars" style="color:var(--gold);letter-spacing:3px;font-size:20px">★★★★★</div><blockquote style="margin:12px 0 10px">{E(t)}</blockquote><figcaption><strong>{E(n)}</strong> · Google review</figcaption></figure>' for i, (n, t) in enumerate(REVIEWS))
+    return (f'<section class="section local"><div class="wrap"><div class="rv">{eyebrow("Google reviews")}<h2>5.0 stars from Parrish dog owners.</h2></div>'
+            f'<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;margin-top:32px">{cards}</div>'
+            f'<p style="margin-top:28px"><a class="tlink" href="{GOOGLE}" rel="noopener">Read all Google reviews →</a></p></div></section>')
+
+
 def home():
     cards = ""
     for p in PROGRAMS:
@@ -317,6 +328,7 @@ def home():
 <a class="rating fade" href="{GOOGLE}" rel="noopener"><span class="g">G</span><div><b>5.0</b> <span class="stars">★★★★★</span><br><small>Google reviews · 16 reviews</small></div></a></div>
 <figure class="pf" style="aspect-ratio:{w01}/{h01}"><img src="/assets/img01.jpg" alt="Jacob Soos and Chloe walking their dogs in Parrish, Florida" width="{w01}" height="{h01}" fetchpriority="high"></figure></div></section>
 {proof_strip()}
+{reviews_section()}
 <section class="section consult" id="consult"><div class="wrap contact-grid"><div class="rv">{eyebrow("Free consultation")}<h2>Free Consultation</h2><p class="lede">Tell us about you and your dog — we’ll follow up shortly.</p>
 <div class="ways"><a href="tel:{TEL}">{PHONE_IC}{PHONE}</a></div></div><div class="rv" data-d="120">{form_embed()}</div></div></section>
 <section class="section" id="programs"><div class="wrap">{section_head("Gator Alley board & train", "Four clear paths. One goal: a better life with your dog.", "Every Gator Alley program is structured around your dog’s history, home life, and training goals. The work is personally led by Jacob in a real home environment, with focused training, practical routines, and a clear owner handoff so progress can carry into everyday life.")}
@@ -610,6 +622,7 @@ def area_page(k):
 <section class="section method"><div class="wrap method-grid"><div class="sticky"><div class="rv">{eyebrow("How it works")}</div><h2 class="rv">From first call to confident dog.</h2><p class="rv" data-d="100">Every conversation begins with your dog’s needs and your goals, not a one-size-fits-all promise.</p></div>{steps_html(HOW_STEPS)}</div></section>
 <section class="section" id="faq"><div class="wrap faq-grid"><div class="rv">{eyebrow(f"Dog training in {town}")}<h2>Questions {E(town)} owners ask.</h2></div><div>{faq_html(faqs)}</div></div></section>
 {town_programs(k)}
+{reviews_section() if k == "parrish" else ""}
 {links_block(k)}
 {cta_section(f"Ready to talk about your {town} dog?")}
 </main>''' + footer()

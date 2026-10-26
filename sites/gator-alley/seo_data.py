@@ -11,7 +11,7 @@ AREA_ORDER = ["parrish", "bradenton", "sarasota", "lakewood-ranch", "palmetto", 
 AREAS_LOCAL = {
     "parrish": dict(
         town="Parrish", slug="dog-training-parrish-fl", county="Manatee County",
-        title="Board & Train Dog Training in Parrish, FL | Gator Alley",
+        title="Dog Training in Parrish, FL | Gator Alley",
         desc="Dog training in Parrish, FL with Jacob Soos: puppy programs, basic obedience, advanced off-leash and behavior work. Free consultation, call (941) 842-0849.",
         h1="Dog Training in Parrish, FL",
         lede="Gator Alley Dog Training is based right here in Parrish. Personally led board-and-train programs in a real home, built around the way your dog actually lives.",
@@ -46,7 +46,7 @@ AREAS_LOCAL = {
             ("Condo, townhome and small-yard living", "Calm behavior in shared hallways and elevators, settling when the building is busy and keeping barking in check."),
             ("Dogs that react to other dogs", "An honest look at the behavior history first, then a structured plan for calmer distance and recovery."),
         ],
-        focus="Most Bradenton owners begin with Basic Obedience, and move to Advanced Obedience & Behavior when reactivity, anxiety or off-leash goals come into play.",
+        focus="Most Bradenton owners begin with Basic Obedience, and move to Advanced Obedience and Behavior when reactivity, anxiety or off-leash goals come into play.",
         nearby=["parrish", "palmetto", "ellenton", "lakewood-ranch", "sarasota"],
     ),
     "sarasota": dict(
@@ -141,7 +141,7 @@ AREAS_LOCAL = {
         headline='Riverview dogs, trained by Jacob in Parrish',
         paras=["Riverview sits about a half hour north of Jacob's home in Parrish, which makes board-and-train a practical choice for busy families in FishHawk and the newer subdivisions along the Alafia. Your dog stays with Jacob in a real house rather than a kennel, and you get a hands-on handover when the program ends.", "Owners here tend to describe the same picture: a dog who behaves in the backyard and falls apart on the way to the mailbox. Jacob starts every Riverview inquiry with a conversation about your dog's history, then recommends a program, so you are not guessing which one to pick."],
         challenges=[('Neighborhood walks', 'Calm leash manners past retention ponds, bikes and other dogs.'), ('Preserve and trail days', 'Coming when called and ignoring wildlife on shared paths.'), ('A full household', 'Getting every family member to give the same cues at the door and at dinner.')],
-        focus='Basic Obedience is the common first step for Riverview owners; puppies fit Puppy Head Start, and reactive dogs are discussed for Advanced Obedience & Behavior.',
+        focus='Basic Obedience is the common first step for Riverview owners; puppies fit Puppy Head Start, and reactive dogs are discussed for Advanced Obedience and Behavior.',
         nearby=['ruskin', 'apollo-beach', 'sun-city-center', 'brandon', 'tampa', 'bradenton', 'parrish'],
     ),
     'apollo-beach': dict(
@@ -171,7 +171,7 @@ AREAS_LOCAL = {
         headline='Dog training next door in Ruskin',
         paras=['Ruskin mixes older farmland, quiet country roads and bayfront neighborhoods. Dogs often have room to roam, which can hide gaps in manners until a visitor arrives or a leash comes out.', 'Because Parrish is practically next door, Ruskin owners can talk through pickup and handover with Jacob directly. Programs are personally led in his home, and he will tell you honestly which one suits your dog.'],
         challenges=[('Yard-to-street transitions', 'A dog who is perfect off-leash at home but unmanageable on a walk.'), ('Livestock and wildlife', 'Impulse control around chickens, horses and whatever crosses the road.'), ('Barking at the fence line', 'Settling when delivery trucks and neighbors pass.')],
-        focus='Ruskin owners often pick Basic Obedience; those with anxious or reactive dogs are pointed to Advanced Obedience & Behavior.',
+        focus='Ruskin owners often pick Basic Obedience; those with anxious or reactive dogs are pointed to Advanced Obedience and Behavior.',
         nearby=['apollo-beach', 'riverview', 'sun-city-center', 'palmetto', 'bradenton', 'tampa', 'parrish'],
     ),
     'sun-city-center': dict(
@@ -216,7 +216,7 @@ AREAS_LOCAL = {
         headline='Dog training for Tampa owners, led by Jacob',
         paras=['Tampa neighborhoods range from walkable city blocks to leafy suburbs, and the right training depends on where your dog spends its day. A condo dog needs elevator and hallway manners; a yard dog needs a reliable recall.', 'Gator Alley is a one-trainer operation based in Parrish. Tampa clients who prefer not to commute can start with virtual coaching, and Jacob will tell you in the consultation whether board-and-train or Zoom fits your situation.'],
         challenges=[('Busy sidewalks', 'Staying focused when other dogs, bikes and joggers come close.'), ('Condo and townhome life', 'Settling quietly when neighbors are nearby.'), ('Reactivity', "A realistic, step-by-step plan, with an honest conversation about your dog's history.")],
-        focus='Tampa owners often ask about Advanced Obedience & Behavior for reactivity, and about Zoom coaching if the drive to Parrish is a hurdle.',
+        focus='Tampa owners often ask about Advanced Obedience and Behavior for reactivity, and about Zoom coaching if the drive to Parrish is a hurdle.',
         nearby=['brandon', 'riverview', 'st-petersburg', 'apollo-beach', 'bradenton', 'sarasota', 'parrish'],
     ),
     'st-petersburg': dict(
@@ -308,7 +308,7 @@ LANDINGS = [
         h1="Puppy Training in Bradenton, FL",
         eyebrow="Puppy programs · Serving Bradenton",
         lede="Personally led puppy board-and-train programs for Bradenton families, from a short head start to a full twelve-week foundation.",
-        img=("prog-frenchie-puppy.jpg", "A French Bulldog puppy practicing leash walking during the Puppy Head Start Program in Parrish, Florida"),
+        img=("prog-frenchie-puppy.jpg", "A French Bulldog puppy practicing leash walking during puppy training in Parrish, Florida"),
         intro=[
             "A new puppy in Bradenton means new routines: potty breaks before work, crate time, walks that do not turn into tug-of-war, and a puppy who has to learn manners around visitors, kids and other dogs.",
             "Gator Alley Dog Training is a short trip from Bradenton. Jacob trains puppies in his own home in Parrish, building the routines, early obedience and real-world exposure that make life at home easier, then walks you through a handover so you can continue the work.",
@@ -331,13 +331,13 @@ LANDINGS = [
         h1="Board and Train in Sarasota, FL",
         eyebrow="Board & train · Serving Sarasota",
         lede="Custom board-and-train programs for Sarasota dogs, personally led by Jacob in a real home environment.",
-        img=("prog-gsd-down.webp", "A black German Shepherd holding a down-stay during puppy foundations training in Parrish, Florida"),
+        img=("prog-gsd-down.webp", "A black German Shepherd holding a down-stay during training in Parrish, Florida"),
         intro=[
             "Board and train gives your dog focused, daily work with one trainer, followed by a handover so you can keep the results going at home. Sarasota owners usually come to us after months of leash pulling, jumping, barking or recall that works only when there are no distractions.",
             "At Gator Alley, Jacob personally trains and cares for every dog throughout the program in his own home in Parrish. There are no rotating staff and no group classes. The length of stay is set after the consultation, based on what your dog needs and the outcome you want.",
         ],
         programs=[("basic-obedience", "Basic Obedience", "Clearer communication, better manners, reliable routines and practical obedience matched to your household."),
-                  ("behavioral-issues-reactivity", "Advanced Obedience, Off-Leash & Behavior Modification", "For reactivity, anxiety, difficult behavior or a higher standard of obedience and off-leash reliability."),
+                  ("behavioral-issues-reactivity", "Advanced Obedience and Behavior", "For reactivity, anxiety, difficult behavior or a higher standard of obedience and off-leash reliability."),
                   ("puppy-head-start", "Puppy Head Start Program", "A focused 2-week program for puppies covering obedience, potty training and exposure."),
                   ("puppy-foundations", "Puppy Raise & Train", "A 12-week foundation program personally led by Jacob during key early development.")],
         faqs=[
@@ -356,13 +356,13 @@ LANDINGS = [
         h1="Board and Train in Tampa, FL",
         eyebrow="Board & train · Serving Tampa",
         lede="Custom board-and-train programs for Tampa dogs, personally led by Jacob in a real home environment.",
-        img=("prog-gsd-down.webp", "A black German Shepherd holding a down-stay during puppy foundations training in Parrish, Florida"),
+        img=("prog-gsd-down.webp", "A black German Shepherd holding a down-stay during training in Parrish, Florida"),
         intro=[
             "Board and train gives your dog focused, daily work with one trainer, followed by a handover so you can keep the results going at home. Tampa owners usually come to us after months of leash pulling, reactivity around other dogs, jumping or recall that works only when there are no distractions.",
             "At Gator Alley, Jacob personally trains and cares for every dog throughout the program in his own home in Parrish. There are no rotating staff and no group classes. The length of stay is set after the consultation, based on what your dog needs and the outcome you want.",
         ],
         programs=[("basic-obedience", "Basic Obedience", "Clearer communication, better manners, reliable routines and practical obedience matched to your household."),
-                  ("behavioral-issues-reactivity", "Advanced Obedience, Off-Leash & Behavior Modification", "For reactivity, anxiety, difficult behavior or a higher standard of obedience and off-leash reliability."),
+                  ("behavioral-issues-reactivity", "Advanced Obedience and Behavior", "For reactivity, anxiety, difficult behavior or a higher standard of obedience and off-leash reliability."),
                   ("puppy-head-start", "Puppy Head Start Program", "A focused 2-week program for puppies covering obedience, potty training and exposure."),
                   ("puppy-foundations", "Puppy Raise & Train", "A 12-week foundation program personally led by Jacob during key early development.")],
         faqs=[
@@ -381,7 +381,7 @@ LANDINGS = [
         h1="Puppy Training in Tampa, FL",
         eyebrow="Puppy programs · Serving Tampa",
         lede="Start your Tampa puppy off right with a personally led board-and-train puppy program, or begin with live virtual coaching over Zoom.",
-        img=("prog-frenchie-puppy.jpg", "A French Bulldog puppy practicing leash walking during the Puppy Head Start Program in Parrish, Florida"),
+        img=("prog-frenchie-puppy.jpg", "A French Bulldog puppy practicing leash walking during puppy training in Parrish, Florida"),
         intro=[
             "The first months with a puppy set the habits you live with for years. Tampa owners in condos, townhomes and busy neighborhoods usually want the same things: a puppy who is potty trained, comfortable in a crate, calm around people and other dogs, and learning to walk on a leash before pulling becomes a habit.",
             "Gator Alley Dog Training offers two puppy programs, both led personally by Jacob in a real home environment in Parrish, and live virtual coaching sessions for owners who want one-on-one help from home.",
@@ -425,13 +425,13 @@ LANDINGS = [
 # program slug each problem maps to: (slug, label)
 PROB_PROGRAM = {
     "dog-pulling-on-leash": ("basic-obedience", "Basic Obedience"),
-    "reactive-dog-training": ("behavioral-issues-reactivity", "Advanced Obedience & Behavior Modification"),
+    "reactive-dog-training": ("behavioral-issues-reactivity", "Advanced Obedience and Behavior"),
     "stop-dog-jumping": ("basic-obedience", "Basic Obedience"),
     "stop-dog-barking": ("basic-obedience", "Basic Obedience"),
-    "dog-wont-come-when-called": ("behavioral-issues-reactivity", "Advanced Obedience, Off-Leash & Behavior Modification"),
+    "dog-wont-come-when-called": ("behavioral-issues-reactivity", "Advanced Obedience and Behavior"),
     "crate-training-puppy": ("puppy-head-start", "Puppy Head Start Program"),
     "potty-training-puppy": ("puppy-head-start", "Puppy Head Start Program"),
-    "dog-separation-anxiety": ("behavioral-issues-reactivity", "Advanced Obedience & Behavior Modification"),
+    "dog-separation-anxiety": ("behavioral-issues-reactivity", "Advanced Obedience and Behavior"),
 }
 
 PROBLEMS = [
@@ -440,7 +440,7 @@ PROBLEMS = [
         title="Dog Pulling on Leash? Parrish, FL Trainer | Gator Alley",
         desc="Dog pulling on leash? Learn why it happens and how Jacob Soos teaches loose-leash walking in Parrish, Bradenton and Sarasota, FL. Free consultation.",
         h1="Dog Pulling on Leash? Here's How Jacob Fixes It",
-        img=("prog-pomsky.jpg", "A Pomsky puppy practicing loose-leash walking during basic obedience training in Parrish, Florida"),
+        img=("prog-pomsky.jpg", "A Pomsky puppy practicing loose-leash walking during training in Parrish, Florida"),
         lede="If every walk feels like a tug-of-war, you are not alone. Leash pulling is one of the most common reasons owners in Parrish, Bradenton and Sarasota reach out, and it is a trainable habit, not a personality flaw.",
         blocks=[
             ("h", "Why dogs pull on the leash"),
@@ -471,7 +471,7 @@ PROBLEMS = [
         title="Reactive Dog Training in Parrish, FL | Gator Alley",
         desc="Reactive or aggressive dog? Jacob Soos works hands-on with reactivity, fear and difficult behavior in Parrish, FL. Honest, one-on-one board and train.",
         h1="Reactive Dog Training in Parrish, FL",
-        img=("prog-gsd-down.webp", "A black German Shepherd holding a down-stay during puppy foundations training in Parrish, Florida"),
+        img=("prog-gsd-down.webp", "A black German Shepherd holding a down-stay during training in Parrish, Florida"),
         lede="Barking, lunging and spinning at other dogs, people or noises can make every outing stressful. Jacob works hands-on with reactive, anxious and difficult dogs, starting with an honest look at your dog's history.",
         blocks=[
             ("h", "What reactivity looks like"),
@@ -492,7 +492,7 @@ PROBLEMS = [
             ("Where does reactive dog training happen?", "In Jacob's real home environment in Parrish and in real-world settings, not a kennel facility or a group class."),
             ("Will my dog ever be fully cured?", "Outcomes depend on the dog, the history and the work at home. Jacob provides a personalized plan and a detailed handover, not a guarantee."),
             ("Do you work with reactive dogs from Bradenton and Sarasota?", "Yes. Gator Alley serves Parrish, Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota."),
-            ("Which program covers reactivity?", "Advanced Obedience, Off-Leash & Behavior Modification is designed for reactivity, anxiety and other difficult behavior."),
+            ("Which program covers reactivity?", "Advanced Obedience and Behavior is designed for reactivity, anxiety and other difficult behavior."),
         ],
         cta="Ready to talk honestly about your dog's behavior? Request a consultation with Jacob.",
         related=["dog-pulling-on-leash", "stop-dog-barking", "dog-separation-anxiety"],
@@ -544,7 +544,7 @@ PROBLEMS = [
                     "**Frustration barking** behind gates, on leash or when left alone.",
                     "**Fear or reactive barking** at other dogs, people or noises such as Florida thunderstorms."]),
             ("h", "How training helps"),
-            ("p", "Jacob builds a clear, consistent way for your dog to communicate and settle, using structure, place work and real-world practice at the triggers that matter. For barking driven by fear, anxiety or reactivity, the work moves into Advanced Obedience & Behavior Modification."),
+            ("p", "Jacob builds a clear, consistent way for your dog to communicate and settle, using structure, place work and real-world practice at the triggers that matter. For barking driven by fear, anxiety or reactivity, the work moves into Advanced Obedience and Behavior."),
             ("h", "What to expect"),
             ("p", "Few barking habits disappear in a day. How fast things improve depends on what triggers the noise, what your dog has learned so far, and how steadily the plan is followed at home."),
         ],
@@ -554,7 +554,7 @@ PROBLEMS = [
             ("Why does my dog bark at storms and fireworks?", "Noise sensitivity is common. Mention it in the consultation so the plan covers settling and confidence."),
             ("Can you help with barking at other dogs on walks?", "That is often reactivity. See Jacob's reactive-dog training page and share the details in your consultation."),
             ("Do you serve Bradenton, Palmetto and Ellenton?", "Yes. Gator Alley is based in Parrish and serves those towns and more."),
-            ("What program covers barking?", "Basic Obedience covers everyday barking and settling, and Advanced Obedience & Behavior Modification covers fear- and anxiety-driven barking."),
+            ("What program covers barking?", "Basic Obedience covers everyday barking and settling, and Advanced Obedience and Behavior covers fear- and anxiety-driven barking."),
         ],
         cta="Ready for a quieter home? Request a consultation with Jacob.",
         related=["reactive-dog-training", "dog-separation-anxiety", "stop-dog-jumping"],
@@ -582,7 +582,7 @@ PROBLEMS = [
         faqs=[
             ("Why won't my dog come when called?", "Usually because coming has not been made more rewarding than the distraction, or the command has been repeated without a clear meaning."),
             ("Can any dog learn off-leash reliability?", "Many can, but it depends on temperament, history and environment. Jacob discusses what is appropriate for your dog."),
-            ("Is recall part of basic obedience?", "Basic recall is. Higher-level off-leash reliability is part of Advanced Obedience, Off-Leash & Behavior Modification."),
+            ("Is recall part of basic obedience?", "Basic recall is. Higher-level off-leash reliability is part of Advanced Obedience and Behavior."),
             ("Do you offer virtual coaching for recall?", "Jacob offers live one-on-one virtual coaching sessions over Zoom that can cover leash manners and recall."),
             ("Do you serve Sarasota and Lakewood Ranch?", "Yes. Gator Alley serves Parrish, Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota."),
             ("How long does recall training take?", "It depends on your dog's age and history. Jacob sets the plan after the consultation."),
@@ -628,7 +628,7 @@ PROBLEMS = [
         title="Potty Training a Puppy: A Simple Plan | Gator Alley K9",
         desc="Potty training a puppy? Get a simple routine and learn how Jacob Soos builds potty training into the Puppy Head Start program in Parrish, FL.",
         h1="Potty Training a Puppy: A Simple Plan",
-        img=("prog-frenchie-puppy.jpg", "A French Bulldog puppy practicing leash walking during the Puppy Head Start Program in Parrish, Florida"),
+        img=("prog-frenchie-puppy.jpg", "A French Bulldog puppy practicing leash walking during puppy training in Parrish, Florida"),
         lede="Potty training is mostly about schedule, supervision and consistency. Puppies are not being stubborn, they are learning where and when.",
         blocks=[
             ("h", "The core routine"),
@@ -670,7 +670,7 @@ PROBLEMS = [
             ("h", "Anxiety is not disobedience"),
             ("p", "A dog who panics when alone is distressed, not spiteful. Punishment usually makes anxiety worse. The work focuses on building calm, confidence and structure."),
             ("h", "How Jacob approaches it"),
-            ("p", "Jacob starts with your dog's history and routine, then builds structure, independence and calm through daily work in his home. The Advanced Obedience & Behavior Modification program is designed for anxiety and difficult behavior, with a detailed handover for continuing at home."),
+            ("p", "Jacob starts with your dog's history and routine, then builds structure, independence and calm through daily work in his home. The Advanced Obedience and Behavior program is designed for anxiety and difficult behavior, with a detailed handover for continuing at home."),
             ("h", "A note on severe cases"),
             ("p", "Severe separation anxiety can involve medical or veterinary support. Talk with your veterinarian if your dog is hurting itself or cannot eat or settle, and share what you know with Jacob."),
         ],
@@ -680,7 +680,7 @@ PROBLEMS = [
             ("Does crate training help?", "For some dogs, yes, but a crate can worsen distress in others. Discuss your dog's response with Jacob."),
             ("Do you offer help beyond Parrish?", "Yes. Gator Alley serves Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota."),
             ("Can this be fixed with virtual coaching?", "Some owners benefit from virtual sessions. For serious concerns Jacob will discuss whether a virtual session is the right fit."),
-            ("Which program covers separation anxiety?", "Advanced Obedience, Off-Leash & Behavior Modification covers anxiety and other difficult behavior."),
+            ("Which program covers separation anxiety?", "Advanced Obedience and Behavior covers anxiety and other difficult behavior."),
         ],
         cta="Ready for calmer departures? Request a consultation with Jacob.",
         related=["stop-dog-barking", "crate-training-puppy", "reactive-dog-training"],

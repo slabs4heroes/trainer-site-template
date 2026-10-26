@@ -55,7 +55,7 @@ PROGRAMS = [
     dict(slug="puppy-head-start", track="Track 01", tag="2 weeks", name="Puppy Head Start Program", short="Puppy Head Start",
          nav="Puppy Head Start", cta="Explore Puppy Head Start",
          blurb="A focused 2-week program for puppies covering basic obedience, potty training and exposure training — the best possible start before habits set in.",
-         card=("prog-pomsky.jpg", "A Pomsky puppy practicing loose-leash walking during basic obedience training in Parrish, Florida"),
+         card=("prog-pomsky.jpg", "A Pomsky puppy practicing loose-leash walking during training in Parrish, Florida"),
          title="Puppy Head Start Program in Parrish, FL | Gator Alley K9",
          desc="The Puppy Head Start Program gives Parrish, FL puppy owners an early advantage on obedience, socialization, and confidence before issues start.",
          h1="Puppy Head Start Program in Parrish, FL",
@@ -80,7 +80,7 @@ PROGRAMS = [
     dict(slug="basic-obedience", track="Track 02", tag="Board & Train", name="Basic Obedience", short="Basic Obedience",
          nav="Basic Obedience", cta="Explore Basic Obedience",
          blurb="A focused program for clearer communication, better manners, reliable routines and practical obedience matched to your household.",
-         card=("prog-frenchie-wait.webp", "An adult French Bulldog practicing a wait command during behavioral training in Parrish, Florida"),
+         card=("prog-frenchie-wait.webp", "An adult French Bulldog practicing a wait command during training in Parrish, Florida"),
          title="Basic Obedience Training in Parrish, FL | Gator Alley K9",
          desc="Basic obedience training in Parrish, FL builds sit, stay, place, and loose-leash manners for real-world reliability. Book a free consultation today.",
          h1="Basic Obedience Training in Parrish, FL",
@@ -100,13 +100,13 @@ PROGRAMS = [
          faq=[("Where does training happen?", "Training happens in Jacob’s real home environment in Parrish rather than a kennel facility, with exposure to normal household routines and real-world distractions."),
               ("Who trains my dog?", "Jacob personally trains and cares for your dog throughout the program — no rotating staff."),
               ("What ages and breeds are a fit for Basic Obedience?", "Every dog is different. Share your dog’s age, breed, history and goals during the consultation so Jacob can discuss whether this program is the right fit.")]),
-    dict(slug="behavioral-issues-reactivity", track="Track 03", tag="Advanced", name="Advanced Obedience, Off-Leash & Behavior Modification", short="Advanced Obedience & Behavior",
-         nav="Advanced Obedience & Behavior", cta="Explore Advanced Obedience",
+    dict(slug="behavioral-issues-reactivity", track="Track 03", tag="Advanced", name="Advanced Obedience and Behavior", short="Advanced Obedience and Behavior",
+         nav="Advanced Obedience and Behavior", cta="Explore Advanced Obedience and Behavior",
          blurb="For owners navigating reactivity, anxiety, difficult behavior, or a higher standard of advanced obedience, calmness, communication and off-leash reliability.",
-         card=("prog-gsd-down.webp", "A black German Shepherd holding a down-stay during puppy foundations training in Parrish, Florida"),
+         card=("prog-gsd-down.webp", "A black German Shepherd holding a down-stay during training in Parrish, Florida"),
          title="Reactivity & Behavior Training in Parrish, FL | Gator Alley",
          desc="Behavior modification for reactivity, anxiety, and unwanted behaviors in Parrish, FL. Structured, one-on-one training with Jacob Soos rebuilds reliability.",
-         h1="Advanced Obedience, Off-Leash & Behavior Modification in Parrish, FL",
+         h1="Advanced Obedience and Behavior in Parrish, FL",
          lede="Advanced dog training for owners working through serious behavior challenges—or seeking a highly advanced level of obedience.",
          intro=["Designed for owners struggling with serious behavioral challenges—or those who simply want a highly advanced level of obedience. Jacob works hands-on with reactive, aggressive, anxious, or difficult-to-manage dogs to address unwanted behaviors while developing exceptional obedience, calmness, confidence, and control.",
                 "Your dog will develop full-spectrum communication, advanced positioning, and off-leash reliability, creating a dog capable of performing reliably at home, in public, and around real-world distractions."],
@@ -114,7 +114,7 @@ PROGRAMS = [
          local=["For Parrish dog owners, this program begins with an honest conversation about the behavior you are seeing and the environments where it occurs. Clear history around reactivity, fear, anxiety, aggression or bite history helps determine the appropriate training plan and next step.",
                 "Gator Alley Dog Training serves nearby dog owners from Palmetto, Ellenton, Bradenton, Lakewood Ranch and surrounding Manatee County communities."],
          diff="This program is led personally by Jacob in a real home environment, not a kennel or group setting — every case starts with an honest look at your dog’s specific history before any plan is built.",
-         how="How Advanced Obedience & Behavior Modification Works",
+         how="How Advanced Obedience and Behavior Works",
          steps=[("Personalized planning", "Jacob discusses your dog’s specific behavior history — reactivity, anxiety or a bite history — before building a plan."),
                 ("Focused, hands-on training", "Jacob works directly with your dog every day to address the behavior while building advanced obedience and control."),
                 ("Daily structure", "Calm, consistent routines help your dog build confidence day after day, not just during a single session."),
@@ -128,7 +128,7 @@ PROGRAMS = [
     dict(slug="puppy-foundations", track="Track 04", tag="12 weeks", name="Puppy Raise & Train", short="Puppy Raise & Train",
          nav="Puppy Raise & Train", cta="Explore Puppy Raise & Train",
          blurb="A longer foundation-focused program personally led by Jacob during the key early stages of development, with structured routines, socialization, real-world exposure and advanced foundations.",
-         card=("prog-frenchie-puppy.jpg", "A French Bulldog puppy practicing leash walking during the Puppy Head Start Program in Parrish, Florida"),
+         card=("prog-frenchie-puppy.jpg", "A French Bulldog puppy practicing leash walking during puppy training in Parrish, Florida"),
          title="Puppy Foundations Training in Parrish, FL | Gator Alley K9",
          desc="Puppy Foundations builds leash manners, socialization, and obedience basics for young dogs in Parrish, FL. Start your puppy off right with Gator Alley.",
          h1="Puppy Raise & Train in Parrish, FL",
@@ -203,7 +203,7 @@ def header(cur=""):
     return f'''<a class="skip" href="#main">Skip to content</a><div class="progress" aria-hidden="true"><i></i></div>
 <header class="header" id="top"><div class="pill"><a href="/" class="brand" aria-label="Gator Alley Dog Training home"><img src="/assets/logo.png" alt="Gator Alley Dog Training Academy" width="739" height="356"></a>
 <nav class="nav" aria-label="Main">{links}</nav>{btn("/contact", "Request a consultation", "sm")}
-<button class="menu-btn" aria-label="Menu" aria-expanded="false"><i></i></button></div></header>
+<a class="hcall" href="tel:{TEL}" aria-label="Call Gator Alley Dog Training">{PHONE_IC}<span>Call</span></a><button class="menu-btn" aria-label="Menu" aria-expanded="false"><i></i></button></div></header>
 <div class="drawer">{drawer}{btn("/contact", "Request a consultation")}</div>'''
 
 
@@ -249,7 +249,7 @@ def faq_ld(items):
 
 
 def proof_strip():
-    items = ["Puppy Head Start", "Basic Obedience", "Advanced &amp; Off-Leash", "Behavior Modification", "Puppy Raise &amp; Train", "Virtual Coaching", "Real home, not a kennel", "Personally led by Jacob"]
+    items = ["Puppy Head Start", "Basic Obedience", "Advanced Obedience and Behavior", "Puppy Raise &amp; Train", "Virtual Coaching", "Real home, not a kennel", "Personally led by Jacob"]
     r = "".join(f"<span>{i}</span>" for i in items)
     return f'<div class="proof" aria-hidden="true"><div class="row">{r}{r}</div></div>'
 
@@ -311,7 +311,7 @@ def home():
                 "/", schema(faq_ld(HOME_FAQ), home=True), embed=True) + header("home") + f'''
 <main id="main">
 <section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><div class="status fade">Dog training in Parrish, Florida</div>
-<h1><span class="ln"><span>Reliable</span></span><span class="ln"><span>obedience built</span></span><span class="ln"><span>for <em>real life.</em></span></span></h1>
+<h1><span class="ln"><span>Reliable</span></span> <span class="ln"><span>obedience built</span></span> <span class="ln"><span>for <em>real life.</em></span></span></h1>
 <p class="lede fade">Gator Alley Dog Training offers personally led board-and-train programs for owners who want calm, trustworthy and obedient dogs.</p>
 <div class="cta-row fade"><a class="btn" href="#consult">Free Consultation{ARROW}</a><a class="btn ghost" href="#book-consultation">Book Phone Consultation</a></div>
 <a class="rating fade" href="{GOOGLE}" rel="noopener"><span class="g">G</span><div><b>5.0</b> <span class="stars">★★★★★</span><br><small>Google reviews · 16 reviews</small></div></a></div>
@@ -321,7 +321,7 @@ def home():
 <div class="ways"><a href="tel:{TEL}">{PHONE_IC}{PHONE}</a></div></div><div class="rv" data-d="120">{form_embed()}</div></div></section>
 <section class="section" id="programs"><div class="wrap">{section_head("Gator Alley board & train", "Four clear paths. One goal: a better life with your dog.", "Every Gator Alley program is structured around your dog’s history, home life, and training goals. The work is personally led by Jacob in a real home environment, with focused training, practical routines, and a clear owner handoff so progress can carry into everyday life.")}
 <div class="pgrid">{cards}</div>
-<a class="virtual rv" href="/programs#virtual-coaching"><div><div class="status inv">New — one-on-one, from anywhere</div><h3>Can't make it to Parrish? Train with Jacob over Zoom.</h3><p>Live virtual coaching sessions for dog owners who want one-on-one help with a specific topic — leash manners, puppy foundations, or behavior and consistency. Each session is held over Zoom and recorded for you to keep.</p></div><span class="btn">See Virtual Coaching Sessions{ARROW}</span></a></div></section>
+<a class="virtual rv" href="/virtual-dog-training"><div><div class="status inv">New — one-on-one, from anywhere</div><h3>Can't make it to Parrish? Train with Jacob over Zoom.</h3><p>Live virtual coaching sessions for dog owners who want one-on-one help with a specific topic — leash manners, puppy foundations, or behavior and consistency. Each session is held over Zoom and recorded for you to keep.</p></div><span class="btn">See Virtual Coaching Sessions{ARROW}</span></a></div></section>
 <section class="section local"><div class="wrap">{section_head("Parrish dog training for real-life goals", "From puppy foundations to more complicated behavior histories.", "Owners in Parrish and nearby communities often start with a practical question: how do we make everyday life with our dog feel calmer, clearer and more manageable? Bring the full picture to the consultation so Jacob can discuss the right next step.")}
 {trio([("Puppy foundations", "If you are raising a puppy, share your goals around socialization, household manners, leash skills, recall and building good habits early. Jacob can discuss whether one of the current programs fits your dog and your timeline."), ("Common obedience challenges", "Leash pulling, jumping, barking, inconsistent recall and difficulty settling can make normal routines feel exhausting. Clear communication and real-world practice are part of the conversation."), ("Behavior-history cases", "Reactivity, anxiety, fear, aggression or a bite history need honest context and careful planning. Share what has happened, where it happens and what safety considerations matter at home.")])}
 <p class="note rv">These are common goals owners bring to a consultation, not a promise of an instant fix or a separate service menu.</p></div></section>
@@ -341,7 +341,7 @@ def home():
 <section class="section area" id="area" style="padding-top:0"><div class="wrap story-grid"><div class="rv">{eyebrow("Serving Parrish & nearby areas")}<h2>Dog training that starts in Parrish and travels home with you.</h2></div>
 <div class="rv" data-d="100"><p>Gator Alley Dog Training is based in Parrish and serves owners in Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota, while also welcoming board-and-train clients from around the country. The page is local by design: the conversation starts with your dog's actual routines, behavior history and household goals, not a generic city-page promise.</p><p style="margin-top:28px">{btn("/contact", "Talk with Jacob")}</p></div></div></section>
 {links_block()}
-<section class="section contact" id="book-consultation"><div class="wrap contact-grid"><div class="rv">{eyebrow("Book your free consultation")}<h2>Pick a time that works — Jacob will confirm personally.</h2><p class="lede">Available Wednesday through Sunday, 9 AM–7 PM Eastern, in 30-minute slots. Prefer to talk first? Call <a href="tel:{TEL}">{PHONE}</a>.</p></div><div class="rv" data-d="120">{booking_embed()}</div></div></section>
+<section class="section contact" id="book-consultation"><div class="wrap contact-grid"><div class="rv">{eyebrow("Book your free consultation")}<h2>Pick a time that works — Jacob will confirm personally.</h2><p class="lede">Available Wednesday through Sunday, 9 AM–8 PM Eastern, in 30-minute slots. Prefer to talk first? Call <a href="tel:{TEL}">{PHONE}</a>.</p></div><div class="rv" data-d="120">{booking_embed()}</div></div></section>
 </main>''' + footer()
 
 
@@ -452,7 +452,7 @@ def contact_page():
 <main id="main">{hero_block("Request a consultation", "Start the conversation about your dog.", "Tell Jacob what is going on, the goals you have and which board-and-train program you are considering. Puppy foundations, common obedience challenges and behavior-history cases are all useful context to include.", f'<a class="btn" href="tel:{TEL}">{PHONE}{ARROW}</a><span class="hrs">Wed–Sun, 9 AM–8 PM</span>', pfig("img01.jpg", "Jacob Soos and Chloe walking with their dogs in Parrish, Florida"))}
 {proof_strip()}
 <section class="section contact" id="consult"><div class="wrap contact-grid"><div class="rv">{eyebrow("Consultation request")}<h2>How can we help?</h2><div class="ways" style="margin-top:28px"><a href="tel:{TEL}">{PHONE_IC}{PHONE}</a><a href="mailto:{EMAIL}">{EMAIL}</a></div></div><div class="rv" data-d="120">{form_embed()}</div></div></section>
-<section class="section contact" id="book-consultation"><div class="wrap contact-grid"><div class="rv">{eyebrow("Book your free consultation")}<h2>Pick a time that works — Jacob will confirm personally.</h2><p class="lede">Available Wednesday through Sunday, 9 AM–7 PM Eastern, in 30-minute slots. Prefer to talk first? Call <a href="tel:{TEL}">{PHONE}</a>.</p></div><div class="rv" data-d="120">{booking_embed()}</div></div></section>
+<section class="section contact" id="book-consultation"><div class="wrap contact-grid"><div class="rv">{eyebrow("Book your free consultation")}<h2>Pick a time that works — Jacob will confirm personally.</h2><p class="lede">Available Wednesday through Sunday, 9 AM–8 PM Eastern, in 30-minute slots. Prefer to talk first? Call <a href="tel:{TEL}">{PHONE}</a>.</p></div><div class="rv" data-d="120">{booking_embed()}</div></div></section>
 <section class="section"><div class="wrap story-grid"><div class="rv">{eyebrow("Parrish dog training")}<h2>Based in Parrish. Serving nearby owners and board-and-train clients nationwide.</h2></div><div class="rv" data-d="100"><p>Gator Alley Dog Training is located at {ADDR}. Service conversations commonly begin with owners from Parrish, Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota.</p><p class="note"><strong>Important:</strong> Reach out before visiting. This is a training business, not a walk-in storefront.</p></div></div></section>
 <section class="section local"><div class="wrap">{section_head("Help Jacob understand the fit", "The more context you share, the more useful the first conversation can be.")}
 {trio([("Your dog's profile", "Include age, breed, health considerations, training history and the routines that matter most in your home."), ("The challenge", "Share examples of leash pulling, jumping, barking, poor recall, reactivity, anxiety, fear, aggression or other behavior concerns."), ("Your location and goals", "Let Jacob know whether you are in Parrish, Palmetto, Ellenton, Bradenton, Lakewood Ranch, Sarasota or elsewhere and what you want daily life to feel like.")])}</div></section>
@@ -590,7 +590,7 @@ def area_page(k):
         q1 = (f"Do you offer dog training in {town}, FL?", f"Yes. Gator Alley Dog Training is based in Parrish and serves {town} owners with personally led board-and-train programs, plus live virtual coaching over Zoom. Contact Jacob to talk through logistics from {town}.")
     faqs = [
         q1,
-        (f"Which programs are available to {town} owners?", "Four board-and-train programs: Puppy Head Start (2 weeks), Basic Obedience, Advanced Obedience, Off-Leash & Behavior Modification, and Puppy Raise & Train (12 weeks). Jacob also offers live one-on-one virtual coaching sessions over Zoom."),
+        (f"Which programs are available to {town} owners?", "Four board-and-train programs: Puppy Head Start (2 weeks), Basic Obedience, Advanced Obedience and Behavior, and Puppy Raise & Train (12 weeks). Jacob also offers live one-on-one virtual coaching sessions over Zoom."),
         ("Will my dog be kenneled?", "No. Dogs live and learn in Jacob’s real home environment in Parrish rather than a kennel facility, and Jacob personally trains and cares for every dog throughout the program."),
         ("Can you help with reactivity, anxiety or aggression?", "Behavior history matters. Be candid about fear, aggression, reactivity or any bite history during the consultation so the situation can be discussed responsibly. It is a personalized plan, not a guaranteed outcome."),
         ("What does training cost?", "Program fit and scope are discussed during the free consultation. Contact Jacob for current availability and program details rather than relying on an assumed price."),
@@ -598,7 +598,7 @@ def area_page(k):
     paras = "".join(f"<p>{E(t)}</p>" for t in a["paras"])
     challenge_items = "".join(f'<li>{CHECK}<span><strong>{E(t)}.</strong> {E(x)}</span></li>' for t, x in a["challenges"])
     ld = service_ld(f"Dog training in {town}, FL", a["desc"], town) + faq_ld(faqs) + crumbs_ld([("Home", "/"), ("Service areas", "/service-areas"), (f"Dog training in {town}", path)])
-    ctas = btn("/contact", "Request a consultation") + f'<a class="btn ghost" href="tel:{TEL}">{PHONE}</a>'
+    ctas = btn("/contact", "Request a consultation") + f'<a class="btn ghost" href="tel:{TEL}">{PHONE}</a>' + '<span class="hrs">Free 30-minute phone consultation</span>'
     return head(a["title"], a["desc"], path, ld) + header("areas") + f'''
 <main id="main">{hero_block(f'{a["county"]} · Gator Alley Dog Training', a["h1"], a["lede"], ctas, pfig(n, alt))}
 {proof_strip()}
@@ -606,7 +606,7 @@ def area_page(k):
 <div class="rv" data-d="100"><h3>What {E(town)} owners ask for</h3><ul class="fit">{challenge_items}</ul></div></div></section>
 <section class="section local"><div class="wrap">{section_head(f"Programs for {town} dogs", "Four board-and-train programs, one trainer.", "Every program is personally led by Jacob. The right one depends on your dog’s age, history and goals, and it is chosen together in the consultation.")}
 {prog_cards()}
-<p class="note rv">Not able to come to Parrish? Jacob also offers <a class="tlink" href="/programs#virtual-coaching">live virtual coaching over Zoom</a> for leash manners, puppy foundations and behavior consistency.</p></div></section>
+<p class="note rv">Not able to come to Parrish? Jacob also offers <a class="tlink" href="/virtual-dog-training">live virtual coaching over Zoom</a> for leash manners, puppy foundations and behavior consistency.</p></div></section>
 <section class="section method"><div class="wrap method-grid"><div class="sticky"><div class="rv">{eyebrow("How it works")}</div><h2 class="rv">From first call to confident dog.</h2><p class="rv" data-d="100">Every conversation begins with your dog’s needs and your goals, not a one-size-fits-all promise.</p></div>{steps_html(HOW_STEPS)}</div></section>
 <section class="section" id="faq"><div class="wrap faq-grid"><div class="rv">{eyebrow(f"Dog training in {town}")}<h2>Questions {E(town)} owners ask.</h2></div><div>{faq_html(faqs)}</div></div></section>
 {town_programs(k)}
@@ -637,7 +637,7 @@ def landing_page(l):
     rel = chips([(PROBLEM_LABELS[r], f"/{r}") for r in l["related"]] + ([(f"Dog training in {l['town']}", f"/{AREAS_LOCAL[l['area_slug']]['slug']}")] if l.get("area_slug") else []))
     why = "".join(f'<li>{CHECK}<span>{E(t)}</span></li>' for t in ["Personally led by Jacob, no rotating staff", "A real home environment, not a kennel", "Real-world practice around everyday distractions", "A detailed handover and ongoing support", "Consultation first, with no one-size-fits-all promise"])
     ld = service_ld(l["h1"].split(" in ")[0], l["desc"], l.get("town")) + faq_ld(l["faqs"]) + crumbs_ld([("Home", "/"), ("Programs", "/programs"), (l["h1"], path)])
-    ctas = btn("/contact", "Request a consultation") + f'<a class="btn ghost" href="tel:{TEL}">{PHONE}</a>'
+    ctas = btn("/contact", "Request a consultation") + f'<a class="btn ghost" href="tel:{TEL}">{PHONE}</a>' + '<span class="hrs">Free 30-minute phone consultation</span>'
     return head(l["title"], l["desc"], path, ld) + header("programs") + f'''
 <main id="main">{hero_block(l["eyebrow"], l["h1"], l["lede"], ctas, pfig(n, alt))}
 {proof_strip()}
@@ -650,6 +650,18 @@ def landing_page(l):
 {links_block(l.get("area_slug"), (), [l["slug"]])}
 {cta_section(f"Talk with Jacob about your {l['town']} dog." if l.get("town") else "Talk with Jacob about your dog.")}
 </main>''' + footer()
+
+
+PROBLEM_VIDEOS = {"dog-pulling-on-leash": "DeR-RpZPiWg", "crate-training-puppy": "DbQlSEzxLTd", "reactive-dog-training": "DdrBHcvxOmW", "dog-wont-come-when-called": "Ddb7Fq-tmya"}
+
+
+def problem_video(slug):
+    vid = PROBLEM_VIDEOS.get(slug)
+    v = next((x for x in VIDEOS if x["id"] == vid), None)
+    if not v:
+        return ""
+    return (f'<section class="section"><div class="wrap story-grid"><div class="rv"><div class="vframe" style="max-width:340px"><iframe src="https://www.instagram.com/reel/{v["id"]}/embed/" title="{A(v["title"])}" loading="lazy" allowfullscreen scrolling="no"></iframe></div></div>'
+            f'<div class="rv prose" data-d="100"><h2>{E(v["title"])}</h2><p>{E(v["blurb"])}</p></div></div></section>')
 
 
 def problem_page(p):
@@ -666,10 +678,11 @@ def problem_page(p):
             body += f"<{t}>" + "".join(f"<li>{inline(i)}</li>" for i in x) + f"</{t}>"
     rel = chips([(PROBLEM_LABELS[r], f"/{r}") for r in p["related"]])
     ld = faq_ld(p["faqs"]) + crumbs_ld([("Home", "/"), ("Programs", "/programs"), (p["h1"], path)])
-    ctas = btn("/contact", "Request a consultation") + f'<a class="btn ghost" href="tel:{TEL}">{PHONE}</a>'
+    ctas = btn("/contact", "Request a consultation") + f'<a class="btn ghost" href="tel:{TEL}">{PHONE}</a>' + '<span class="hrs">Free 30-minute phone consultation</span>'
     return head(p["title"], p["desc"], path, ld) + header("programs") + f'''
 <main id="main">{hero_block("Dog training help · Parrish, FL", p["h1"], p["lede"], ctas, pfig(n, alt))}
 {proof_strip()}
+{problem_video(p["slug"])}
 <section class="section"><div class="wrap article-grid"><article class="article rv">{body}</article>
 <aside class="rv" data-d="100"><div class="callout"><p class="status">The program that fits</p><h3>{E(pn)}</h3><p>Personally led by Jacob in a real home environment, with a detailed handover so the training holds up at home.</p><p style="margin-top:18px"><a class="tlink" href="/{ps}">See the program →</a></p></div>
 <div class="callout"><p class="status">Serving</p><p>Parrish, Bradenton, Sarasota, Lakewood Ranch, Palmetto, Ellenton, Tampa, St. Petersburg and nearby, plus virtual coaching anywhere.</p><p style="margin-top:14px"><a class="tlink" href="/service-areas">Where we train →</a></p></div></aside></div></section>
@@ -809,7 +822,7 @@ def write(path, content):
 
 OLD = {"puppy-head-start-parrish-fl": "/puppy-head-start", "basic-obedience-parrish-fl": "/basic-obedience",
        "advanced-obedience-behavior-parrish-fl": "/behavioral-issues-reactivity", "puppy-raise-and-train-parrish-fl": "/puppy-foundations",
-       "virtual-dog-training-coaching": "/programs#virtual-coaching", "about-jacob-soos": "/about-jacob"}
+       "virtual-dog-training-coaching": "/virtual-dog-training", "about-jacob-soos": "/about-jacob"}
 
 if __name__ == "__main__":
     pages = {"index.html": "/", "programs.html": "/programs", "about-jacob.html": "/about-jacob", "contact.html": "/contact"}

@@ -252,3 +252,19 @@ footer a{color:#ff6a74}
   .js .rv{opacity:1;transform:none}
   .tl::after{transform:scaleY(1)}
 }
+
+/* lead form */
+.cform{margin-top:44px;background:#111;border:1px solid var(--line);border-top:3px solid var(--red);padding:26px 20px;display:grid;gap:16px;min-width:0}
+.cform h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:32px;letter-spacing:.06em;text-transform:uppercase;color:#fff}
+.cform .fnote{color:#b9b9b9;font-size:16px;line-height:1.5}
+.cform label{display:grid;gap:6px;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#d8d8d8;font-weight:600;min-width:0}
+.cform input,.cform select,.cform textarea{width:100%;min-width:0;font:inherit;font-size:17px;letter-spacing:0;text-transform:none;color:#fff;background:#0a0a0a;border:1px solid #3a3a3a;padding:13px 14px;border-radius:0}
+.cform textarea{resize:vertical}
+.cform input:focus,.cform select:focus,.cform textarea:focus{outline:2px solid var(--red2);outline-offset:1px;border-color:var(--red2)}
+.cform .frow{display:grid;gap:16px}
+.cform .btn{width:100%}
+.hpw{position:absolute;left:-9999px;height:0;overflow:hidden}
+.fmsg{min-height:1.4em;font-size:16px;color:#b9b9b9}
+.fmsg.ok{color:#7ddc8f}.fmsg.err{color:#ff8a93}
+@media (min-width:700px){.cform{padding:34px}.cform .frow{grid-template-columns:1fr 1fr}}
+@media (min-width:980px){.cwrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}.cform{margin-top:0}}

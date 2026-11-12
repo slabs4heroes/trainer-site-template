@@ -177,3 +177,21 @@
     } else { running = true; requestAnimationFrame(frame); }
   }
 })();
+
+(function () {
+  var f = document.getElementById('lead');
+  if (!f) return;
+  var msg = f.querySelector('.fmsg'), btn = f.querySelector('button[type=submit]');
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var d = {};
+    new FormData(f).forEach(function (v, k) { d[k] = String(v).trim(); });
+    msg.className = 'fmsg';
+    if (!d.name || (!d.phone && !d.email)) { msg.className = 'fmsg err'; msg.textContent = 'Please add your name and a phone number or email so Don can reach you.'; return; }
+    d.source = 'ironsidek9.com website form';
+    btn.disabled = true; btn.textContent = 'Sending...';
+    fetch('https://k9pn.app.n8n.cloud/webhook/ironside-k9-lead', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) })
+      .then(function (r) { if (!r.ok) throw new Error('bad'); f.reset(); msg.className = 'fmsg ok'; msg.textContent = 'Thank you. Don got your message and will be in touch soon.'; btn.textContent = 'Sent'; })
+      .catch(function () { msg.className = 'fmsg err'; msg.textContent = 'That did not go through. Please call Don at (248) 217-2932.'; btn.disabled = false; btn.textContent = 'Send to Don'; });
+  });
+})();

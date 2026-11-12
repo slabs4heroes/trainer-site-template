@@ -201,3 +201,12 @@
   if (!f || !('IntersectionObserver' in window)) return;
   new IntersectionObserver(function (es) { document.body.classList.toggle('at-form', es[0].isIntersecting); }, { threshold: 0.05 }).observe(f);
 })();
+
+(function () {
+  var f = document.getElementById('lead');
+  if (!f) return;
+  var n = f.querySelector('[name=name]');
+  function open() { f.classList.add('open'); }
+  n.addEventListener('input', function () { if (n.value.trim().length) open(); });
+  n.addEventListener('change', function () { if (n.value.trim().length) open(); });
+})();

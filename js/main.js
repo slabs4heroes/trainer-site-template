@@ -195,3 +195,9 @@
       .catch(function () { msg.className = 'fmsg err'; msg.textContent = 'That did not go through. Please call Don at (248) 217-2932.'; btn.disabled = false; btn.textContent = 'Send to Don'; });
   });
 })();
+
+(function () {
+  var f = document.getElementById('lead');
+  if (!f || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function (es) { document.body.classList.toggle('at-form', es[0].isIntersecting); }, { threshold: 0.05 }).observe(f);
+})();

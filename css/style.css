@@ -268,3 +268,13 @@ footer a{color:#ff6a74}
 .fmsg.ok{color:#7ddc8f}.fmsg.err{color:#ff8a93}
 @media (min-width:700px){.cform{padding:34px}.cform .frow{grid-template-columns:1fr 1fr}}
 @media (min-width:980px){.cwrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}.cform{margin-top:0}}
+
+/* lead form polish */
+.cform h3{line-height:1.05}
+.cform input,.cform select,.cform textarea{background:#1b1b1b;border:1px solid #4a4a4a;height:52px;line-height:1.2;font-family:inherit}
+.cform textarea{height:auto;min-height:120px}
+.cform select{appearance:none;-webkit-appearance:none;padding-right:42px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23ff4b57' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+.cform select option{background:#1b1b1b;color:#fff}
+.cform input::placeholder,.cform textarea::placeholder{color:#7d7d7d}
+.cform .frow{align-items:end}
+body.at-form .callbar{transform:translateY(120%);pointer-events:none}

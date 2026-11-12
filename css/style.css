@@ -298,3 +298,20 @@ body.at-form .callbar{transform:translateY(120%);pointer-events:none}
 @media (max-width:979px){.hero-card{margin-top:34px}}
 
 @media (max-width:979px){.hero .cta-row{display:none}.hero-card{margin-top:26px}}
+
+/* uniform form */
+.hform{gap:0;padding:26px 24px}
+.hform .fhead{flex-direction:column;text-align:center;gap:10px;margin-bottom:22px;padding-bottom:20px;border-bottom:1px solid #ffffff1f}
+.hform .fthumb{width:76px}
+.hform .fhead h3{font-size:30px;letter-spacing:.06em}
+.hform .fhead .fnote{margin:6px 0 0;font-size:16px}
+.hform label{margin-bottom:16px}
+.hform .frow{display:grid;grid-template-columns:1fr;gap:0}
+.hform input,.hform select,.hform textarea{height:52px;font-size:17px;padding:0 14px}
+.hform textarea{height:96px;padding:12px 14px;min-height:0}
+.hform select{padding-right:42px}
+.hform .btn{margin-top:4px;min-height:56px;font-size:20px}
+.hform .btn::before,.hform .btn::after{display:none}
+.hform .fmsg{margin-top:12px;text-align:center}
+@media (min-width:700px){.hform{padding:30px 30px}}
+@media (min-width:980px){.hform{padding:22px 26px}.hform .fhead{margin-bottom:16px;padding-bottom:14px;gap:6px}.hform .fthumb{width:56px}.hform .fhead h3{font-size:26px}.hform .fhead .fnote{font-size:15px}.hform label{margin-bottom:11px;gap:5px;font-size:13px}.hform input,.hform select{height:46px}.hform textarea{height:72px}.hform .btn{min-height:52px}}

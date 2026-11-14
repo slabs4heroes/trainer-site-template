@@ -325,7 +325,7 @@ def home():
 <h1><span class="ln"><span>Reliable</span></span> <span class="ln"><span>obedience built</span></span> <span class="ln"><span>for <em>real life.</em></span></span></h1>
 <p class="lede fade">Gator Alley Dog Training offers personally led board-and-train programs for owners who want calm, trustworthy and obedient dogs.</p>
 <div class="cta-row fade"><a class="btn" href="#consult">Free Consultation{ARROW}</a><a class="btn ghost" href="#book-consultation">Book Phone Consultation</a></div>
-<a class="rating fade" href="{GOOGLE}" rel="noopener"><span class="g">G</span><div><b>5.0</b> <span class="stars">★★★★★</span><br><small>Google reviews · 16 reviews</small></div></a></div>
+<a class="rating fade" href="{GOOGLE}" rel="noopener"><span class="g">G</span><div><b>5.0</b> <span class="stars">★★★★★</span><br><small>Google reviews · 20 reviews</small></div></a></div>
 <figure class="pf" style="aspect-ratio:{w01}/{h01}"><img src="/assets/img01.jpg" alt="Jacob Soos and Chloe walking their dogs in Parrish, Florida" width="{w01}" height="{h01}" fetchpriority="high"></figure></div></section>
 {proof_strip()}
 {reviews_section()}
@@ -348,7 +348,7 @@ def home():
 <div class="rv" data-d="100">{eyebrow("The Gator Alley difference")}<h2>Real-world exposure. Personal care. Clear standards.</h2>
 <p>Dogs live and learn in a real home environment, not a facility. Jacob personally works with each dog through the routines, people and distractions that make reliable behavior matter.</p>
 <p style="margin-top:28px">{btn("/about-jacob", "Meet Jacob")}</p></div></div></section>
-<section class="section" style="padding-top:0"><div class="wrap"><div class="google rv"><div class="score">5.0</div><div>{eyebrow("Proof from the program")}<h3>Real work deserves real stories.</h3><p class="muted" style="margin-top:10px">Read what owners say about training with Jacob in the 16 reviews on Google.</p></div><a class="btn ghost" href="{GOOGLE}" rel="noopener">Google reviews · 16 reviews{ARROW}</a></div></div></section>
+<section class="section" style="padding-top:0"><div class="wrap"><div class="google rv"><div class="score">5.0</div><div>{eyebrow("Proof from the program")}<h3>Real work deserves real stories.</h3><p class="muted" style="margin-top:10px">Read what owners say about training with Jacob in the 20 reviews on Google.</p></div><a class="btn ghost" href="{GOOGLE}" rel="noopener">Google reviews · 20 reviews{ARROW}</a></div></div></section>
 <section class="section" id="faq" style="padding-top:0"><div class="wrap faq-grid"><div class="rv">{eyebrow("Frequently asked questions")}<h2>What to know before you call.</h2></div><div>{faq_html(HOME_FAQ)}</div></div></section>
 <section class="section area" id="area" style="padding-top:0"><div class="wrap story-grid"><div class="rv">{eyebrow("Serving Parrish & nearby areas")}<h2>Dog training that starts in Parrish and travels home with you.</h2></div>
 <div class="rv" data-d="100"><p>Gator Alley Dog Training is based in Parrish and serves owners in Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota, while also welcoming board-and-train clients from around the country. The page is local by design: the conversation starts with your dog's actual routines, behavior history and household goals, not a generic city-page promise.</p><p style="margin-top:28px">{btn("/contact", "Talk with Jacob")}</p></div></div></section>

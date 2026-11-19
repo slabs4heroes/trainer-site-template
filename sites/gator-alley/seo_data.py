@@ -404,7 +404,7 @@ LANDINGS = [
         h1="Virtual Dog Training Over Zoom",
         eyebrow="Virtual coaching · Live with Jacob",
         lede="Can't make it to Parrish? Train one-on-one with Jacob over Zoom, from Parrish, Tampa, Sarasota or anywhere else.",
-        img=("img18.jpg", "Jacob, Chloe and their dog walking together"),
+        img=("img18.jpg", "Jacob Soos and Chloe walking their dog together on an evening walk in Parrish, Florida"),
         intro=[
             "Virtual coaching is for dog owners who want live, one-on-one help with a specific topic. Jacob works through what you are dealing with over Zoom, with instruction tailored to your dog and your home, and the session is recorded so you can rewatch it.",
             "Afterward you get instructional videos connected to what you covered, plus follow-up support to ask questions and check on progress. For serious safety concerns such as a bite history or significant aggression, Jacob will first discuss whether a virtual session is the right fit.",
@@ -533,7 +533,7 @@ PROBLEMS = [
         title="How to Stop Dog Barking | Gator Alley, Parrish FL",
         desc="Dog barking too much? Jacob Soos helps with demand, alert and reactive barking in Parrish, Bradenton and Sarasota, FL. Book a free consultation.",
         h1="How to Stop Dog Barking: A Parrish Trainer's Guide",
-        img=("img06.jpg", "Jacob Soos working obedience with his German Shepherd"),
+        img=("img06.jpg", "Jacob Soos working obedience with his German Shepherd in Parrish, Florida"),
         lede="A dog barking is a dog communicating, yet nonstop barking at the front window, a knock, deliveries or afternoon storms can leave a household frazzled.",
         blocks=[
             ("h", "Why dogs bark, and what it tells you"),
@@ -659,7 +659,7 @@ PROBLEMS = [
         title="Dog Separation Anxiety Help in Parrish, FL | Gator Alley",
         desc="Dog anxious when you leave? Jacob Soos helps with separation anxiety, fear and clinginess in Parrish, Bradenton and Sarasota, FL. Honest, personal plans.",
         h1="Dog Separation Anxiety Help in Parrish, FL",
-        img=("img18.jpg", "Jacob, Chloe and their dog walking together"),
+        img=("img18.jpg", "Jacob Soos and Chloe walking their dog together on an evening walk in Parrish, Florida"),
         lede="If your dog panics, destroys things or howls when you leave, you are dealing with more than boredom. Anxiety needs patience, structure and a realistic plan.",
         blocks=[
             ("h", "Signs of separation anxiety"),

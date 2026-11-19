@@ -100,7 +100,7 @@ PROGRAMS = [
                 ("Real-world practice", "Skills are practiced around the distractions of daily life — walks, greetings, guests — not just inside a quiet training space."),
                 ("Owner handoff", "Before your dog comes home, you get a full walkthrough of the commands and routines so the training holds up at home."),
                 ("Consultation first", "Every program starts with a conversation about your dog’s history and goals — not a one-size-fits-all sign-up.")],
-         imgs=[("img06.jpg", "Jacob Soos working obedience with his German Shepherd"), ("img03.jpg", "Jacob Soos giving a hand-signal cue to a German Shepherd during obedience training")],
+         imgs=[("img06.jpg", "Jacob Soos working obedience with his German Shepherd in Parrish, Florida"), ("img03.jpg", "Jacob Soos giving a hand-signal cue to a German Shepherd during obedience training")],
          faq=[("Where does training happen?", "Training happens in Jacob’s real home environment in Parrish rather than a kennel facility, with exposure to normal household routines and real-world distractions."),
               ("Who trains my dog?", "Jacob personally trains and cares for your dog throughout the program — no rotating staff."),
               ("What ages and breeds are a fit for Basic Obedience?", "Every dog is different. Share your dog’s age, breed, history and goals during the consultation so Jacob can discuss whether this program is the right fit.")]),
@@ -183,6 +183,13 @@ def btn(href, label, cls=""):
     return f'<a class="btn {cls}" href="{href}">{E(label)}{ARROW}</a>'
 
 
+def tw_desc(d, n=125):
+    if len(d) <= n:
+        return d
+    cut = d[:n - 1].rsplit(" ", 1)[0].rstrip(",;:- ")
+    return cut + "…"
+
+
 def short_name(title):
     return title.split(" | ")[0].strip()
 
@@ -191,7 +198,7 @@ def page_ld(title, desc, path):
     """WebPage node (plus breadcrumb when the page did not provide one) so every page carries structured data."""
     g = {"@context": "https://schema.org", "@type": "WebPage", "@id": f"{DOMAIN}{path}#webpage", "url": f"{DOMAIN}{path}", "name": title, "description": desc,
          "inLanguage": "en-US", "isPartOf": {"@type": "WebSite", "@id": f"{DOMAIN}/#website", "url": f"{DOMAIN}/", "name": "Gator Alley Dog Training"},
-         "about": {"@id": f"{DOMAIN}/#business"}}
+         "about": {"@type": "LocalBusiness", "@id": f"{DOMAIN}/#business", "name": "Gator Alley Dog Training", "url": f"{DOMAIN}/", "telephone": TEL}}
     return '<script type="application/ld+json">' + json.dumps(g) + "</script>"
 
 
@@ -204,7 +211,7 @@ def head(title, desc, path, extra="", embed=False):
 <title>{E(title)}</title><meta name="description" content="{A(desc)}">
 <link rel="canonical" href="{DOMAIN}{path}"><meta name="theme-color" content="#f6f3ec">
 <meta property="og:site_name" content="Gator Alley Dog Training"><meta property="og:locale" content="en_US"><meta property="og:title" content="{A(title)}"><meta property="og:description" content="{A(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{DOMAIN}{path}"><meta property="og:image" content="{OG_IMG}"><meta property="og:image:width" content="1000"><meta property="og:image:height" content="663"><meta property="og:image:alt" content="{A(OG_ALT)}">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="{X_HANDLE}"><meta name="twitter:title" content="{A(title)}"><meta name="twitter:description" content="{A(desc)}"><meta name="twitter:image" content="{OG_IMG}"><meta name="twitter:image:alt" content="{A(OG_ALT)}">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="{X_HANDLE}"><meta name="twitter:title" content="{A(title)}"><meta name="twitter:description" content="{A(tw_desc(desc))}"><meta name="twitter:image" content="{OG_IMG}"><meta name="twitter:image:alt" content="{A(OG_ALT)}">
 <link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script>document.documentElement.classList.add('js')</script>
 {FONTS}<link rel="stylesheet" href="/styles.css">{auto}{extra}{sc}</head><body>'''
@@ -349,14 +356,14 @@ def reviews_section():
 
 
 HOME_GALLERY = [
-    ("img02.jpg", "German Shepherd sitting calmly at its handler's side at sunset during obedience training in Parrish, Florida", "Calm focus at the handler's side, practiced outdoors."),
-    ("img07.jpg", "French Bulldog holding a place command on a raised cot while Jacob Soos works on leash skills in Parrish, Florida", "A French Bulldog holding a place command on a raised cot."),
-    ("img09.jpg", "German Shepherd, French Bulldog and Pomsky lying calmly together indoors during impulse-control training in Parrish, Florida", "Three dogs settling together indoors: impulse control at home."),
+    ("img02.jpg", "German Shepherd sitting calmly at its handler's side at sunset during training in Parrish, Florida", "Calm focus at the handler's side, practiced outdoors."),
+    ("img07.jpg", "French Bulldog holding a place command on a raised cot during training in Parrish, Florida", "A French Bulldog holding a place command on a raised cot."),
+    ("img09.jpg", "German Shepherd, French Bulldog and Pomsky lying calmly together during impulse-control training in Parrish, Florida", "Three dogs settling together indoors: impulse control at home."),
     ("img10.jpg", "Dogs practicing socialization and impulse control outdoors in Parrish, Florida", "Socialization and impulse control around other dogs, outdoors."),
-    ("img11.jpg", "Two dogs holding a down command on a sidewalk during neighborhood obedience training in Parrish, Florida", "Down-stays on a neighborhood sidewalk."),
+    ("img11.jpg", "Two dogs holding a down command on a sidewalk during obedience training in Parrish, Florida", "Down-stays on a neighborhood sidewalk."),
     ("img12.jpg", "Jacob Soos holding a young Pomsky during puppy training in Parrish, Florida", "Jacob Soos with a young dog during puppy training."),
     ("img13.jpg", "Young puppy practicing leash skills on the grass during puppy training in Parrish, Florida", "Puppy leash skills and confidence-building."),
-    ("prog-frenchie-puppy.jpg", "French Bulldog puppy practicing leash walking on a sidewalk during puppy training in Parrish, Florida", "A French Bulldog puppy learning leash walking."),
+    ("prog-frenchie-puppy.jpg", "French Bulldog puppy practicing leash walking on a sidewalk during training in Parrish, Florida", "A French Bulldog puppy learning leash walking."),
 ]
 
 
@@ -384,8 +391,8 @@ def home():
         cards += (f'<a class="pcard rv" href="/{p["slug"]}"><div class="pph" style="aspect-ratio:{w}/{h}"><img src="/assets/{n}" alt="{A(alt)}" width="{w}" height="{h}" loading="lazy" decoding="async"></div>'
                   f'<div class="pbody"><span class="meta">{E(p["track"])} · {E(p["tag"])}</span><h3>{E(p["name"])}</h3><p>{E(p["blurb"])}</p><span class="more-l">{E(p["cta"])} {ARROW_SVG}</span></div></a>')
     cap = [("img03.jpg", "Jacob Soos giving a hand-signal cue to a German Shepherd during training", "Hand signals and verbal cues layered together during an obedience session."),
-           ("img04.jpg", "Jacob and Chloe with their German Shepherd Gator", "Jacob and Chloe with Gator — the same balanced approach used with client dogs."),
-           ("img05.jpg", "German Shepherd walking a path in Parrish, Florida", "Real-world reliability, practiced outside the training space.")]
+           ("img04.jpg", "Jacob and Chloe with their German Shepherd Gator on a walk in Parrish, Florida", "Jacob and Chloe with Gator — the same balanced approach used with client dogs."),
+           ("img05.jpg", "A German Shepherd walking along a path outdoors in Parrish, Florida during training", "Real-world reliability, practiced outside the training space.")]
     media = "".join(photo(n, a, c, d=i * 100) for i, (n, a, c) in enumerate(cap))
     w01, h01 = ar("img01.jpg")
     return head("Dog Trainer in Parrish, FL | Gator Alley Dog Training",
@@ -415,7 +422,7 @@ def home():
 <section class="section method"><div class="wrap method-grid"><div class="sticky"><div class="rv">{eyebrow("A simple path forward")}</div><h2 class="rv">Book. Train. Thrive.</h2><p class="rv" data-d="100">Every conversation begins with your dog’s needs, your goals and the right fit—not a one-size-fits-all promise.</p></div>
 {steps_html([("Book", "Share what is happening at home and speak directly with Jacob about your goals."), ("Train", "Your dog receives personally led work, structure and real-world exposure in the appropriate program."), ("Thrive", "Use the handover and ongoing support to carry clearer communication into everyday life.")], tight=False)}</div></section>
 <section class="section"><div class="wrap">{section_head("More from the program", "Real sessions, real dogs, real Parrish backyards.")}<div class="media3">{media}</div></div></section>
-<section class="section difference"><div class="wrap jacob-grid"><div class="photo rv" style="aspect-ratio:{"/".join(map(str, ar("img06.jpg")))};max-width:560px">{img("img06.jpg", "Jacob Soos working obedience with his German Shepherd")}</div>
+<section class="section difference"><div class="wrap jacob-grid"><div class="photo rv" style="aspect-ratio:{"/".join(map(str, ar("img06.jpg")))};max-width:560px">{img("img06.jpg", "Jacob Soos working obedience with his German Shepherd in Parrish, Florida")}</div>
 <div class="rv" data-d="100">{eyebrow("The Gator Alley difference")}<h2>Real-world exposure. Personal care. Clear standards.</h2>
 <p>Dogs live and learn in a real home environment, not a facility. Jacob personally works with each dog through the routines, people and distractions that make reliable behavior matter.</p>
 <p style="margin-top:28px">{btn("/about-jacob", "Meet Jacob")}</p></div></div></section>
@@ -496,7 +503,7 @@ def programs():
 {trio([("Balanced training", "The balanced approach combines clear communication, positive reinforcement, structure, fair corrections and accountability. Training is tailored to each dog using appropriate methods and tools to build confidence, obedience and reliable behavior in the real world."), ("Real-world exposure", "Your dog lives in Jacob’s home—not a facility—and trains in the environments that matter most. Household routines, public settings and everyday distractions build behavior you can use at home in Parrish and beyond."), ("Jacob trains every dog", "Every dog is personally trained and cared for by Jacob. Your dog is never passed to inexperienced staff or unfamiliar trainers; you know who is responsible for training, care, safety and progress.")])}</div></section>
 <section class="section difference"><div class="wrap jacob-grid"><div class="rv">{eyebrow("Training that transfers home")}<h2>Built for daily life in Parrish and the surrounding communities.</h2>
 <p>Gator Alley Dog Training is based in Parrish and serves dog owners from Palmetto, Ellenton, Bradenton, Lakewood Ranch and Sarasota, while also welcoming board-and-train clients from around the country.</p><p>At the end of the program, Jacob provides a detailed handover and ongoing support so owners can continue the dog’s progress at home.</p><p style="margin-top:28px">{btn("/contact", "Request a consultation")}</p></div>
-<div class="photo rv" data-d="100" style="aspect-ratio:{"/".join(map(str, ar("img06.jpg")))};max-width:520px">{img("img06.jpg", "Jacob Soos working obedience with his German Shepherd")}</div></div></section>
+<div class="photo rv" data-d="100" style="aspect-ratio:{"/".join(map(str, ar("img06.jpg")))};max-width:520px">{img("img06.jpg", "Jacob Soos working obedience with his German Shepherd in Parrish, Florida")}</div></div></section>
 <section class="section local"><div class="wrap">{section_head("Dog training in Parrish, Florida", "Impulse control, puppy training and obedience for real life.", "Gator Alley’s Parrish dog-training programs build practical behavior around the routines and environments that matter after dogs return home—from settling indoors to neighborhood obedience and puppy leash work.")}<div class="gal">{gal_html}</div></div></section>
 <section class="section method" id="virtual-coaching"><div class="wrap">{section_head("New — one-on-one, from anywhere", "Virtual Coaching Sessions", "Jacob now also offers live virtual coaching for dog owners in Parrish and beyond — one-on-one sessions held over Zoom, built around whatever you're working through with your dog. Each session is recorded and given to you afterward to keep, plus follow-up support to keep practicing between conversations.")}
 {trio([("Leash manners & recall", "Talk through walks, pulling, coming when called and how to practice around real distractions."), ("Puppy foundations", "Work through household routines, early manners, exposure goals and the questions that come with a young dog."), ("Behavior & consistency", "Discuss barking, settling, reactivity or a training plan that feels hard to keep consistent at home.")], cls="inv")}
@@ -510,16 +517,16 @@ def programs():
 
 
 def about():
-    gal = [("img17.jpg", "Portrait of Jacob Soos outdoors in Parrish, Florida", "Jacob Soos, owner and trainer at Gator Alley Dog Training."),
-           ("img18.jpg", "Jacob, Chloe and their dog walking together", "Jacob and Chloe on an evening walk with their dog."),
-           ("img19.jpg", "Two German Shepherds resting near a boat", "Down time between sessions — the dogs Jacob works with every day.")]
+    gal = [("img17.jpg", "Portrait of Jacob Soos, owner and dog trainer at Gator Alley, outdoors in Parrish, Florida", "Jacob Soos, owner and trainer at Gator Alley Dog Training."),
+           ("img18.jpg", "Jacob Soos and Chloe walking their dog together on an evening walk in Parrish, Florida", "Jacob and Chloe on an evening walk with their dog."),
+           ("img19.jpg", "Two German Shepherds resting near a boat between training sessions in Parrish, Florida", "Down time between sessions — the dogs Jacob works with every day.")]
     media = "".join(photo(n, a, c, d=i * 100) for i, (n, a, c) in enumerate(gal))
     return head("Meet Jacob Soos, Dog Trainer in Parrish, FL | Gator Alley",
                 "Jacob Soos is a professional dog trainer serving Parrish, FL and the Bradenton-Sarasota area, specializing in advanced obedience and off-leash reliability.",
                 "/about-jacob", schema(person_ld())) + header("about") + f'''
-<main id="main">{hero_block("Meet your trainer", "Jacob Soos, dog trainer in Parrish, Florida.", "Gator Alley Dog Training is built around patient, consistent work and clearer communication between dogs and their families.", btn("/contact", "Talk with Jacob"), pfig("img14.jpg", "Jacob Soos serving in the United States Coast Guard"))}
+<main id="main">{hero_block("Meet your trainer", "Jacob Soos, dog trainer in Parrish, Florida.", "Gator Alley Dog Training is built around patient, consistent work and clearer communication between dogs and their families.", btn("/contact", "Talk with Jacob"), pfig("img14.jpg", "Jacob Soos in uniform while serving in the United States Coast Guard"))}
 {proof_strip()}
-{split_photo("From Palmetto to Parrish", "A lifelong respect for dogs—and the work behind their behavior.", ["Born and raised in Palmetto, Florida, Jacob grew up around dogs, including dogs with challenging behaviors. His training approach was shaped by years of learning how patience, consistency and clear communication change a dog’s relationship with its owner.", "While serving in the U.S. Coast Guard along the Mississippi Gulf Coast, Jacob began training dogs to build experience and deepen that knowledge. Today he lives in Parrish with his wife and high-school sweetheart, Chloe, their German Shepherd Gator, and their cats Guru and Goose."], "img06.jpg", "Jacob Soos working obedience with his German Shepherd")}
+{split_photo("From Palmetto to Parrish", "A lifelong respect for dogs—and the work behind their behavior.", ["Born and raised in Palmetto, Florida, Jacob grew up around dogs, including dogs with challenging behaviors. His training approach was shaped by years of learning how patience, consistency and clear communication change a dog’s relationship with its owner.", "While serving in the U.S. Coast Guard along the Mississippi Gulf Coast, Jacob began training dogs to build experience and deepen that knowledge. Today he lives in Parrish with his wife and high-school sweetheart, Chloe, their German Shepherd Gator, and their cats Guru and Goose."], "img06.jpg", "Jacob Soos working obedience with his German Shepherd in Parrish, Florida")}
 {split_photo("A home environment", "Your family becomes part of ours.", ["During Board & Train, dogs live and learn in a real home environment—not a kennel. Daily structure, socialization and individualized work prepare them for the household routines and distractions that matter after they go home.", "Every program ends with a detailed handover session and ongoing support so owners can confidently continue their dog’s progress."], "img01.jpg", "Jacob and Chloe walking dogs in Parrish, Florida", rev=True, cls="local")}
 {split_photo("Five years in the U.S. Coast Guard", "Discipline learned on the water, applied on the leash.", ["Jacob served five years in the U.S. Coast Guard as a Boatswain's Mate Second Class, including search-and-rescue, law-enforcement missions and hurricane response along the Mississippi Gulf Coast. The same structure, calm and follow-through carries directly into how he trains dogs today."], "img16.jpg", "Jacob Soos in U.S. Coast Guard uniform holding service paperwork", cls="method")}
 <section class="section"><div class="wrap">{section_head("More of the story", "Palmetto roots, Coast Guard discipline, Parrish home.")}<div class="media3">{media}</div></div></section>
@@ -546,19 +553,19 @@ def contact_page():
 # ---------------------------------------------------------------- local SEO pages
 AREA_IMG = {"parrish": ("img01.jpg", "Jacob Soos and Chloe walking with their dogs in Parrish, Florida"),
             "bradenton": ("img03.jpg", "Jacob Soos giving a hand-signal cue to a German Shepherd during obedience training"),
-            "sarasota": ("img05.jpg", "German Shepherd walking a path in Parrish, Florida"),
-            "lakewood-ranch": ("img04.jpg", "Jacob and Chloe with their German Shepherd Gator"),
-            "palmetto": ("img17.jpg", "Portrait of Jacob Soos outdoors in Parrish, Florida"),
-            "ellenton": ("img18.jpg", "Jacob, Chloe and their dog walking together"),
+            "sarasota": ("img05.jpg", "A German Shepherd walking along a path outdoors in Parrish, Florida during training"),
+            "lakewood-ranch": ("img04.jpg", "Jacob and Chloe with their German Shepherd Gator on a walk in Parrish, Florida"),
+            "palmetto": ("img17.jpg", "Portrait of Jacob Soos, owner and dog trainer at Gator Alley, outdoors in Parrish, Florida"),
+            "ellenton": ("img18.jpg", "Jacob Soos and Chloe walking their dog together on an evening walk in Parrish, Florida"),
             "ruskin": ("prog-programs-hero.jpg", "Jacob Soos with his German Shepherd, Gator Alley Dog Training"),
             "apollo-beach": ("img01.jpg", "Jacob Soos and Chloe walking with their dogs in Parrish, Florida"),
-            "sun-city-center": ("img18.jpg", "Jacob, Chloe and their dog walking together"),
-            "riverview": ("img04.jpg", "Jacob and Chloe with their German Shepherd Gator"),
-            "brandon": ("img17.jpg", "Portrait of Jacob Soos outdoors in Parrish, Florida"),
+            "sun-city-center": ("img18.jpg", "Jacob Soos and Chloe walking their dog together on an evening walk in Parrish, Florida"),
+            "riverview": ("img04.jpg", "Jacob and Chloe with their German Shepherd Gator on a walk in Parrish, Florida"),
+            "brandon": ("img17.jpg", "Portrait of Jacob Soos, owner and dog trainer at Gator Alley, outdoors in Parrish, Florida"),
             "tampa": ("img03.jpg", "Jacob Soos giving a hand-signal cue to a German Shepherd during obedience training"),
-            "st-petersburg": ("img05.jpg", "German Shepherd walking a path in Parrish, Florida"),
+            "st-petersburg": ("img05.jpg", "A German Shepherd walking along a path outdoors in Parrish, Florida during training"),
             "venice": ("prog-programs-hero.jpg", "Jacob Soos with his German Shepherd, Gator Alley Dog Training"),
-            "north-port": ("img04.jpg", "Jacob and Chloe with their German Shepherd Gator")}
+            "north-port": ("img04.jpg", "Jacob and Chloe with their German Shepherd Gator on a walk in Parrish, Florida")}
 
 CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-7"/></svg>'
 
@@ -694,7 +701,7 @@ def area_page(k):
     else:
         work = f"Board-and-train happens at Jacob's home in Parrish. Owners in {town} can also start with live virtual coaching over Zoom. Request a free 30-minute consultation to talk through your dog and the logistics from {town}."
     return head(a["title"], a["desc"], path, ld) + header("areas") + f'''
-<main id="main">{hero_block(f'{a["county"]} · Gator Alley Dog Training', a["h1"], t.get("lede", a["lede"]), ctas, pfig(n, alt))}
+<main id="main">{hero_block(f'{a["county"]} · Gator Alley Dog Training', a["h1"], t.get("lede", a["lede"]), ctas, pfig(n, f"{alt}. Gator Alley Dog Training serves {town}, FL"))}
 {proof_strip()}
 <section class="section"><div class="wrap split"><div class="rv">{eyebrow(f"Dog training in {town}")}<h2>{E(t["headline"])}</h2><div class="prose">{intro}</div></div>
 <div class="rv" data-d="100"><h3>Know the local rules</h3><ul class="fit">{rules}</ul></div></div></section>
@@ -879,7 +886,7 @@ def videos_page():
     ld = video_ld() + crumbs_ld([("Home", "/"), ("Videos", "/videos")])
     ctas = btn("/contact", "Request a consultation") + f'<a class="btn ghost" href="{IG}" rel="noopener">Follow on Instagram</a>'
     return head("Dog Training Videos from Parrish, FL | Gator Alley", VIDEO_PAGE_DESC, "/videos", ld) + header("videos") + f'''
-<main id="main">{hero_block("Videos · Parrish, FL", "Dog training videos from Parrish, Florida.", "Real dogs, real training sessions and straight answers from Jacob Soos on leash pulling, crate manners, verbal commands, off-leash obedience and behavior progress.", ctas, pfig("img04.jpg", "Jacob and Chloe with their German Shepherd Gator"))}
+<main id="main">{hero_block("Videos · Parrish, FL", "Dog training videos from Parrish, Florida.", "Real dogs, real training sessions and straight answers from Jacob Soos on leash pulling, crate manners, verbal commands, off-leash obedience and behavior progress.", ctas, pfig("img04.jpg", "Jacob and Chloe with their German Shepherd Gator on a walk in Parrish, Florida"))}
 {proof_strip()}
 <section class="section"><div class="wrap">{section_head("Watch Jacob work", "Short training clips from the Gator Alley Instagram.", "Jacob posts what he is working on with client dogs and his own. Each clip below links to the program or guide that goes deeper, so you can go from watching to a plan for your own dog.")}<div class="vgrid">{cards}</div></div></section>
 <section class="section local"><div class="wrap"><div class="rv"><h3>Watch by topic</h3><p class="muted" style="margin:10px 0 0">Jump to Jacob’s written guides for the problems owners ask about most.</p>{topics}</div></div></section>

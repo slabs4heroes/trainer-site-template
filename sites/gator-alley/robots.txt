@@ -1,3 +1,8 @@
+# Gator Alley Dog Training, Parrish FL
+# Sitemap and a plain-text site summary for crawlers and assistants
 User-agent: *
 Allow: /
+Disallow: /cdn-cgi/
+
 Sitemap: https://gatoralleyk9.com/sitemap.xml
+# Site summary: https://gatoralleyk9.com/llms.txt

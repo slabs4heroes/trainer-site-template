@@ -296,3 +296,8 @@ h2{font-size:clamp(36px,4.8vw,66px)}
 
 .hcall{display:none;align-items:center;gap:6px;padding:10px 14px;border-radius:999px;background:var(--gold);color:var(--ink);font-weight:700;text-decoration:none;margin-left:auto;margin-right:6px}.hcall svg{width:18px;height:18px}
 @media(max-width:1000px){.hcall{display:inline-flex}}
+
+.srcs{display:block;margin-top:6px;font-size:13px;color:var(--ink-2)}.srcs a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.srclist{margin-top:14px;font-size:14px;line-height:1.9}.srclist a{color:var(--ink-2);text-decoration:underline;text-underline-offset:2px}
+.gal4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:980px){.gal4{grid-template-columns:repeat(2,1fr)}}

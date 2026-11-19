@@ -285,7 +285,7 @@ LANDINGS = [
         h1="Puppy Training in Sarasota, FL",
         eyebrow="Puppy programs · Serving Sarasota",
         lede="Start your Sarasota puppy off right with a personally led board-and-train puppy program, or begin with live virtual coaching over Zoom.",
-        img=("prog-puppy-leash-wide.jpg", "Young puppy practicing leash skills during puppy training in Parrish, Florida"),
+        img=("prog-puppy-leash-wide.jpg", "Puppy practicing leash skills during training in Parrish, Florida"),
         intro=[
             "The first months with a puppy set the habits you live with for years. Sarasota owners usually want the same things: a puppy who is potty trained, comfortable in a crate, calm around people and other dogs, and learning to walk on a leash before pulling becomes a habit.",
             "Gator Alley Dog Training offers two puppy programs, both led personally by Jacob in a real home environment in Parrish, and live virtual coaching sessions for owners who want one-on-one help from home.",
@@ -308,7 +308,7 @@ LANDINGS = [
         h1="Puppy Training in Bradenton, FL",
         eyebrow="Puppy programs · Serving Bradenton",
         lede="Personally led puppy board-and-train programs for Bradenton families, from a short head start to a full twelve-week foundation.",
-        img=("prog-frenchie-puppy.jpg", "A French Bulldog puppy practicing leash walking during puppy training in Parrish, Florida"),
+        img=("prog-frenchie-puppy.jpg", "French Bulldog puppy practicing leash walking in Parrish, Florida"),
         intro=[
             "A new puppy in Bradenton means new routines: potty breaks before work, crate time, walks that do not turn into tug-of-war, and a puppy who has to learn manners around visitors, kids and other dogs.",
             "Gator Alley Dog Training is a short trip from Bradenton. Jacob trains puppies in his own home in Parrish, building the routines, early obedience and real-world exposure that make life at home easier, then walks you through a handover so you can continue the work.",
@@ -331,7 +331,7 @@ LANDINGS = [
         h1="Board and Train in Sarasota, FL",
         eyebrow="Board & train · Serving Sarasota",
         lede="Custom board-and-train programs for Sarasota dogs, personally led by Jacob in a real home environment.",
-        img=("prog-gsd-down.webp", "A black German Shepherd holding a down-stay during training in Parrish, Florida"),
+        img=("prog-gsd-down.webp", "Black German Shepherd holding a down-stay in Parrish, Florida"),
         intro=[
             "Board and train gives your dog focused, daily work with one trainer, followed by a handover so you can keep the results going at home. Sarasota owners usually come to us after months of leash pulling, jumping, barking or recall that works only when there are no distractions.",
             "At Gator Alley, Jacob personally trains and cares for every dog throughout the program in his own home in Parrish. There are no rotating staff and no group classes. The length of stay is set after the consultation, based on what your dog needs and the outcome you want.",
@@ -356,7 +356,7 @@ LANDINGS = [
         h1="Board and Train in Tampa, FL",
         eyebrow="Board & train · Serving Tampa",
         lede="Custom board-and-train programs for Tampa dogs, personally led by Jacob in a real home environment.",
-        img=("prog-gsd-down.webp", "A black German Shepherd holding a down-stay during training in Parrish, Florida"),
+        img=("prog-gsd-down.webp", "Black German Shepherd holding a down-stay in Parrish, Florida"),
         intro=[
             "Board and train gives your dog focused, daily work with one trainer, followed by a handover so you can keep the results going at home. Tampa owners usually come to us after months of leash pulling, reactivity around other dogs, jumping or recall that works only when there are no distractions.",
             "At Gator Alley, Jacob personally trains and cares for every dog throughout the program in his own home in Parrish. There are no rotating staff and no group classes. The length of stay is set after the consultation, based on what your dog needs and the outcome you want.",
@@ -381,7 +381,7 @@ LANDINGS = [
         h1="Puppy Training in Tampa, FL",
         eyebrow="Puppy programs · Serving Tampa",
         lede="Start your Tampa puppy off right with a personally led board-and-train puppy program, or begin with live virtual coaching over Zoom.",
-        img=("prog-frenchie-puppy.jpg", "A French Bulldog puppy practicing leash walking during puppy training in Parrish, Florida"),
+        img=("prog-frenchie-puppy.jpg", "French Bulldog puppy practicing leash walking in Parrish, Florida"),
         intro=[
             "The first months with a puppy set the habits you live with for years. Tampa owners in condos, townhomes and busy neighborhoods usually want the same things: a puppy who is potty trained, comfortable in a crate, calm around people and other dogs, and learning to walk on a leash before pulling becomes a habit.",
             "Gator Alley Dog Training offers two puppy programs, both led personally by Jacob in a real home environment in Parrish, and live virtual coaching sessions for owners who want one-on-one help from home.",
@@ -404,7 +404,7 @@ LANDINGS = [
         h1="Virtual Dog Training Over Zoom",
         eyebrow="Virtual coaching · Live with Jacob",
         lede="Can't make it to Parrish? Train one-on-one with Jacob over Zoom, from Parrish, Tampa, Sarasota or anywhere else.",
-        img=("img18.jpg", "Jacob Soos and Chloe walking their dog together on an evening walk in Parrish, Florida"),
+        img=("img18.jpg", "Jacob Soos and Chloe walking their dog in Parrish, Florida"),
         intro=[
             "Virtual coaching is for dog owners who want live, one-on-one help with a specific topic. Jacob works through what you are dealing with over Zoom, with instruction tailored to your dog and your home, and the session is recorded so you can rewatch it.",
             "Afterward you get instructional videos connected to what you covered, plus follow-up support to ask questions and check on progress. For serious safety concerns such as a bite history or significant aggression, Jacob will first discuss whether a virtual session is the right fit.",
@@ -440,7 +440,7 @@ PROBLEMS = [
         title="Dog Pulling on Leash? Parrish, FL Trainer | Gator Alley",
         desc="Dog pulling on leash? Learn why it happens and how Jacob Soos teaches loose-leash walking in Parrish, Bradenton and Sarasota, FL. Free consultation.",
         h1="Dog Pulling on Leash? Here's How Jacob Fixes It",
-        img=("prog-pomsky.jpg", "A Pomsky puppy practicing loose-leash walking during training in Parrish, Florida"),
+        img=("prog-pomsky.jpg", "Pomsky puppy practicing loose-leash walking in Parrish, Florida"),
         lede="If every walk feels like a tug-of-war, you are not alone. Leash pulling is one of the most common reasons owners in Parrish, Bradenton and Sarasota reach out, and it is a trainable habit, not a personality flaw.",
         blocks=[
             ("h", "Why dogs pull on the leash"),
@@ -471,7 +471,7 @@ PROBLEMS = [
         title="Reactive Dog Training in Parrish, FL | Gator Alley",
         desc="Reactive or aggressive dog? Jacob Soos works hands-on with reactivity, fear and difficult behavior in Parrish, FL. Honest, one-on-one board and train.",
         h1="Reactive Dog Training in Parrish, FL",
-        img=("prog-gsd-down.webp", "A black German Shepherd holding a down-stay during training in Parrish, Florida"),
+        img=("prog-gsd-down.webp", "Black German Shepherd holding a down-stay in Parrish, Florida"),
         lede="Barking, lunging and spinning at other dogs, people or noises can make every outing stressful. Jacob works hands-on with reactive, anxious and difficult dogs, starting with an honest look at your dog's history.",
         blocks=[
             ("h", "What reactivity looks like"),
@@ -502,7 +502,7 @@ PROBLEMS = [
         title="How to Stop Dog Jumping on People | Gator Alley, Parrish FL",
         desc="Stop your dog jumping on guests and family. Jacob Soos teaches calm greetings and door manners in Parrish, Bradenton and Sarasota, FL. Free consultation.",
         h1="How to Stop Your Dog Jumping on People",
-        img=("img03.jpg", "Jacob Soos giving a hand-signal cue to a German Shepherd during obedience training"),
+        img=("img03.jpg", "Jacob Soos giving a hand-signal cue to a German Shepherd"),
         lede="A dog who launches at every guest is not being rude, they are excited and it has worked before. The fix is teaching what to do instead and being consistent about it.",
         blocks=[
             ("h", "Why dogs jump on people, and what drives it"),
@@ -595,7 +595,7 @@ PROBLEMS = [
         title="Crate Training a Puppy: Step-by-Step | Gator Alley",
         desc="Crate training a puppy in Parrish, Bradenton or Sarasota, FL? Learn the basics and how Jacob Soos builds crate routines in the Puppy Head Start program.",
         h1="Crate Training a Puppy: Step by Step",
-        img=("prog-puppy-leash-wide.jpg", "Young puppy practicing leash skills during puppy training in Parrish, Florida"),
+        img=("prog-puppy-leash-wide.jpg", "Puppy practicing leash skills during training in Parrish, Florida"),
         lede="A crate can be a calm, safe place for your puppy and a huge help with potty training, travel and sleep. The key is making it a good place to be.",
         blocks=[
             ("h", "Why crate train a puppy at all"),
@@ -628,7 +628,7 @@ PROBLEMS = [
         title="Potty Training a Puppy: A Simple Plan | Gator Alley K9",
         desc="Potty training a puppy? Get a simple routine and learn how Jacob Soos builds potty training into the Puppy Head Start program in Parrish, FL.",
         h1="Potty Training a Puppy: A Simple Plan",
-        img=("prog-frenchie-puppy.jpg", "A French Bulldog puppy practicing leash walking during puppy training in Parrish, Florida"),
+        img=("prog-frenchie-puppy.jpg", "French Bulldog puppy practicing leash walking in Parrish, Florida"),
         lede="Potty training is mostly about schedule, supervision and consistency. Puppies are not being stubborn, they are learning where and when.",
         blocks=[
             ("h", "The core potty training routine"),
@@ -659,7 +659,7 @@ PROBLEMS = [
         title="Dog Separation Anxiety Help in Parrish, FL | Gator Alley",
         desc="Dog anxious when you leave? Jacob Soos helps with separation anxiety, fear and clinginess in Parrish, Bradenton and Sarasota, FL. Honest, personal plans.",
         h1="Dog Separation Anxiety Help in Parrish, FL",
-        img=("img18.jpg", "Jacob Soos and Chloe walking their dog together on an evening walk in Parrish, Florida"),
+        img=("img18.jpg", "Jacob Soos and Chloe walking their dog in Parrish, Florida"),
         lede="If your dog panics, destroys things or howls when you leave, you are dealing with more than boredom. Anxiety needs patience, structure and a realistic plan.",
         blocks=[
             ("h", "Signs of separation anxiety"),
